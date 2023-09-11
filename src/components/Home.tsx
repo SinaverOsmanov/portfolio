@@ -4,8 +4,8 @@ function Home() {
     return (
         <section className="home active section" id="home">
             <div className="container">
-                <div className="row">
-                    <div className="home-info padd-15">
+                <div className="flex flex-row">
+                    <div className="flex-col col-span-4 home-info padd-15">
                         <h3 className="hello">
                             Hello, my name is
                             <span className="name"> Sinaver Osmanov</span>
@@ -16,8 +16,9 @@ function Home() {
                                 sequence={['Front end Developer', 1000, 'Freelancer', 1000]}
                                 wrapper="span"
                                 speed={50}
+                                className="xs:text-md"
                                 style={{
-                                    fontSize: '2em',
+                                    // fontSize: '2em',
                                     display: 'inline-block',
                                     marginLeft: 10,
                                 }}
@@ -31,11 +32,10 @@ function Home() {
                             passion for design. I believe having experience in both design and development allows for
                             making the most optimal user experiences.
                         </p>
-                        <a href="https://www.linkedin.com/in/sinaver-osmanov/" target="_blank" className="btn">
-                            My Linkedin
-                        </a>
+                        <button className="btn">My Linkedin</button>
+                        {/* href="https://www.linkedin.com/in/sinaver-osmanov/" */}
                     </div>
-                    <div className="home-img padd-15">
+                    <div className="flex-col col-span-8 home-img padd-15">
                         <img src={'./assets/hero.jpg'} alt="hero" />
                     </div>
                 </div>

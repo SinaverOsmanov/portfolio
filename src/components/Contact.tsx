@@ -25,7 +25,7 @@ export function Contact() {
                             <i className="fa fa-map-marker-alt"></i>
                         </div>
                         <h4>Address</h4>
-                        <p>Bishkek cityk</p>
+                        <p>Evpatoriya city</p>
                     </div>
                     {/* Contact info item end  */}
                     {/* Contact info item start  */}
@@ -34,7 +34,7 @@ export function Contact() {
                             <i className="fa fa-envelope"></i>
                         </div>
                         <h4>Email</h4>
-                        <p>mrdilmurat777@gmail.com</p>
+                        <p>sinaver.osmanov@gmail.com</p>
                     </div>
                     {/* Contact info item end  */}
                     {/* Contact info item start  */}
@@ -43,7 +43,8 @@ export function Contact() {
                             <i className="fa fa-globe-asia"></i>
                         </div>
                         <h4>GitHub</h4>
-                        <p>https://github.com/mrDilmurat</p>
+                        <p>https://github.com/SinaverOsmanov</p>
+                        <p>https://github.com/SinaverFrontent</p>
                     </div>
                     {/* Contact info item end  */}
                 </div>

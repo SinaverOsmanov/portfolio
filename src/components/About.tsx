@@ -12,7 +12,7 @@ export default function About() {
                         <div className="row">
                             <div className="about-text padd-15">
                                 <h3>
-                                    I'm Dilmurat Idrisov and <span>Web Developer</span>
+                                    I'm Sinaver Osmanov and I'm <span>Web Developer</span>
                                 </h3>
                                 <p>
                                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt eaque provident
@@ -34,17 +34,17 @@ export default function About() {
                                     </div>
                                     <div className="info-item padd-15">
                                         <p>
-                                            ENGLISH : <span>FLUENT</span>
+                                            ENGLISH : <span>B2</span>
                                         </p>
                                     </div>
-                                    <div className="info-item padd-15">
+                                    {/* <div className="info-item padd-15">
                                         <p>
                                             Website : <span>www.domain.com</span>
                                         </p>
-                                    </div>
+                                    </div> */}
                                     <div className="info-item padd-15">
                                         <p>
-                                            Email : <span>mrdilmurat777@gmail.com</span>
+                                            Email : <span>sinaver.osmanov@gmail.com</span>
                                         </p>
                                     </div>
                                     <div className="info-item padd-15">
@@ -52,14 +52,14 @@ export default function About() {
                                             Makers Coding Bootcamp : <span>Front-End Developer</span>
                                         </p>
                                     </div>
-                                    <div className="info-item padd-15">
+                                    {/* <div className="info-item padd-15">
                                         <p>
                                             Phone : <span>+996(558)-755-756</span>
                                         </p>
-                                    </div>
+                                    </div> */}
                                     <div className="info-item padd-15">
                                         <p>
-                                            City : <span>Bishkek</span>
+                                            City : <span>Evpatoria</span>
                                         </p>
                                     </div>
                                     <div className="info-item padd-15">
@@ -107,6 +107,13 @@ export default function About() {
                                         </div>
                                     </div>
                                     <div className="skills-item padd-15">
+                                        <h5>Vue</h5>
+                                        <div className="progress">
+                                            <div className="progress-in" style={{ width: '30%' }}></div>
+                                            <div className="skills-percent">30%</div>
+                                        </div>
+                                    </div>
+                                    <div className="skills-item padd-15">
                                         <h5>Git</h5>
                                         <div className="progress">
                                             <div className="progress-in" style={{ width: '80%' }}></div>
@@ -114,7 +121,14 @@ export default function About() {
                                         </div>
                                     </div>
                                     <div className="skills-item padd-15">
-                                        <h5>Bootstrap, Material UI,</h5>
+                                        <h5>Typescript</h5>
+                                        <div className="progress">
+                                            <div className="progress-in" style={{ width: '80%' }}></div>
+                                            <div className="skills-percent">80%</div>
+                                        </div>
+                                    </div>
+                                    <div className="skills-item padd-15">
+                                        <h5>Bootstrap, Material UI, Antd, Blueprint.js, Tailwind</h5>
                                         <div className="progress">
                                             <div className="progress-in" style={{ width: '70%' }}></div>
                                             <div className="skills-percent">70%</div>

@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function Navbar() {
     const navTogglerBtn = document.querySelector('.nav-toggler'),
         aside = document.querySelector('.aside');
@@ -62,52 +64,57 @@ export default function Navbar() {
             }
         }
     }
-    document.querySelector('.hire-me')?.addEventListener('click', function () {
-        const sectionIndex = this.getAttribute('date-section-index');
-        //console.log(sectionIndex);
-        showSection(this);
-        updateNav(this);
-        removeBackSection();
-        addBackSection(sectionIndex);
-    });
+    // document.querySelector('.hire-me')?.addEventListener('click', function () {
+    //     const sectionIndex = this.getAttribute('date-section-index');
+    //     //console.log(sectionIndex);
+    //     showSection(this);
+    //     updateNav(this);
+    //     removeBackSection();
+    //     addBackSection(sectionIndex);
+    // });
 
     return (
-        <div className="aside">
-            <div className="logo">
-                <a href="#">
-                    <span>Maker</span>s
-                </a>
+        <aside className="w-64 flex flex-col justify-between p-8 pt-12 h-full aside">
+            <div className="text-lg text-center logo ">
+                <Link to="/">
+                    <span>Portfoli</span>o
+                </Link>
             </div>
-            <div className="nav-toggler">
+            {/* <div className="nav-toggler">
                 <span></span>
-            </div>
-            <ul className="nav">
-                <li>
-                    <a href="#home" className="active">
-                        <i className="fa fa-home"></i> Home
-                    </a>
-                </li>
-                <li>
-                    <a href="#about">
-                        <i className="fa fa-user"></i> About
-                    </a>
-                </li>
-                <li>
-                    <a href="#services">
-                        <i className="fa fa-list"></i> Services
-                    </a>
-                </li>
-                <li>
-                    <a href="#portfolio">
-                        <i className="fa fa-briefcase"></i> Portfolio
-                    </a>
-                </li>
-                <li>
-                    <a href="#contact">
-                        <i className="fa fa-comments"></i> Contact
-                    </a>
-                </li>
-            </ul>
-        </div>
+            </div> */}
+            <div></div>
+            <nav className="nav">
+                <ul>
+                    <li>
+                        <Link to="/" className="active">
+                            <i className="fa fa-home"></i> Home
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/about">
+                            <i className="fa fa-user"></i> About
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/services">
+                            <i className="fa fa-list"></i> Services
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/portfolio">
+                            <i className="fa fa-briefcase"></i> Portfolio
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/contact">
+                            <i className="fa fa-comments"></i> Contact
+                        </Link>
+                    </li>
+                </ul>
+            </nav>
+            <div></div>
+            <div></div>
+        </aside>
     );
 }

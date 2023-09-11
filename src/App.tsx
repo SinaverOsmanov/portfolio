@@ -7,6 +7,8 @@ import Portfolio from './components/Portfolio';
 import Services from './components/Services';
 import { Contact } from './components/Contact';
 import './App.css';
+import './i18n';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
     useEffect(() => {
@@ -33,19 +35,23 @@ function App() {
     }, []);
 
     return (
-        <>
-            <div className="main-container">
-                <Navbar />
-                <div className="main-content">
-                    <Home />
-                    <About />
-                    <Services />
-                    <Portfolio />
-                    <Contact />
+        <BrowserRouter>
+            <div className="flex flex-row h-screen">
+                <div className="flex flex-col">
+                    <Navbar />
+                </div>
+                <div className="flex flex-col pl-10">
+                    <Routes>
+                        <Route path="/" Component={Home} />
+                        <Route path="/about" Component={About} />
+                        <Route path="/services" Component={Services} />
+                        <Route path="/portfolio" Component={Portfolio} />
+                        <Route path="/contact" Component={Contact} />
+                    </Routes>
                 </div>
             </div>
-            <Switcher />
-        </>
+            {/* <Switcher /> */}
+        </BrowserRouter>
     );
 }
 
