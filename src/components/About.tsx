@@ -1,9 +1,11 @@
+import { Link } from 'react-router-dom';
+
 export default function About() {
     return (
         <section className="about section" id="about">
-            <div className="container">
+            <div className="container pt-16">
                 <div className="row">
-                    <div className="section-title padd-15">
+                    <div className="basis-full mb-14 section-title padd-15">
                         <h2>About Me</h2>
                     </div>
                 </div>
@@ -70,9 +72,9 @@ export default function About() {
                                 </div>
                                 <div className="row">
                                     <div className="buttons padd-15">
-                                        <a href="#contact" data-section-index="1" className="btn hire-me">
+                                        <Link to="/contact" data-section-index="1" className="btn hire-me">
                                             Hire Me
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>

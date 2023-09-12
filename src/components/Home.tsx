@@ -3,9 +3,9 @@ import { TypeAnimation } from 'react-type-animation';
 function Home() {
     return (
         <section className="home active section" id="home">
-            <div className="container">
+            <div className="container pt-52">
                 <div className="flex flex-row">
-                    <div className="flex-col col-span-4 home-info padd-15">
+                    <div className="flex-col basis-6/12 home-info padd-15">
                         <h3 className="hello">
                             Hello, my name is
                             <span className="name"> Sinaver Osmanov</span>
@@ -35,7 +35,7 @@ function Home() {
                         <button className="btn">My Linkedin</button>
                         {/* href="https://www.linkedin.com/in/sinaver-osmanov/" */}
                     </div>
-                    <div className="flex-col col-span-8 home-img padd-15">
+                    <div className="flex-col basis-4/12 home-img padd-15">
                         <img src={'./assets/hero.jpg'} alt="hero" />
                     </div>
                 </div>
