@@ -39,11 +39,11 @@ export default function About() {
                                             ENGLISH : <span>B2</span>
                                         </p>
                                     </div>
-                                    {/* <div className="info-item padd-15">
+                                    <div className="info-item padd-15">
                                         <p>
                                             Website : <span>www.domain.com</span>
                                         </p>
-                                    </div> */}
+                                    </div>
                                     <div className="info-item padd-15">
                                         <p>
                                             Email : <span>sinaver.osmanov@gmail.com</span>
