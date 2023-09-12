@@ -9,7 +9,7 @@ export default function Services() {
                 </div>
                 <div className="row">
                     {/* Service item Start  */}
-                    <div className="service-item padd-15">
+                    <div className="flex-col service-item padd-15">
                         <div className="service-item-inner">
                             <div className="icon">
                                 <i className="fa fa-mobile-alt"></i>
@@ -23,7 +23,7 @@ export default function Services() {
                     </div>
                     {/* Service item End  */}
                     {/* Service item Start  */}
-                    <div className="service-item padd-15">
+                    <div className="flex-col service-item padd-15">
                         <div className="service-item-inner">
                             <div className="icon">
                                 <i className="fa fa-palette"></i>
@@ -37,7 +37,7 @@ export default function Services() {
                     </div>
                     {/* Service item End  */}
                     {/* Service item Start  */}
-                    <div className="service-item padd-15">
+                    <div className="flex-col service-item padd-15">
                         <div className="service-item-inner">
                             <div className="icon">
                                 <i className="fa fa-code"></i>
