@@ -36,7 +36,7 @@ function App() {
 
     return (
         <BrowserRouter>
-            <div className="flex flex-row h-screen">
+            <div className="flex flex-row">
                 <div className="flex flex-col">
                     <Navbar />
                 </div>

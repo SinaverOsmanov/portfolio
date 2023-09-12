@@ -1,4 +1,34 @@
-import { Link } from 'react-router-dom';
+import { ReactNode } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { NavItem } from './NavItem';
+
+const navItems = [
+    {
+        to: '/',
+        icon: 'fa-home',
+        children: 'Home',
+    },
+    {
+        to: '/about',
+        icon: 'fa-user',
+        children: 'About',
+    },
+    {
+        to: '/contact',
+        icon: 'fa-comments',
+        children: 'Contact',
+    },
+    {
+        to: '/services',
+        icon: 'fa-list',
+        children: 'Services',
+    },
+    {
+        to: '/portfolio',
+        icon: 'fa-briefcase',
+        children: 'Portfolio',
+    },
+];
 
 export default function Navbar() {
     const navTogglerBtn = document.querySelector('.nav-toggler'),
@@ -74,8 +104,8 @@ export default function Navbar() {
     // });
 
     return (
-        <aside className="w-64 flex flex-col justify-between p-8 pt-12 h-full aside">
-            <div className="text-lg text-center logo ">
+        <aside className="w-64 flex flex-col p-10 pt-12 h-full aside">
+            <div className="text-lg text-center logo">
                 <Link to="/">
                     <span>Portfoli</span>o
                 </Link>
@@ -83,38 +113,13 @@ export default function Navbar() {
             {/* <div className="nav-toggler">
                 <span></span>
             </div> */}
-            <div></div>
             <nav className="nav">
                 <ul>
-                    <li>
-                        <Link to="/" className="active">
-                            <i className="fa fa-home"></i> Home
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/about">
-                            <i className="fa fa-user"></i> About
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/services">
-                            <i className="fa fa-list"></i> Services
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/portfolio">
-                            <i className="fa fa-briefcase"></i> Portfolio
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/contact">
-                            <i className="fa fa-comments"></i> Contact
-                        </Link>
-                    </li>
+                    {navItems.map(item => (
+                        <NavItem key={item.to} {...item} />
+                    ))}
                 </ul>
             </nav>
-            <div></div>
-            <div></div>
         </aside>
     );
 }
