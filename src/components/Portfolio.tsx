@@ -1,9 +1,9 @@
 export default function Portfolio() {
     return (
         <section className="portfolio section" id="portfolio">
-            <div className="container">
+            <div className="container pt-16">
                 <div className="row">
-                    <div className="section-title padd-15">
+                    <div className="basis-full mb-14 section-title padd-15">
                         <h2>Portfolio</h2>
                     </div>
                 </div>

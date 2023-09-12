@@ -40,7 +40,7 @@ function App() {
                 <div className="flex flex-col">
                     <Navbar />
                 </div>
-                <div className="flex flex-col pl-10">
+                <div className="flex flex-col pl-52">
                     <Routes>
                         <Route path="/" Component={Home} />
                         <Route path="/about" Component={About} />
