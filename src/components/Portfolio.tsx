@@ -17,7 +17,7 @@ export default function Portfolio() {
                     <div className="portfolio-item padd-15">
                         <div className="portfolio-item-inner shadow-dark">
                             <div className="portfolio-img">
-                                <img src="images/portfolio1.webp" alt="" />
+                                <img src="/assets/portfolio1.webp" alt="" />
                             </div>
                         </div>
                     </div>
@@ -26,7 +26,7 @@ export default function Portfolio() {
                     <div className="portfolio-item padd-15">
                         <div className="portfolio-item-inner shadow-dark">
                             <div className="portfolio-img">
-                                <img src="images/portfolio2.webp" alt="" />
+                                <img src="/assets/portfolio2.webp" alt="" />
                             </div>
                         </div>
                     </div>
@@ -35,7 +35,7 @@ export default function Portfolio() {
                     <div className="portfolio-item padd-15">
                         <div className="portfolio-item-inner shadow-dark">
                             <div className="portfolio-img">
-                                <img src="images/portfolio3.webp" alt="" />
+                                <img src="/assets/portfolio3.webp" alt="" />
                             </div>
                         </div>
                     </div>
@@ -44,7 +44,7 @@ export default function Portfolio() {
                     <div className="portfolio-item padd-15">
                         <div className="portfolio-item-inner shadow-dark">
                             <div className="portfolio-img">
-                                <img src="images/portfolio4.jpeg" alt="" />
+                                <img src="/assets/portfolio4.jpeg" alt="" />
                             </div>
                         </div>
                     </div>
@@ -53,7 +53,7 @@ export default function Portfolio() {
                     <div className="portfolio-item padd-15">
                         <div className="portfolio-item-inner shadow-dark">
                             <div className="portfolio-img">
-                                <img src="images/portfolio5.webp" alt="" />
+                                <img src="/assets/portfolio5.webp" alt="" />
                             </div>
                         </div>
                     </div>
@@ -62,7 +62,7 @@ export default function Portfolio() {
                     <div className="portfolio-item padd-15">
                         <div className="portfolio-item-inner shadow-dark">
                             <div className="portfolio-img">
-                                <img src="images/portfolio6.webp" alt="" />
+                                <img src="/assets/portfolio6.webp" alt="" />
                             </div>
                         </div>
                     </div>

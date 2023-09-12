@@ -224,26 +224,20 @@ ul {
     transform: rotate(-45deg);
     top: 0;
 }
-.aside .nav {
-    margin-top: 50px;
+
+.aside .nav ul li:last-child {
+    border-bottom: none;
 }
-.aside .nav li {
-    margin-bottom: 20px;
-    display: block;
-}
+
 .aside .nav li a {
     font-size: 16px;
     font-weight: 600;
-    display: block;
-    border-bottom: 1px solid var(--bg-black-50);
+    /* border-bottom: 1px solid var(--bg-black-50); */
     color: var(--text-black-900);
-    padding: 5px 15px;
 }
+
 .aside .nav li a.active {
     color: var(--skin-color);
-}
-.aside .nav li a i {
-    margin-right: 15px;
 }
 
 /* Home */
@@ -512,9 +506,7 @@ h3.my-profession {
     text-transform: capitalize;
 }
 .service .service-item .service-item-inner p {
-    font-size: 16px;
     color: var(--text-black-700);
-    line-height: 25px;
 }
 /* portfolio */
 

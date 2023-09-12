@@ -7,9 +7,9 @@ export function NavItem({ to, icon, children }: NavItemProps) {
     const { pathname } = useLocation();
 
     return (
-        <li>
+        <li className="border-b-[1px] border-gray-200 py-3">
             <Link to={to} className={pathname === to ? 'active' : ''}>
-                <i className={`fa ${icon}`}></i>
+                <i className={`fa ${icon} mr-4 w-4`}></i>
                 {children}
             </Link>
         </li>
