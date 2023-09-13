@@ -668,22 +668,11 @@ h3.my-profession {
         flex: 0 0 100%;
         max-width: 100%;
     }
-    .home .home-info {
-        flex: 0 0 100%;
-        max-width: 100%;
-        margin-top: 50px;
-    }
-    .home .home-img {
-        display: flex;
-        flex: 0 0 100%;
-        max-width: 100%;
-        margin-top: 50px;
-    }
 }
 
 .style-switcher {
     position: fixed;
-    right: 0;
+    right: 0px;
     top: 60px;
     padding: 15px;
     width: 200px;
@@ -694,20 +683,26 @@ h3.my-profession {
     transition: all 0.3s ease;
     transform: translateX(100%);
 }
+
+.style-switcher .btns {
+    position: absolute;
+    left: -64px;
+    top: 0;
+}
+
 .style-switcher.open {
     transform: translateX(-25px);
 }
 .style-switcher .s-icon {
-    position: absolute;
     height: 40px;
     width: 40px;
     text-align: center;
     font-size: 20px;
     background-color: var(--bg-black-100);
     color: var(--text-black-900);
-    right: 100%;
+    right: 200px;
     border: 1px solid var(--bg-black-50);
-    margin-right: 25px;
+    /* margin-right: 25px; */
     cursor: pointer;
     transition: all 0.3s ease;
     border-radius: 50%;
@@ -715,12 +710,12 @@ h3.my-profession {
 .style-switcher .s-icon i {
     line-height: 40px;
 }
-.style-switcher .style-switcher-toggler {
+/* .style-switcher .style-switcher-toggler {
     top: 0;
 }
 .style-switcher .day-night {
     top: 55px;
-}
+} */
 .style-switcher h4 {
     margin: 0 0 10px;
     color: var(--text-black-700);
@@ -737,7 +732,6 @@ h3.my-profession {
     height: 30px;
     width: 30px;
     border-radius: 50%;
-    border: 1px solid red;
 }
 .style-switcher .color-1 {
     background: #ec1839;
