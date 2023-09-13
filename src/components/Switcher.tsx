@@ -1,8 +1,10 @@
-import { useEffect, useState } from 'react';
+import useStoreTheme from '../store/storeTheme';
+import { useState } from 'react';
 
 export default function Switcher() {
-    const [dark, setDark] = useState(false);
     const [colors, setColors] = useState(false);
+
+    const { dark, toggleDark } = useStoreTheme();
 
     function changeDark() {
         const isDark = document.body.classList.contains('dark');
@@ -13,12 +15,13 @@ export default function Switcher() {
             document.body.classList.add('dark');
         }
 
-        setDark(prev => !prev);
+        toggleDark();
     }
 
     function changeColors() {
         setColors(prev => !prev);
     }
+
     // useEffect(() => {
     //     const dayNight = document.querySelector('.day-night');
 
