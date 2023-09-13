@@ -5,7 +5,7 @@ function Home() {
         <section className="home active section" id="home">
             <div className="container pt-52">
                 <div className="flex flex-row">
-                    <div className="flex-col basis-6/12 home-info padd-15">
+                    <div className="flex-col basis-7/12 home-info">
                         <h3 className="hello">
                             Hello, my name is
                             <span className="name"> Sinaver Osmanov</span>
@@ -35,7 +35,7 @@ function Home() {
                         <button className="btn">My Linkedin</button>
                         {/* href="https://www.linkedin.com/in/sinaver-osmanov/" */}
                     </div>
-                    <div className="flex-col basis-4/12 home-img padd-15">
+                    <div className="flex-col basis-5/12 home-img">
                         <img src={'./assets/hero.jpg'} alt="hero" />
                     </div>
                 </div>
