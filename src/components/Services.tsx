@@ -7,7 +7,7 @@ export default function Services() {
                         <h2>Services</h2>
                     </div>
                 </div>
-                <div className="row gap-x-7">
+                <div className="row gap-x-7 justify-between">
                     {/* Service item Start  */}
                     <div className="flex-col service-item">
                         <div className="service-item-inner">

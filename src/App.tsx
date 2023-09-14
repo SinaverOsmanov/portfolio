@@ -5,18 +5,16 @@ import Navbar from './components/Navbar';
 import Portfolio from './components/Portfolio';
 import Services from './components/Services';
 import { Contact } from './components/Contact';
-import './App.css';
-import './i18n';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
     return (
         <BrowserRouter>
-            <div className="flex">
-                <div className="flex flex-col">
+            <div className="flex ">
+                <div className="flex-col">
                     <Navbar />
                 </div>
-                <div className="flex flex-col px-56">
+                <div className="flex-col grow px-56">
                     <Routes>
                         <Route path="/" Component={Home} />
                         <Route path="/about" Component={About} />

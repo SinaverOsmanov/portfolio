@@ -1,3 +1,5 @@
+import { SubmitHandler, useForm } from 'react-hook-form';
+
 export function Contact() {
     return (
         <section className="contact section" id="contact">
@@ -25,7 +27,7 @@ export function Contact() {
                             <i className="fa fa-map-marker-alt"></i>
                         </div>
                         <h4>Address</h4>
-                        <p>Evpatoriya city</p>
+                        <p>Crimea, Evpatoriya</p>
                     </div>
                     {/* Contact info item end  */}
                     {/* Contact info item start  */}
@@ -52,43 +54,71 @@ export function Contact() {
                 <h4 className="contact-sub-title">I'M VERY RESPOSIVE TO MESSAGES</h4>
                 {/* Contact Form  */}
                 <div className="row">
-                    <div className="contact-form">
-                        <div className="row">
-                            <div className="form-item col-6">
-                                <div className="form-group">
-                                    <input type="text" className="form-control" placeholder="Name" />
-                                </div>
-                            </div>
-                            <div className="form-item col-6">
-                                <div className="form-group">
-                                    <input type="email" className="form-control" placeholder="Email" />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="form-item col-12">
-                                <div className="form-group">
-                                    <input type="text" className="form-control" placeholder="Subject" />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="form-item col-12">
-                                <div className="form-group">
-                                    <textarea name="" className="form-control" id="" placeholder="Message"></textarea>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="form-item col-12">
-                                <button type="submit" className="btn">
-                                    Send Message
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                    <ContactForm />
                 </div>
             </div>
         </section>
+    );
+}
+
+type FormValues = {
+    name: string;
+    subject: string;
+    email: string;
+    message: string;
+};
+
+function ContactForm() {
+    const { register, handleSubmit } = useForm<FormValues>();
+
+    const onSubmit: SubmitHandler<FormValues> = data => console.log(data);
+
+    return (
+        <div className="flex-1-full contact-form">
+            <form onSubmit={handleSubmit(onSubmit)}>
+                <div className="row gap-x-3">
+                    <div className="flex-col grow form-item">
+                        <div className="form-group">
+                            <input {...register('name')} type="text" className="form-control" placeholder="Name" />
+                        </div>
+                    </div>
+                    <div className="flex-col grow form-item">
+                        <div className="form-group">
+                            <input {...register('email')} type="email" className="form-control" placeholder="Email" />
+                        </div>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="flex-1-full form-item">
+                        <div className="form-group">
+                            <input
+                                {...register('subject')}
+                                type="text"
+                                className="form-control"
+                                placeholder="Subject"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="flex-1-full form-item">
+                        <div className="form-group">
+                            <textarea
+                                {...register('message')}
+                                className="form-control"
+                                placeholder="Message"
+                            ></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="flex-1-full form-item">
+                        <button type="submit" className="btn">
+                            Send Message
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
     );
 }
