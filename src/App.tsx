@@ -12,11 +12,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
     return (
         <BrowserRouter>
-            <div className="flex h-screen">
+            <div className="flex">
                 <div className="flex flex-col">
                     <Navbar />
                 </div>
-                <div className="flex flex-col px-52">
+                <div className="flex flex-col px-56">
                     <Routes>
                         <Route path="/" Component={Home} />
                         <Route path="/about" Component={About} />

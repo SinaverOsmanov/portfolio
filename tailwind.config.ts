@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
     darkMode: 'class',
     content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
@@ -21,8 +22,14 @@ export default {
     
           '2xl': '2560px',
           // => @media (min-width: 1536px) { ... }
+        },
+      },
+      extend: {
+        flex: {
+          'flex-1-half': "0 0 50%",
+          'flex-1-full': "0 0 100%",
         }
       },
-
     plugins: [],
+    jit: true
 };

@@ -4,6 +4,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    .flex-1-full {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .flex-1-half {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
 :root {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
