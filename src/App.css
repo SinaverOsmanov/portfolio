@@ -31,12 +31,17 @@ body {
     text-decoration: none;
     box-sizing: border-box;
 }
+
 ::before,
 ::after {
     box-sizing: border-box;
 }
 ul {
     list-style: none;
+}
+
+h3 {
+    font-weight: 700 !important;
 }
 .section {
     min-height: 100vh;
@@ -69,11 +74,6 @@ ul {
 } */
 .hidden {
     display: none !important;
-}
-
-.padd-15 {
-    padding-left: 15px;
-    padding-right: 15px;
 }
 
 /* .container {
@@ -127,9 +127,6 @@ ul {
 }
 .btn:hover {
     transform: scale(1.05);
-}
-.shadow-dark {
-    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 }
 /* aside */
 .aside {
@@ -299,7 +296,6 @@ h3.my-profession {
     border-radius: 5px;
     height: 400px;
 }
-
 /* About */
 .about .about-content .about-text h3 {
     font-size: 24px;
@@ -493,11 +489,13 @@ h3.my-profession {
 
 .portfolio .portfolio-heiding h2 {
     color: var(--text-black-900);
+    font-size: 24px;
 }
 .portfolio .portfolio-item {
     flex: 0 0 33.33%;
     max-width: 33.33%;
     margin-bottom: 30px;
+    padding-right: 30px;
 }
 .portfolio .portfolio-item .portfolio-item-inner {
     border: 6px solid var(--bg-black-100);
