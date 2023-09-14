@@ -145,7 +145,7 @@ export default function About() {
                                 <h3 className="title">Education</h3>
                                 <div className="flex flex-row">
                                     <div className="timeline-box">
-                                        <div className="timeline shadow-dark">
+                                        <div className="timeline shadow-lg">
                                             timeline item
                                             <div className="timeline-item">
                                                 <div className="circle-dot"></div>
@@ -173,7 +173,7 @@ export default function About() {
                                 <h3 className="title">Experience</h3>
                                 <div className="flex flex-row">
                                     <div className="timeline-box">
-                                        <div className="timeline shadow-dark">
+                                        <div className="timeline shadow-lg">
                                             timeline item
                                             <div className="timeline-item">
                                                 <div className="circle-dot"></div>
