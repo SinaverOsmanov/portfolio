@@ -1,11 +1,13 @@
 import { create } from 'zustand';
 
 type ColorsState = {
-    color: string
+    color: string,
+    setColor: (color: string)=>void
 }
 
 const useStoreColors = create<ColorsState>((set) => ({
-  color: '#FC0'  
+  color: 'color1',
+  setColor: (color: string)=>set((state) => ({ color: color }))
 }));
 
 export default useStoreColors;

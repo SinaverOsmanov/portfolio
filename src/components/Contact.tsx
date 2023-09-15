@@ -6,7 +6,7 @@ export function Contact() {
             <div className="container pt-16">
                 <div className="row">
                     <div className="basis-full mb-14 section-title">
-                        <h2>Contact</h2>
+                        <h1>Contact</h1>
                     </div>
                 </div>
                 <h3 className="contact-title">Have You Any Questions ?</h3>

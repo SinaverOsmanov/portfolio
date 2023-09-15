@@ -1,4 +1,16 @@
+import { ReactElement, cloneElement } from 'react';
+import { twMerge } from 'tailwind-merge';
+import useStoreColors from '../hooks/useColors';
 import { Link } from 'react-router-dom';
+
+function ColorSkin({ children, className }: { children: ReactElement; className?: any }) {
+    const { color } = useStoreColors();
+    const mergedClass = twMerge(`text-[--${color}]`, className);
+
+    const clonedElement = cloneElement(children, { className: mergedClass });
+
+    return clonedElement;
+}
 
 export default function About() {
     return (
@@ -6,7 +18,7 @@ export default function About() {
             <div className="container pt-16">
                 <div className="flex flex-row">
                     <div className="basis-full mb-14 section-title">
-                        <h2>About Me</h2>
+                        <h1>About Me</h1>
                     </div>
                 </div>
                 <div className="flex flex-row">
