@@ -18,7 +18,7 @@ i18next
     .init({
         resources: resources,
         debug: true,
-        lng: 'ru',
+        lng: 'en',
         fallbackLng: ['en', 'ru'],
         supportedLngs: ['en', 'ru'],
         load: 'languageOnly',

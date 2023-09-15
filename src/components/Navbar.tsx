@@ -6,27 +6,27 @@ const navItems = [
     {
         to: '/',
         icon: 'fa-home',
-        children: 'Home',
+        title: 'Home',
     },
     {
         to: '/about',
         icon: 'fa-user',
-        children: 'About',
+        title: 'About',
     },
     {
         to: '/contact',
         icon: 'fa-comments',
-        children: 'Contact',
+        title: 'Contact',
     },
     {
         to: '/services',
         icon: 'fa-list',
-        children: 'Services',
+        title: 'Services',
     },
     {
         to: '/portfolio',
         icon: 'fa-briefcase',
-        children: 'Portfolio',
+        title: 'Portfolio',
     },
 ];
 
