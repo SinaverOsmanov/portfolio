@@ -1,13 +1,11 @@
 import useStoreColors from '../store/storeColors';
 import useStoreTheme from '../store/storeTheme';
 import { useState, useEffect } from 'react';
-import tailwindConfig from '../../tailwind.config.js';
 
 export default function Switcher() {
     const [openColors, setOpenColors] = useState(false);
 
     const { dark, toggleDark } = useStoreTheme();
-    const { setColor } = useStoreColors();
 
     function changeDark() {
         const isDark = document.body.classList.contains('dark');
@@ -25,29 +23,6 @@ export default function Switcher() {
         setOpenColors(prev => !prev);
     }
 
-    // useEffect(() => {
-    //     const dayNight = document.querySelector('.day-night');
-
-    //     if (dayNight) {
-    //         dayNight.addEventListener('click', () => {
-    //             dayNight.querySelector('i')?.classList.toggle('fa-sun');
-    //             dayNight.querySelector('i')?.classList.toggle('fa-moon');
-    //             document.body.classList.toggle('dark');
-    //         });
-
-    //         window.addEventListener('load', () => {
-    //             if (document.body.classList.contains('dark')) {
-    //                 dayNight.querySelector('i')?.classList.add('fa-sun');
-    //             } else {
-    //                 dayNight.querySelector('i')?.classList.add('fa-moon');
-    //             }
-    //         });
-    //     }
-    //     return () => {
-    //         window.removeEventListener('load', () => {});
-    //     };
-    // }, []);
-    // const alternateStyles = document.querySelectorAll('.alternate-style');
     function getColor(color?: string): string {
         let skinColor = '#1854b4';
         const hasColor = JSON.parse(localStorage.getItem('skin')!);
@@ -93,7 +68,7 @@ export default function Switcher() {
     }, []);
 
     return (
-        <div className={`style-switcher ${openColors ? 'open' : ''}`}>
+        <div className={`  style-switcher ${openColors ? 'open' : ''}`}>
             <div className="flex flex-col btns">
                 <div className="flex flex-row mb-2">
                     <div className="style-switcher-toggler s-icon" onClick={changeColors}>
@@ -101,14 +76,14 @@ export default function Switcher() {
                     </div>
                 </div>
                 <div className="flex flex-row">
-                    <div className="day-night s-icon" onClick={changeDark}>
+                    <div className="s-icon" onClick={changeDark}>
                         <i className={`fas fa-${dark ? 'sun' : 'moon'}`} />
                     </div>
                 </div>
             </div>
             <div className="flex flex-col">
                 <h4>Theme Colors</h4>
-                <div className={`colors`}>
+                <div className="colors">
                     <span className="color-1" onClick={() => setActiveStyle('color1')}></span>
                     <span className="color-2" onClick={() => setActiveStyle('color2')}></span>
                     <span className="color-3" onClick={() => setActiveStyle('color3')}></span>

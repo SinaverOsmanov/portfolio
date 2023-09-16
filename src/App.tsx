@@ -10,21 +10,24 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
     return (
         <BrowserRouter>
-            <div className="flex">
-                <div className="flex-col">
+            <div className="h-full min-h-full pl-96">
+                <div className="flex justify-center">
+                    {/* <div className="md:hidden fixed left-5 top-5">
+                        <i className="text-4xl fa-solid fa-burger"></i>
+                    </div> */}
                     <Navbar />
+                    <div className="flex-col">
+                        <Routes>
+                            <Route path="/" Component={Home} />
+                            <Route path="/about" Component={About} />
+                            <Route path="/services" Component={Services} />
+                            <Route path="/portfolio" Component={Portfolio} />
+                            <Route path="/contact" Component={Contact} />
+                        </Routes>
+                    </div>
                 </div>
-                <div className="flex-col grow px-56">
-                    <Routes>
-                        <Route path="/" Component={Home} />
-                        <Route path="/about" Component={About} />
-                        <Route path="/services" Component={Services} />
-                        <Route path="/portfolio" Component={Portfolio} />
-                        <Route path="/contact" Component={Contact} />
-                    </Routes>
-                </div>
+                <Switcher />
             </div>
-            <Switcher />
         </BrowserRouter>
     );
 }

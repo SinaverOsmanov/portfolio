@@ -1,6 +1,14 @@
+import { motion } from 'framer-motion';
+
 export default function Services() {
     return (
-        <section className="service section" id="services">
+        <motion.section
+            initial={{ x: '100vw' }}
+            animate={{ x: '0' }}
+            transition={{ duration: 1, bounce: true, type: 'spring', damping: 12, stiffness: 70 }}
+            className="service section"
+            id="services"
+        >
             <div className="container pt-16">
                 <div className="row">
                     <div className="basis-full mb-14 section-title">
@@ -52,6 +60,6 @@ export default function Services() {
                     {/* Service item End  */}
                 </div>
             </div>
-        </section>
+        </motion.section>
     );
 }
