@@ -11,12 +11,12 @@ function Home() {
             className="home active section"
             id="home"
         >
-            <div className="container pt-52">
-                <div className="flex flex-row">
-                    <div className="flex-col basis-7/12 home-info">
+            <div className="container md:pt-52 max-md:py-5 max-md:flex-custom-full">
+                <div className="flex flex-row flex-wrap-reverse">
+                    <div className="flex-col basis-7/12 max-md:basis-auto home-info">
                         <h3 className="hello">
                             Hello, my name is
-                            <span className="name"> Sinaver Osmanov</span>
+                            <span className="name sm:block"> Sinaver Osmanov</span>
                         </h3>
                         <h3 className="my-profession">
                             I' m a
@@ -24,7 +24,7 @@ function Home() {
                                 sequence={['Front end Developer', 1000, 'Freelancer', 1000]}
                                 wrapper="span"
                                 speed={50}
-                                className="xs:text-md"
+                                className="max-md:text-md"
                                 style={{
                                     // fontSize: '2em',
                                     display: 'inline-block',
@@ -47,8 +47,10 @@ function Home() {
                             My Linkedin
                         </button>
                     </div>
-                    <div className="flex-col basis-5/12 home-img">
-                        <img src={'./assets/hero.jpg'} alt="hero" />
+                    <div className="flex-col justify-center basis-5/12 max-md:basis-full">
+                        <div className="max-md:after:hidden max-md:before:hidden home-img w-52">
+                            <img src={'./assets/hero.jpg'} alt="hero" />
+                        </div>
                     </div>
                 </div>
             </div>

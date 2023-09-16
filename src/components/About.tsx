@@ -22,7 +22,7 @@ export default function About() {
             className="about section"
             id="about"
         >
-            <div className="container pt-16">
+            <div className="container py-16 max-md:flex-custom-full">
                 <div className="flex flex-row">
                     <div className="basis-full mb-14 section-title">
                         <h1>About Me</h1>
@@ -46,8 +46,8 @@ export default function About() {
                                 </p>
                             </div>
                         </div>
-                        <div className="flex flex-row justify-between mb-20">
-                            <div className="flex-col basis-6/12 flex-wrap personal-info">
+                        <div className="flex flex-row justify-between flex-wrap mb-20 max-sl:mb-5">
+                            <div className="flex-col basis-6/12 max-sl:basis-full flex-wrap personal-info">
                                 <div className="flex flex-row flex-wrap gap-y-5">
                                     <div className="info-item">
                                         <p>
@@ -98,58 +98,59 @@ export default function About() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex-col basis-4/12 skills">
+                            <div className="flex-col basis-4/12 max-md:basis-5/12 max-sl:mt-10 max-sl:basis-full skills">
                                 <div className="flex flex-row flex-wrap">
-                                    <div className="flex-col flex-1-full skills-item">
+                                    <h3 className="title">Skills</h3>
+                                    <div className="flex-col flex-custom-full skills-item">
                                         <h5>HTML</h5>
                                         <div className="progress">
                                             <div className="progress-in" style={{ width: '96%' }}></div>
                                             <div className="skills-percent">96%</div>
                                         </div>
                                     </div>
-                                    <div className="flex-col flex-1-full skills-item">
+                                    <div className="flex-col flex-custom-full skills-item">
                                         <h5>CSS</h5>
                                         <div className="progress">
                                             <div className="progress-in" style={{ width: '86%' }}></div>
                                             <div className="skills-percent">86%</div>
                                         </div>
                                     </div>
-                                    <div className="flex-col flex-1-full skills-item">
+                                    <div className="flex-col flex-custom-full skills-item">
                                         <h5>JavaScript</h5>
                                         <div className="progress">
                                             <div className="progress-in" style={{ width: '75%' }}></div>
                                             <div className="skills-percent">75%</div>
                                         </div>
                                     </div>
-                                    <div className="flex-col flex-1-full skills-item">
+                                    <div className="flex-col flex-custom-full skills-item">
                                         <h5>React</h5>
                                         <div className="progress">
                                             <div className="progress-in" style={{ width: '65%' }}></div>
                                             <div className="skills-percent">65%</div>
                                         </div>
                                     </div>
-                                    <div className="flex-col flex-1-full skills-item">
+                                    <div className="flex-col flex-custom-full skills-item">
                                         <h5>Vue</h5>
                                         <div className="progress">
                                             <div className="progress-in" style={{ width: '30%' }}></div>
                                             <div className="skills-percent">30%</div>
                                         </div>
                                     </div>
-                                    <div className="flex-col flex-1-full skills-item">
+                                    <div className="flex-col flex-custom-full skills-item">
                                         <h5>Git</h5>
                                         <div className="progress">
                                             <div className="progress-in" style={{ width: '80%' }}></div>
                                             <div className="skills-percent">80%</div>
                                         </div>
                                     </div>
-                                    <div className="flex-col flex-1-full skills-item">
+                                    <div className="flex-col flex-custom-full skills-item">
                                         <h5>Typescript</h5>
                                         <div className="progress">
                                             <div className="progress-in" style={{ width: '80%' }}></div>
                                             <div className="skills-percent">80%</div>
                                         </div>
                                     </div>
-                                    <div className="flex-col flex-1-full skills-item">
+                                    <div className="flex-col flex-custom-full skills-item">
                                         <h5>Bootstrap, Material UI, Antd, Blueprint.js, Tailwind</h5>
                                         <div className="progress">
                                             <div className="progress-in" style={{ width: '70%' }}></div>
@@ -159,8 +160,8 @@ export default function About() {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex flex-row justify-between">
-                            <div className="education">
+                        <div className="flex flex-row flex-wrap justify-between">
+                            <div className="max-sl:flex-custom-full flex-custom-1/2 sl:pr-5">
                                 <h3 className="title">Education</h3>
                                 <div className="flex flex-row">
                                     <div className="timeline-box">
@@ -188,7 +189,7 @@ export default function About() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="experience">
+                            <div className="max-sl:flex-custom-full max-sl:mt-10 flex-custom-1/2">
                                 <h3 className="title">Experience</h3>
                                 <div className="flex flex-row">
                                     <div className="timeline-box">

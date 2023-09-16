@@ -1,11 +1,14 @@
 /** @type {import('tailwindcss').Config} */
-import skinColorPlugin from './colorPlugin' 
 
 export default {
   darkMode: 'class',
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+        container: {
+          center: true, // Center the container horizontally
+          padding: '1rem', // Add some padding to the container
+        },
         colors: {
             color1: '#ec1839',
             color2: '#fa5b0f',
@@ -14,15 +17,20 @@ export default {
             color5: '#f021b2',
         },
         flex: {
-            'flex-1-half': '0 0 50%',
-            'flex-1-full': '0 0 100%',
+            'flex-custom-1\/4': '0 0 25%',
+            'flex-custom-1\/3': '0 0 33.3%',
+            'flex-custom-1\/2': '0 0 50%',
+            'flex-custom-full': '0 0 100%',
         },
         screens: {
             xs: '320px',
-            // => @media (min-width: 640px) { ... }
+            // => @media (min-width: 320px) { ... }
   
             sm: '425px',
-            // => @media (min-width: 640px) { ... }
+            // => @media (min-width: 425px) { ... }
+
+            sl: '580px',
+            // => @media (min-width: 320px) { ... }
   
             md: '768px',
             // => @media (min-width: 768px) { ... }
