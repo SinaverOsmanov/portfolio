@@ -1,8 +1,15 @@
 import { SubmitHandler, useForm } from 'react-hook-form';
+import { motion } from 'framer-motion';
 
 export function Contact() {
     return (
-        <section className="contact section" id="contact">
+        <motion.section
+            initial={{ x: '100vw' }}
+            animate={{ x: '0' }}
+            transition={{ duration: 1, bounce: true, type: 'spring', damping: 12, stiffness: 70 }}
+            className="contact section"
+            id="contact"
+        >
             <div className="container pt-16">
                 <div className="row">
                     <div className="basis-full mb-14 section-title">
@@ -57,7 +64,7 @@ export function Contact() {
                     <ContactForm />
                 </div>
             </div>
-        </section>
+        </motion.section>
     );
 }
 

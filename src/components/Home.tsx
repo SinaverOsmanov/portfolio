@@ -1,8 +1,16 @@
 import { TypeAnimation } from 'react-type-animation';
+import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
     return (
-        <section className="home active section" id="home">
+        <motion.section
+            initial={{ x: '100vw' }}
+            animate={{ x: '0' }}
+            transition={{ duration: 1, bounce: true, type: 'spring', damping: 12, stiffness: 70 }}
+            className="home active section"
+            id="home"
+        >
             <div className="container pt-52">
                 <div className="flex flex-row">
                     <div className="flex-col basis-7/12 home-info">
@@ -32,15 +40,19 @@ function Home() {
                             passion for design. I believe having experience in both design and development allows for
                             making the most optimal user experiences.
                         </p>
-                        <button className="btn">My Linkedin</button>
-                        {/* href="https://www.linkedin.com/in/sinaver-osmanov/" */}
+                        <button
+                            className="btn"
+                            onClick={() => (window.location.href = 'https://www.linkedin.com/in/sinaver-osmanov/')}
+                        >
+                            My Linkedin
+                        </button>
                     </div>
                     <div className="flex-col basis-5/12 home-img">
                         <img src={'./assets/hero.jpg'} alt="hero" />
                     </div>
                 </div>
             </div>
-        </section>
+        </motion.section>
     );
 }
 

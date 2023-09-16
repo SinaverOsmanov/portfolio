@@ -1,6 +1,8 @@
 import { ReactNode } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { NavItem } from './NavItem';
+import Switcher from './Switcher';
+import { motion } from 'framer-motion';
 
 const navItems = [
     {
@@ -32,15 +34,13 @@ const navItems = [
 
 export default function Navbar() {
     return (
-        <aside className="w-64 flex flex-col px-10 pt-12 h-full aside">
+        <motion.aside initial={{ x: 0 }} className="w-64 flex fixed left-0 flex-col px-10 pt-12 h-full aside">
             <div className="text-lg text-center mb-20 logo">
                 <Link to="/">
                     <span>Portfoli</span>o
                 </Link>
             </div>
-            {/* <div className="nav-toggler">
-                <span></span>
-            </div> */}
+            <Switcher />
             <nav className="nav">
                 <ul>
                     {navItems.map(item => (
@@ -48,6 +48,6 @@ export default function Navbar() {
                     ))}
                 </ul>
             </nav>
-        </aside>
+        </motion.aside>
     );
 }

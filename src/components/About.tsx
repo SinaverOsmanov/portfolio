@@ -2,6 +2,7 @@ import { ReactElement, cloneElement } from 'react';
 import { twMerge } from 'tailwind-merge';
 import useStoreColors from '../hooks/useColors';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 function ColorSkin({ children, className }: { children: ReactElement; className?: any }) {
     const { color } = useStoreColors();
@@ -14,7 +15,13 @@ function ColorSkin({ children, className }: { children: ReactElement; className?
 
 export default function About() {
     return (
-        <section className="about section" id="about">
+        <motion.section
+            initial={{ x: '100vw' }}
+            animate={{ x: '0' }}
+            transition={{ duration: 1, bounce: true, type: 'spring', damping: 12, stiffness: 70 }}
+            className="about section"
+            id="about"
+        >
             <div className="container pt-16">
                 <div className="flex flex-row">
                     <div className="basis-full mb-14 section-title">
@@ -233,6 +240,6 @@ export default function About() {
                     </div>
                 </div>
             </div>
-        </section>
+        </motion.section>
     );
 }

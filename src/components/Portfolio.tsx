@@ -1,6 +1,14 @@
+import { motion } from 'framer-motion';
+
 export default function Portfolio() {
     return (
-        <section className="portfolio section" id="portfolio">
+        <motion.section
+            initial={{ x: '100vw' }}
+            animate={{ x: '0' }}
+            transition={{ duration: 1, bounce: true, type: 'spring', damping: 12, stiffness: 70 }}
+            className="portfolio section"
+            id="portfolio"
+        >
             <div className="container pt-16">
                 <div className="row">
                     <div className="basis-full mb-14 section-title">
@@ -69,6 +77,6 @@ export default function Portfolio() {
                     {/* portfolio item end  */}
                 </div>
             </div>
-        </section>
+        </motion.section>
     );
 }

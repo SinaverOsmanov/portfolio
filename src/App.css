@@ -60,6 +60,7 @@ ul {
 h3 {
     font-weight: 700;
 }
+
 .section {
     min-height: 100vh;
     /* padding: 0 30px; */
@@ -151,17 +152,14 @@ h3 {
     border-right: 1px solid var(--bg-black-50);
     transition: all 0.3s ease;
 }
-/* .aside .logo {
-    position: absolute;
-    top: 50px;
-    text-transform: capitalize;
-} */
+
 .aside .logo a {
     color: var(--text-black-900);
     font-weight: 700;
     font-size: 30px;
     letter-spacing: 5px;
     position: relative;
+    text-transform: capitalize;
 }
 .aside .logo span {
     font-family: 'Clicker Script', cursive;
@@ -736,19 +734,20 @@ h3.my-profession {
     height: 30px;
     width: 30px;
     border-radius: 50%;
+    cursor: pointer;
 }
 .style-switcher .color-1 {
-    background: #ec1839;
+    background: var(--color1);
 }
 .style-switcher .color-2 {
-    background: #fa5b0f;
+    background: var(--color2);
 }
 .style-switcher .color-3 {
-    background: #37b182;
+    background: var(--color3);
 }
 .style-switcher .color-4 {
-    background: #1854b4;
+    background: var(--color4);
 }
 .style-switcher .color-5 {
-    background: #f021b2;
+    background: var(--color5);
 }
