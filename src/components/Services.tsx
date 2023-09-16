@@ -9,15 +9,15 @@ export default function Services() {
             className="service section"
             id="services"
         >
-            <div className="container pt-16">
+            <div className="container py-16">
                 <div className="row">
                     <div className="basis-full mb-14 section-title">
                         <h1>Services</h1>
                     </div>
                 </div>
-                <div className="row gap-x-7 justify-between">
+                <div className="row flex-wrap gap-x-7 justify-between">
                     {/* Service item Start  */}
-                    <div className="flex-col service-item">
+                    <div className="flex-col max-md:flex-custom-full service-item max-md:mb-5">
                         <div className="service-item-inner">
                             <div className="icon">
                                 <i className="fa fa-mobile-alt"></i>
@@ -31,7 +31,7 @@ export default function Services() {
                     </div>
                     {/* Service item End  */}
                     {/* Service item Start  */}
-                    <div className="flex-col service-item">
+                    <div className="flex-col max-md:flex-custom-full service-item max-md:mb-5">
                         <div className="service-item-inner">
                             <div className="icon">
                                 <i className="fa fa-palette"></i>
@@ -45,7 +45,7 @@ export default function Services() {
                     </div>
                     {/* Service item End  */}
                     {/* Service item Start  */}
-                    <div className="flex-col service-item">
+                    <div className="flex-col max-md:flex-custom-full service-item max-md:mb-5">
                         <div className="service-item-inner">
                             <div className="icon">
                                 <i className="fa fa-code"></i>
