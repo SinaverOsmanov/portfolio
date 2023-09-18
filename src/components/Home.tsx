@@ -11,14 +11,14 @@ function Home() {
             className="home active section"
             id="home"
         >
-            <div className="container md:pt-52 max-md:py-5 max-md:flex-custom-full">
-                <div className="flex flex-row flex-wrap-reverse">
-                    <div className="flex-col basis-7/12 max-md:basis-auto home-info">
+            <div className="container ls:pt-52 max-ls:py-16">
+                <div className="flex flex-row flex-wrap">
+                    <div className="flex-col basis-7/12 max-lg:basis-auto max-lg:mb-10 home-info">
                         <h3 className="hello">
                             Hello, my name is
-                            <span className="name sm:block"> Sinaver Osmanov</span>
+                            <span className="name max-sl:block"> Sinaver Osmanov</span>
                         </h3>
-                        <h3 className="my-profession">
+                        <h3 className="my-profession mb-5">
                             I' m a
                             <TypeAnimation
                                 sequence={['Front end Developer', 1000, 'Freelancer', 1000]}
@@ -47,8 +47,8 @@ function Home() {
                             My Linkedin
                         </button>
                     </div>
-                    <div className="flex-col justify-center basis-5/12 max-md:basis-full">
-                        <div className="max-md:after:hidden max-md:before:hidden home-img w-52">
+                    <div className="flex-col max-lg:basis-full basis-5/12 flex items-center justify-center">
+                        <div className="max-lg:after:hidden max-lg:before:hidden home-img w-52">
                             <img src={'./assets/hero.jpg'} alt="hero" />
                         </div>
                     </div>

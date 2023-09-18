@@ -15,9 +15,21 @@ export default function Services() {
                         <h1>Services</h1>
                     </div>
                 </div>
-                <div className="row flex-wrap gap-x-7 justify-between">
+                <div className="row max-md:flex-wrap justify-between">
                     {/* Service item Start  */}
-                    <div className="flex-col max-md:flex-custom-full service-item max-md:mb-5">
+                    <motion.div
+                        // initial={{ x: '-100vh' }}
+                        // transition={{
+                        //     delay: 0.1,
+                        //     duration: 1,
+                        //     bounce: true,
+                        //     type: 'spring',
+                        //     damping: 12,
+                        //     stiffness: 100,
+                        // }}
+                        // animate={{ x: 0 }}
+                        className="flex-custom-1/3 max-mg:flex-custom-full service-item max-mg:mb-5"
+                    >
                         <div className="service-item-inner">
                             <div className="icon">
                                 <i className="fa fa-mobile-alt"></i>
@@ -28,10 +40,22 @@ export default function Services() {
                                 successful user-facing product.
                             </p>
                         </div>
-                    </div>
+                    </motion.div>
                     {/* Service item End  */}
                     {/* Service item Start  */}
-                    <div className="flex-col max-md:flex-custom-full service-item max-md:mb-5">
+                    <motion.div
+                        // initial={{ x: '100vh' }}
+                        // transition={{
+                        //     delay: 0.3,
+                        //     duration: 1,
+                        //     bounce: true,
+                        //     type: 'spring',
+                        //     damping: 12,
+                        //     stiffness: 100,
+                        // }}
+                        // animate={{ x: 0 }}
+                        className="flex-custom-1/3 max-mg:flex-custom-full service-item max-mg:mb-5"
+                    >
                         <div className="service-item-inner">
                             <div className="icon">
                                 <i className="fa fa-palette"></i>
@@ -42,10 +66,22 @@ export default function Services() {
                                 a marketing or advertising campaign.
                             </p>
                         </div>
-                    </div>
+                    </motion.div>
                     {/* Service item End  */}
                     {/* Service item Start  */}
-                    <div className="flex-col max-md:flex-custom-full service-item max-md:mb-5">
+                    <motion.div
+                        // initial={{ x: '-100vh' }}
+                        // transition={{
+                        //     delay: 0.5,
+                        //     duration: 1,
+                        //     bounce: true,
+                        //     type: 'spring',
+                        //     damping: 12,
+                        //     stiffness: 100,
+                        // }}
+                        // animate={{ x: 0 }}
+                        className="flex-custom-1/3 max-mg:flex-custom-full service-item max-mg:mb-5"
+                    >
                         <div className="service-item-inner">
                             <div className="icon">
                                 <i className="fa fa-code"></i>
@@ -56,7 +92,7 @@ export default function Services() {
                                 perform tasks over the Internet.
                             </p>
                         </div>
-                    </div>
+                    </motion.div>
                     {/* Service item End  */}
                 </div>
             </div>

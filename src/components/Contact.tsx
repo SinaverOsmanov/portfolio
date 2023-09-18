@@ -10,7 +10,7 @@ export function Contact() {
             className="contact section"
             id="contact"
         >
-            <div className="container py-16 max-md:flex-custom-full">
+            <div className="container py-16">
                 <div className="row">
                     <div className="flex-custom-full mb-14 section-title">
                         <h1>Contact</h1>
@@ -20,7 +20,7 @@ export function Contact() {
                 <h4 className="contact-sub-title">I'M AT YOUR SERVICES</h4>
                 <div className="row flex-wrap">
                     {/* Contact info item start  */}
-                    <div className="flex-custom-1\/4 max-md:flex-custom-full contact-info-item">
+                    <div className="flex-custom-1/4 max-ls:flex-custom-1/2 max-md:flex-custom-full contact-info-item break-words">
                         <div className="icon">
                             <i className="fa fa-phone"></i>
                         </div>
@@ -29,7 +29,7 @@ export function Contact() {
                     </div>
                     {/* Contact info item end  */}
                     {/* Contact info item start  */}
-                    <div className="flex-custom-1\/4 max-md:flex-custom-full contact-info-item">
+                    <div className="flex-custom-1/4 max-ls:flex-custom-1/2 max-md:flex-custom-full contact-info-item break-words">
                         <div className="icon">
                             <i className="fa fa-map-marker-alt"></i>
                         </div>
@@ -38,7 +38,7 @@ export function Contact() {
                     </div>
                     {/* Contact info item end  */}
                     {/* Contact info item start  */}
-                    <div className="flex-custom-1\/4 max-md:flex-custom-full contact-info-item">
+                    <div className="flex-custom-1/4 max-ls:flex-custom-1/2 max-md:flex-custom-full contact-info-item break-words">
                         <div className="icon">
                             <i className="fa fa-envelope"></i>
                         </div>
@@ -47,18 +47,18 @@ export function Contact() {
                     </div>
                     {/* Contact info item end  */}
                     {/* Contact info item start  */}
-                    <div className="flex-custom-1\/4 max-md:flex-custom-full contact-info-item">
+                    <div className="flex-custom-1/4 max-ls:flex-custom-1/2 max-md:flex-custom-full contact-info-item break-words">
                         <div className="icon">
                             <i className="fa fa-globe-asia"></i>
                         </div>
                         <h4>GitHub</h4>
-                        <p>https://github.com/SinaverOsmanov</p>
-                        <p>https://github.com/SinaverFrontent</p>
+                        <p>SinaverOsmanov</p>
+                        <p>SinaverFrontent</p>
                     </div>
                     {/* Contact info item end  */}
                 </div>
                 <h3 className="contact-title">SEND ME AN EMAIL</h3>
-                <h4 className="contact-sub-title">I'M VERY RESPOSIVE TO MESSAGES</h4>
+                <h4 className="contact-sub-title">I'M VERY RESPONSIVE TO MESSAGES</h4>
                 {/* Contact Form  */}
                 <div className="row">
                     <ContactForm />

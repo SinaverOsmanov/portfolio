@@ -22,7 +22,7 @@ export default function About() {
             className="about section"
             id="about"
         >
-            <div className="container py-16 max-md:flex-custom-full">
+            <div className="container py-16">
                 <div className="flex flex-row">
                     <div className="basis-full mb-14 section-title">
                         <h1>About Me</h1>
@@ -48,43 +48,44 @@ export default function About() {
                         </div>
                         <div className="flex flex-row justify-between flex-wrap mb-20 max-sl:mb-5">
                             <div className="flex-col basis-6/12 max-sl:basis-full flex-wrap personal-info">
-                                <div className="flex flex-row flex-wrap gap-y-5">
-                                    <div className="info-item">
+                                <div className="flex flex-row flex-wrap">
+                                    <h3 className="title">Soft skills</h3>
+                                    <div className="flex-custom-full info-item mb-6">
                                         <p>
                                             RUSSIAN : <span>NATIVE</span>
                                         </p>
                                     </div>
-                                    <div className="info-item">
+                                    <div className="flex-custom-full info-item mb-6">
                                         <p>
                                             ENGLISH : <span>B2</span>
                                         </p>
                                     </div>
-                                    <div className="info-item">
+                                    <div className="flex-custom-full info-item mb-6">
                                         <p>
                                             Website : <span>www.domain.com</span>
                                         </p>
                                     </div>
-                                    <div className="info-item">
+                                    <div className="flex-custom-full info-item mb-6">
                                         <p>
                                             Email : <span>sinaver.osmanov@gmail.com</span>
                                         </p>
                                     </div>
-                                    <div className="info-item">
+                                    <div className="flex-custom-full info-item mb-6">
                                         <p>
                                             Makers Coding Bootcamp : <span>Front-End Developer</span>
                                         </p>
                                     </div>
-                                    {/* <div className="info-item">
+                                    {/* <div className="flex-custom-full info-item mb-6">
                                         <p>
                                             Phone : <span>+996(558)-755-756</span>
                                         </p>
                                     </div> */}
-                                    <div className="info-item">
+                                    <div className="flex-custom-full info-item mb-6">
                                         <p>
                                             City : <span>Evpatoria</span>
                                         </p>
                                     </div>
-                                    <div className="info-item">
+                                    <div className="flex-custom-full info-item mb-6">
                                         <p>
                                             Freelance : <span>Available</span>
                                         </p>
@@ -98,59 +99,59 @@ export default function About() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex-col basis-4/12 max-md:basis-5/12 max-sl:mt-10 max-sl:basis-full skills">
+                            <div className="flex-col basis-5/12 max-sl:mt-10 max-sl:basis-full skills">
                                 <div className="flex flex-row flex-wrap">
-                                    <h3 className="title">Skills</h3>
-                                    <div className="flex-col flex-custom-full skills-item">
+                                    <h3 className="title">Hard skills</h3>
+                                    <div className="flex-custom-full skills-item mb-6">
                                         <h5>HTML</h5>
                                         <div className="progress">
                                             <div className="progress-in" style={{ width: '96%' }}></div>
                                             <div className="skills-percent">96%</div>
                                         </div>
                                     </div>
-                                    <div className="flex-col flex-custom-full skills-item">
+                                    <div className="flex-custom-full skills-item mb-6">
                                         <h5>CSS</h5>
                                         <div className="progress">
                                             <div className="progress-in" style={{ width: '86%' }}></div>
                                             <div className="skills-percent">86%</div>
                                         </div>
                                     </div>
-                                    <div className="flex-col flex-custom-full skills-item">
+                                    <div className="flex-custom-full skills-item mb-6">
                                         <h5>JavaScript</h5>
                                         <div className="progress">
                                             <div className="progress-in" style={{ width: '75%' }}></div>
                                             <div className="skills-percent">75%</div>
                                         </div>
                                     </div>
-                                    <div className="flex-col flex-custom-full skills-item">
+                                    <div className="flex-custom-full skills-item mb-6">
                                         <h5>React</h5>
                                         <div className="progress">
                                             <div className="progress-in" style={{ width: '65%' }}></div>
                                             <div className="skills-percent">65%</div>
                                         </div>
                                     </div>
-                                    <div className="flex-col flex-custom-full skills-item">
+                                    <div className="flex-custom-full skills-item mb-6">
                                         <h5>Vue</h5>
                                         <div className="progress">
                                             <div className="progress-in" style={{ width: '30%' }}></div>
                                             <div className="skills-percent">30%</div>
                                         </div>
                                     </div>
-                                    <div className="flex-col flex-custom-full skills-item">
+                                    <div className="flex-custom-full skills-item mb-6">
                                         <h5>Git</h5>
                                         <div className="progress">
                                             <div className="progress-in" style={{ width: '80%' }}></div>
                                             <div className="skills-percent">80%</div>
                                         </div>
                                     </div>
-                                    <div className="flex-col flex-custom-full skills-item">
+                                    <div className="flex-custom-full skills-item mb-6">
                                         <h5>Typescript</h5>
                                         <div className="progress">
                                             <div className="progress-in" style={{ width: '80%' }}></div>
                                             <div className="skills-percent">80%</div>
                                         </div>
                                     </div>
-                                    <div className="flex-col flex-custom-full skills-item">
+                                    <div className="flex-custom-full skills-item mb-6">
                                         <h5>Bootstrap, Material UI, Antd, Blueprint.js, Tailwind</h5>
                                         <div className="progress">
                                             <div className="progress-in" style={{ width: '70%' }}></div>

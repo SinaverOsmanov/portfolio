@@ -35,9 +35,15 @@ export default {
             md: '768px',
             // => @media (min-width: 768px) { ... }
   
+            mg: '860px',
+            // => @media (min-width: 860px) { ... }
+
             lg: '1024px',
             // => @media (min-width: 1024px) { ... }
-  
+
+            ls: '1150px',
+            // => @media (min-width: 1150px) { ... }
+
             xl: '1440px',
             // => @media (min-width: 1280px) { ... }
   
