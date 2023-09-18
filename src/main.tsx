@@ -16,7 +16,7 @@ if (!root) {
 }
 
 ReactDOM.createRoot(root).render(
-    <BrowserRouter>
+    <BrowserRouter basename={'/portfolio'}>
         <App />
     </BrowserRouter>,
 );
