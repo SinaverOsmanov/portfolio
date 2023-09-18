@@ -1,13 +1,12 @@
 import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
 
 function Home() {
     return (
         <motion.section
             initial={{ x: '100vw' }}
             animate={{ x: '0' }}
-            transition={{ duration: 1, bounce: true, type: 'spring', damping: 12, stiffness: 70 }}
+            transition={{ duration: 3, bounce: true, type: 'spring', damping: 12, stiffness: 70 }}
             className="home active section"
             id="home"
         >
@@ -49,7 +48,7 @@ function Home() {
                     </div>
                     <div className="flex-col max-lg:basis-full basis-5/12 flex items-center justify-center">
                         <div className="max-lg:after:hidden max-lg:before:hidden home-img w-52">
-                            <img src={'./assets/hero.jpg'} alt="hero" />
+                            <img src={'./assets/avatar.png'} alt="hero" />
                         </div>
                     </div>
                 </div>

@@ -5,7 +5,7 @@ export default function Services() {
         <motion.section
             initial={{ x: '100vw' }}
             animate={{ x: '0' }}
-            transition={{ duration: 1, bounce: true, type: 'spring', damping: 12, stiffness: 70 }}
+            transition={{ duration: 3, bounce: true, type: 'spring', damping: 12, stiffness: 70 }}
             className="service section"
             id="services"
         >
@@ -28,7 +28,7 @@ export default function Services() {
                         //     stiffness: 100,
                         // }}
                         // animate={{ x: 0 }}
-                        className="flex-custom-1/3 max-mg:flex-custom-full service-item max-mg:mb-5"
+                        className="flex-custom-1/3 max-mg:flex-custom-full service-item lg:pr-3 max-mg:mb-5"
                     >
                         <div className="service-item-inner">
                             <div className="icon">
@@ -54,7 +54,7 @@ export default function Services() {
                         //     stiffness: 100,
                         // }}
                         // animate={{ x: 0 }}
-                        className="flex-custom-1/3 max-mg:flex-custom-full service-item max-mg:mb-5"
+                        className="flex-custom-1/3 max-mg:flex-custom-full service-item lg:pr-3 max-mg:mb-5"
                     >
                         <div className="service-item-inner">
                             <div className="icon">
