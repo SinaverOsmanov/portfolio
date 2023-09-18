@@ -3,7 +3,7 @@ import App from './App';
 import './i18n';
 import './index.css';
 import './App.css';
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 let root = document.getElementById('root');
 
@@ -16,7 +16,7 @@ if (!root) {
 }
 
 ReactDOM.createRoot(root).render(
-    <HashRouter>
+    <BrowserRouter>
         <App />
-    </HashRouter>,
+    </BrowserRouter>,
 );
