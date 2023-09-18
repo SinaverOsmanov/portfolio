@@ -25,7 +25,7 @@ export default function Portfolio() {
                     <div className="max-sl:flex-custom-full max-xl:flex-custom-1/2 sl:pr-3 ls:flex-custom-1/3 portfolio-item">
                         <div className="portfolio-item-inner shadow-lg">
                             <div className="portfolio-img">
-                                <img src="/assets/portfolio1.webp" alt="portfolio1" />
+                                <img src="./assets/portfolio1.webp" alt="portfolio1" />
                             </div>
                         </div>
                     </div>
@@ -34,7 +34,7 @@ export default function Portfolio() {
                     <div className="max-sl:flex-custom-full max-xl:flex-custom-1/2 sl:pr-3 ls:flex-custom-1/3 portfolio-item">
                         <div className="portfolio-item-inner shadow-lg">
                             <div className="portfolio-img">
-                                <img src="/assets/portfolio2.webp" alt="portfolio2" />
+                                <img src="./assets/portfolio2.webp" alt="portfolio2" />
                             </div>
                         </div>
                     </div>
@@ -43,7 +43,7 @@ export default function Portfolio() {
                     <div className="max-sl:flex-custom-full max-xl:flex-custom-1/2 sl:pr-3 ls:flex-custom-1/3 portfolio-item">
                         <div className="portfolio-item-inner shadow-lg">
                             <div className="portfolio-img">
-                                <img src="/assets/portfolio3.webp" alt="portfolio3" />
+                                <img src="./assets/portfolio3.webp" alt="portfolio3" />
                             </div>
                         </div>
                     </div>
@@ -52,7 +52,7 @@ export default function Portfolio() {
                     <div className="max-sl:flex-custom-full max-xl:flex-custom-1/2 sl:pr-3 ls:flex-custom-1/3 portfolio-item">
                         <div className="portfolio-item-inner shadow-lg">
                             <div className="portfolio-img">
-                                <img src="/assets/portfolio4.jpeg" alt="portfolio4" />
+                                <img src="./assets/portfolio4.jpeg" alt="portfolio4" />
                             </div>
                         </div>
                     </div>
@@ -61,7 +61,7 @@ export default function Portfolio() {
                     <div className="max-sl:flex-custom-full max-xl:flex-custom-1/2 sl:pr-3 ls:flex-custom-1/3 portfolio-item">
                         <div className="portfolio-item-inner shadow-lg">
                             <div className="portfolio-img">
-                                <img src="/assets/portfolio5.webp" alt="portfolio5" />
+                                <img src="./assets/portfolio5.webp" alt="portfolio5" />
                             </div>
                         </div>
                     </div>
@@ -70,7 +70,7 @@ export default function Portfolio() {
                     <div className="max-sl:flex-custom-full max-xl:flex-custom-1/2 sl:pr-3 ls:flex-custom-1/3 portfolio-item">
                         <div className="portfolio-item-inner shadow-lg">
                             <div className="portfolio-img">
-                                <img src="/assets/portfolio6.webp" alt="portfolio6" />
+                                <img src="./assets/portfolio6.webp" alt="portfolio6" />
                             </div>
                         </div>
                     </div>
