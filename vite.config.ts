@@ -16,4 +16,7 @@ export default defineConfig({
     css: {
         postcss: PostCSSConfig, // Use the imported PostCSS configuration
     },
+    build: {
+        outDir: 'build'
+    }
 });
