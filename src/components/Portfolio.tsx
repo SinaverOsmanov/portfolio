@@ -9,7 +9,7 @@ export default function Portfolio() {
             className="portfolio section"
             id="portfolio"
         >
-            <div className="container py-16 max-md:flex-custom-full">
+            <div className="container py-16">
                 <div className="row">
                     <div className="flex-custom-full mb-14 section-title">
                         <h1>Portfolio</h1>
@@ -22,7 +22,7 @@ export default function Portfolio() {
                 </div>
                 <div className="row flex-wrap gap-y-3">
                     {/* portfolio item start  */}
-                    <div className="max-sl:flex-custom-full max-md:flex-custom-1/2 sl:pr-3 flex-custom-1/3 portfolio-item">
+                    <div className="max-sl:flex-custom-full max-xl:flex-custom-1/2 sl:pr-3 ls:flex-custom-1/3 portfolio-item">
                         <div className="portfolio-item-inner shadow-lg">
                             <div className="portfolio-img">
                                 <img src="/assets/portfolio1.webp" alt="portfolio1" />
@@ -31,7 +31,7 @@ export default function Portfolio() {
                     </div>
                     {/* portfolio item end  */}
                     {/* portfolio item start  */}
-                    <div className="max-sl:flex-custom-full max-md:flex-custom-1/2 flex-custom-1/3 portfolio-item">
+                    <div className="max-sl:flex-custom-full max-xl:flex-custom-1/2 sl:pr-3 ls:flex-custom-1/3 portfolio-item">
                         <div className="portfolio-item-inner shadow-lg">
                             <div className="portfolio-img">
                                 <img src="/assets/portfolio2.webp" alt="portfolio2" />
@@ -40,7 +40,7 @@ export default function Portfolio() {
                     </div>
                     {/* portfolio item end  */}
                     {/* portfolio item start  */}
-                    <div className="max-sl:flex-custom-full max-md:flex-custom-1/2 sl:pr-3 flex-custom-1/3 portfolio-item">
+                    <div className="max-sl:flex-custom-full max-xl:flex-custom-1/2 sl:pr-3 ls:flex-custom-1/3 portfolio-item">
                         <div className="portfolio-item-inner shadow-lg">
                             <div className="portfolio-img">
                                 <img src="/assets/portfolio3.webp" alt="portfolio3" />
@@ -49,7 +49,7 @@ export default function Portfolio() {
                     </div>
                     {/* portfolio item end  */}
                     {/* portfolio item start  */}
-                    <div className="max-sl:flex-custom-full max-md:flex-custom-1/2 flex-custom-1/3 portfolio-item">
+                    <div className="max-sl:flex-custom-full max-xl:flex-custom-1/2 sl:pr-3 ls:flex-custom-1/3 portfolio-item">
                         <div className="portfolio-item-inner shadow-lg">
                             <div className="portfolio-img">
                                 <img src="/assets/portfolio4.jpeg" alt="portfolio4" />
@@ -58,7 +58,7 @@ export default function Portfolio() {
                     </div>
                     {/* portfolio item end  */}
                     {/* portfolio item start  */}
-                    <div className="max-sl:flex-custom-full max-md:flex-custom-1/2 sl:pr-3 flex-custom-1/3 portfolio-item">
+                    <div className="max-sl:flex-custom-full max-xl:flex-custom-1/2 sl:pr-3 ls:flex-custom-1/3 portfolio-item">
                         <div className="portfolio-item-inner shadow-lg">
                             <div className="portfolio-img">
                                 <img src="/assets/portfolio5.webp" alt="portfolio5" />
@@ -67,7 +67,7 @@ export default function Portfolio() {
                     </div>
                     {/* portfolio item end  */}
                     {/* portfolio item start  */}
-                    <div className="max-sl:flex-custom-full max-md:flex-custom-1/2 flex-custom-1/3 portfolio-item">
+                    <div className="max-sl:flex-custom-full max-xl:flex-custom-1/2 sl:pr-3 ls:flex-custom-1/3 portfolio-item">
                         <div className="portfolio-item-inner shadow-lg">
                             <div className="portfolio-img">
                                 <img src="/assets/portfolio6.webp" alt="portfolio6" />

@@ -68,7 +68,7 @@ export default function Switcher() {
     }, []);
 
     return (
-        <div className={`max-md:hidden style-switcher ${openColors ? 'open' : ''}`}>
+        <div className={`max-lg:hidden style-switcher ${openColors ? 'open' : ''}`}>
             <div className="flex flex-col btns">
                 <div className="flex flex-row mb-2">
                     <div className="style-switcher-toggler s-icon" onClick={changeColors}>
