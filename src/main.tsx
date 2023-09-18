@@ -3,6 +3,7 @@ import App from './App';
 import './i18n';
 import './index.css';
 import './App.css';
+import { BrowserRouter } from 'react-router-dom';
 
 let root = document.getElementById('root');
 
@@ -15,7 +16,7 @@ if (!root) {
 }
 
 ReactDOM.createRoot(root).render(
-    // <React.StrictMode>
-    <App />,
-    // </React.StrictMode>,
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>,
 );
