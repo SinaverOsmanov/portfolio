@@ -18,7 +18,7 @@ export default function About() {
         <motion.section
             initial={{ x: '100vw' }}
             animate={{ x: '0' }}
-            transition={{ duration: 3, bounce: true, type: 'spring', damping: 12, stiffness: 70 }}
+            transition={{ duration: 1, bounce: false, type: 'spring', damping: 15, stiffness: 70 }}
             className="about section"
             id="about"
         >

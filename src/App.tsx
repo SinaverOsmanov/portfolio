@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import About from './components/About';
-import Home from './components/Home';
+import { Routes, Route } from 'react-router-dom';
+import About from './pages/About';
+import Home from './pages/Home';
 import Switcher from './components/Switcher';
-import Portfolio from './components/Portfolio';
-import Services from './components/Services';
-import { Contact } from './components/Contact';
+import Portfolio from './pages/Portfolio';
+import Services from './pages/Services';
+import Contact from './pages/Contact';
 import { Navigation } from './components/Navigation';
 
 function App() {
