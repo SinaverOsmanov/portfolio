@@ -68,17 +68,17 @@ export default function Switcher() {
     }, []);
 
     return (
-        <div className={`max-lg:hidden style-switcher ${openColors ? 'open' : ''}`}>
+        <div className={`max-lg:top-20 top-5 style-switcher ${openColors ? 'open' : ''}`}>
             <div className="flex flex-col btns">
                 <div className="flex flex-row mb-2">
-                    <div className="style-switcher-toggler s-icon" onClick={changeColors}>
+                    <button className="style-switcher-toggler s-icon shadow-md" onClick={changeColors}>
                         <i className="fas fa-cog fa-spin"></i>
-                    </div>
+                    </button>
                 </div>
                 <div className="flex flex-row">
-                    <div className="s-icon" onClick={changeDark}>
+                    <button className="s-icon shadow-md" onClick={changeDark}>
                         <i className={`fas fa-${dark ? 'sun' : 'moon'}`} />
-                    </div>
+                    </button>
                 </div>
             </div>
             <div className="flex flex-col">

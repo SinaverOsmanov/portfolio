@@ -446,9 +446,9 @@ h3.my-profession {
 
 /* service */
 
-.service .service-item:not(:last-child) {
+/* .service .service-item:not(:last-child) {
     padding-right: 10px;
-}
+} */
 
 .service .service-item .service-item-inner {
     background-color: var(--bg-black-100);
@@ -596,7 +596,6 @@ h3.my-profession {
 .style-switcher {
     position: fixed;
     right: 0px;
-    top: 60px;
     padding: 15px;
     width: 200px;
     border: 1px solid var(--bg-black-50);
@@ -622,7 +621,7 @@ h3.my-profession {
     background-color: var(--bg-black-100);
     color: var(--text-black-900);
     right: 200px;
-    border: 1px solid var(--bg-black-50);
+    border: 1px solid var(--bg-black-100);
     /* margin-right: 25px; */
     cursor: pointer;
     transition: all 0.3s ease;
