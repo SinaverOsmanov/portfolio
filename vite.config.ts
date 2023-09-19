@@ -15,21 +15,24 @@ export default defineConfig({
           '@': path.resolve(__dirname, './src'),
         },
       },
-    base: '/portfolio/',
+    base: '/portfolio',
     css: {
         postcss: PostCSSConfig, // Use the imported PostCSS configuration
     },
     build: {
+        sourcemap: true,
         outDir: 'build',
         minify: 'esbuild', // Use esbuild for minification (faster)
         rollupOptions: {
             output: {
+                assetFileNames: 'assets/[name].[ext]',
                 manualChunks: {
                     react: ['react', 'react-dom'], // Separate React and React DOM
                 },
             },
         },
     },
+    assetsInclude: ['src/assets/**/*'],
     optimizeDeps: {
         include: ['react', 'react-dom'], // Optimize React dependencies
     },
