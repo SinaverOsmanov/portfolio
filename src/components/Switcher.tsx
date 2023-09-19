@@ -74,7 +74,7 @@ export default function Switcher() {
                         <i className={`fas fa-${dark ? 'sun' : 'moon'}`} />
                     </button>
                 </div>
-                <div className={`flex flex-row transition-all duration-500 relative overflow-hidden shadow-md rounded-full ${openColors ? 'h-[220px]' : 'h-10'}`}>
+                <div className={`bg-[color:var(--bg-black-100)] flex flex-row transition-all duration-500 relative overflow-hidden shadow-md rounded-full ${openColors ? 'h-[220px]' : 'h-10'}`}>
                     <button className="style-switcher-toggler z-20 s-icon" onClick={changeColors}>
                         <i className="fas fa-cog fa-spin"></i>
                     </button>
