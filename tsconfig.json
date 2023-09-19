@@ -15,8 +15,17 @@
         "isolatedModules": true,
         "noEmit": true,
         "jsx": "react-jsx",
-        "baseUrl": "src",
-        "types": ["vite/client"]
+        "baseUrl": ".",
+        "types": ["vite/client"],
+        "paths": {
+            "@components/*": ["src/components/*"],
+            "@assets/*": ["src/assets/*"],
+            "@locales/*": ["src/locales/*"],
+            "@store/*": ["src/store/*"],
+            "@pages/*": ["src/pages/*"],
+            "@hooks/*": ["src/hooks/*"],
+            "@/*": ["src/*"]
+        }
     },
     "include": ["./src"]
 }

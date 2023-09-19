@@ -1,17 +1,8 @@
 import { ReactElement, cloneElement } from 'react';
 import { twMerge } from 'tailwind-merge';
-import useStoreColors from '../hooks/useColors';
+import useStoreColors from '@hooks/useColors';
 import { Link } from 'react-router-dom';
 import { LazyMotion, domAnimation, m } from 'framer-motion';
-
-function ColorSkin({ children, className }: { children: ReactElement; className?: any }) {
-    const { color } = useStoreColors();
-    const mergedClass = twMerge(`text-[--${color}]`, className);
-
-    const clonedElement = cloneElement(children, { className: mergedClass });
-
-    return clonedElement;
-}
 
 export default function About() {
     return (
@@ -76,11 +67,6 @@ export default function About() {
                                                 Makers Coding Bootcamp : <span>Front-End Developer</span>
                                             </p>
                                         </div>
-                                        {/* <div className="flex-custom-full info-item mb-6">
-                                        <p>
-                                            Phone : <span>+996(558)-755-756</span>
-                                        </p>
-                                    </div> */}
                                         <div className="flex-custom-full info-item mb-6">
                                             <p>
                                                 City : <span>Evpatoria</span>
@@ -162,7 +148,7 @@ export default function About() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex flex-row flex-wrap justify-between">
+                            {/* <div className="flex flex-row flex-wrap justify-between">
                                 <div className="max-sl:flex-custom-full flex-custom-1/2 sl:pr-5">
                                     <h3 className="title">Education</h3>
                                     <div className="flex flex-row">
@@ -239,7 +225,7 @@ export default function About() {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

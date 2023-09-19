@@ -3,22 +3,7 @@ import { useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
 import { motion } from 'framer-motion';
 
-const draw = {
-    hidden: { pathLength: 0, opacity: 0 },
-    visible: (i: number) => {
-        const delay = 1 + i * 0.5;
-        return {
-            pathLength: 1,
-            opacity: 1,
-            transition: {
-                pathLength: { delay, type: 'spring', duration: 1.5, bounce: 0 },
-                opacity: { delay, duration: 0.01 },
-            },
-        };
-    },
-};
-
-export function Navigation({ isOpen, setOpen }: { isOpen: boolean; setOpen: (payload: boolean) => void }) {
+export default function Navigation({ isOpen, setOpen }: { isOpen: boolean; setOpen: (payload: boolean) => void }) {
     const { pathname } = useLocation();
 
     useEffect(() => {
@@ -28,7 +13,7 @@ export function Navigation({ isOpen, setOpen }: { isOpen: boolean; setOpen: (pay
     return (
         <aside className="z-10">
             <button
-                className="menu-button lg:hidden fixed right-5 top-5 z-20 p-2 rounded-lg shadow-md"
+                className="menu-button lg:hidden fixed right-5 top-5 z-50 p-2 rounded-lg shadow-md"
                 onClick={() => setOpen(!isOpen)}
             >
                 <motion.svg
@@ -42,12 +27,11 @@ export function Navigation({ isOpen, setOpen }: { isOpen: boolean; setOpen: (pay
                 >
                     {isOpen ? (
                         <motion.path
-                            // fillRule="evenodd"
-                            // clipRule="evenodd"
+                            fillRule="evenodd"
+                            clipRule="evenodd"
                             d="M16.9498 8.46447C17.3404 8.07394 17.3404 7.44078 16.9498 7.05025C16.5593 6.65973 15.9261 6.65973 15.5356 7.05025L12.0001 10.5858L8.46455 7.05025C8.07402 6.65973 7.44086 6.65973 7.05033 7.05025C6.65981 7.44078 6.65981 8.07394 7.05033 8.46447L10.5859 12L7.05033 15.5355C6.65981 15.9261 6.65981 16.5592 7.05033 16.9497C7.44086 17.3403 8.07402 17.3403 8.46455 16.9497L12.0001 13.4142L15.5356 16.9497C15.9261 17.3403 16.5593 17.3403 16.9498 16.9497C17.3404 16.5592 17.3404 15.9261 16.9498 15.5355L13.4143 12L16.9498 8.46447Z"
                             fill="#000000"
                             stroke="#000000"
-                            variants={draw}
                         />
                     ) : (
                         <>
@@ -59,6 +43,12 @@ export function Navigation({ isOpen, setOpen }: { isOpen: boolean; setOpen: (pay
                 </motion.svg>
             </button>
             <Navbar isOpen={isOpen} />
+            {isOpen && (
+                <div
+                    onClick={() => setOpen(false)}
+                    className="bg-shadow absolute top-0 left-0 right-0 bottom-0 backdrop-blur-lg backdrop-brightness-50 z-40 shadow-md"
+                ></div>
+            )}
         </aside>
     );
 }
