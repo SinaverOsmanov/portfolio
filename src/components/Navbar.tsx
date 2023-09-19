@@ -77,6 +77,7 @@ const variants = {
 export default function Navbar({ isOpen }: { isOpen: boolean }) {
     return (
         <motion.div
+            transition={{ duration: 1, bounce: false, type: 'spring', damping: 15, stiffness: 70 }}
             className={`aside ${
                 isOpen ? 'max-lg:translate-x-0' : 'max-lg:-translate-x-full'
             }  w-64 flex fixed left-0 flex-col px-10 pt-12 h-full`}

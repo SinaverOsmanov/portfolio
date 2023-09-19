@@ -1,12 +1,19 @@
-import { useState } from 'react';
+import { lazy, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import About from './pages/About';
-import Home from './pages/Home';
+
 import Switcher from './components/Switcher';
+import Home from './pages/Home';
+import About from './pages/About';
 import Portfolio from './pages/Portfolio';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 import { Navigation } from './components/Navigation';
+
+// const Home = lazy(() => import('./pages/Home'));
+// const About = lazy(() => import('./pages/About'));
+// const Portfolio = lazy(() => import('./pages/Portfolio'));
+// const Services = lazy(() => import('./pages/Services'));
+// const Contact = lazy(() => import('./pages/Contact'));
 
 function App() {
     const [isOpenMenu, setIsOpenMenu] = useState(false);

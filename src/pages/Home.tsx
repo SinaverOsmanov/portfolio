@@ -16,20 +16,15 @@ function Home() {
                         <div className="flex-col basis-7/12 max-lg:basis-auto max-lg:mb-10 home-info">
                             <h3 className="hello">
                                 Hello, my name is
-                                <span className="name max-sl:block"> Sinaver Osmanov</span>
+                                <span className="name sl:ml-2 max-sl:block">Sinaver Osmanov</span>
                             </h3>
-                            <h3 className="my-profession mb-5">
-                                I' m a
+                            <h3 className="my-profession max-sl:h-20 mb-5">
+                                I'm a
                                 <TypeAnimation
                                     sequence={['Front end Developer', 1000, 'Freelancer', 1000]}
                                     wrapper="span"
                                     speed={50}
-                                    className="max-md:text-md"
-                                    style={{
-                                        fontSize: '2em',
-                                        display: 'inline-block',
-                                        marginLeft: 10,
-                                    }}
+                                    className="ml-2"
                                     repeat={Infinity}
                                 />
                             </h3>
