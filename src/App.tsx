@@ -1,13 +1,14 @@
-import { lazy, useState } from 'react';
+import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import Switcher from './components/Switcher';
-import Home from './pages/Home';
-import About from './pages/About';
-import Portfolio from './pages/Portfolio';
-import Services from './pages/Services';
-import Contact from './pages/Contact';
-import { Navigation } from './components/Navigation';
+import Switcher from '@components/Switcher';
+import Navigation from '@components/Navigation';
+import Home from '@pages/Home';
+import About from '@pages/About';
+import Services from '@pages/Services';
+import Portfolio from '@pages/Portfolio';
+import Contact from '@pages/Contact';
+import ScrollToTop from '@components/ScrollToTop';
 
 // const Home = lazy(() => import('./pages/Home'));
 // const About = lazy(() => import('./pages/About'));
@@ -26,10 +27,7 @@ function App() {
         <div className="h-full min-h-full">
             <div className={`flex`}>
                 <Navigation isOpen={isOpenMenu} setOpen={handleOpenMenu} />
-                <div
-                    className={`flex-col flex-custom-full lg:pl-64  ${isOpenMenu ? 'blur-md' : ''}`}
-                    onClick={() => setIsOpenMenu(false)}
-                >
+                <div className={`flex-col flex-custom-full lg:pl-64`} onClick={() => setIsOpenMenu(false)}>
                     <Routes>
                         <Route path="/" Component={Home} />
                         <Route path="/about" Component={About} />
@@ -40,6 +38,7 @@ function App() {
                 </div>
             </div>
             <Switcher />
+            <ScrollToTop />
         </div>
     );
 }

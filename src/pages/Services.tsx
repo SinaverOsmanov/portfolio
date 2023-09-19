@@ -18,19 +18,7 @@ export default function Services() {
                     </div>
                     <div className="row max-md:flex-wrap justify-between">
                         {/* Service item Start  */}
-                        <m.div
-                            // initial={{ x: '-100vh' }}
-                            // transition={{
-                            //     delay: 0.1,
-                            //     duration: 1,
-                            //     bounce: true,
-                            //     type: 'spring',
-                            //     damping: 12,
-                            //     stiffness: 100,
-                            // }}
-                            // animate={{ x: 0 }}
-                            className="flex-custom-1/3 max-mg:flex-custom-full service-item mg:pr-3 max-mg:mb-5"
-                        >
+                        <m.div className="flex-custom-1/3 max-mg:flex-custom-full service-item mg:pr-3 max-mg:mb-5">
                             <div className="service-item-inner">
                                 <div className="icon">
                                     <i className="fa fa-mobile-alt"></i>
@@ -44,19 +32,7 @@ export default function Services() {
                         </m.div>
                         {/* Service item End  */}
                         {/* Service item Start  */}
-                        <m.div
-                            // initial={{ x: '100vh' }}
-                            // transition={{
-                            //     delay: 0.3,
-                            //     duration: 1,
-                            //     bounce: true,
-                            //     type: 'spring',
-                            //     damping: 12,
-                            //     stiffness: 100,
-                            // }}
-                            // animate={{ x: 0 }}
-                            className="flex-custom-1/3 max-mg:flex-custom-full service-item mg:pr-3 max-mg:mb-5"
-                        >
+                        <m.div className="flex-custom-1/3 max-mg:flex-custom-full service-item mg:pr-3 max-mg:mb-5">
                             <div className="service-item-inner">
                                 <div className="icon">
                                     <i className="fa fa-palette"></i>
@@ -70,19 +46,7 @@ export default function Services() {
                         </m.div>
                         {/* Service item End  */}
                         {/* Service item Start  */}
-                        <m.div
-                            // initial={{ x: '-100vh' }}
-                            // transition={{
-                            //     delay: 0.5,
-                            //     duration: 1,
-                            //     bounce: true,
-                            //     type: 'spring',
-                            //     damping: 12,
-                            //     stiffness: 100,
-                            // }}
-                            // animate={{ x: 0 }}
-                            className="flex-custom-1/3 max-mg:flex-custom-full service-item max-mg:mb-5"
-                        >
+                        <m.div className="flex-custom-1/3 max-mg:flex-custom-full service-item max-mg:mb-5">
                             <div className="service-item-inner">
                                 <div className="icon">
                                     <i className="fa fa-code"></i>
