@@ -25,7 +25,7 @@ function Home() {
                                 speed={50}
                                 className="max-md:text-md"
                                 style={{
-                                    // fontSize: '2em',
+                                    fontSize: '2em',
                                     display: 'inline-block',
                                     marginLeft: 10,
                                 }}

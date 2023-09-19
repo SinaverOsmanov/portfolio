@@ -22,10 +22,15 @@ export default function Contact() {
                     {/* Contact info item start  */}
                     <div className="flex-custom-1/4 max-ls:flex-custom-1/2 max-md:flex-custom-full contact-info-item break-words">
                         <div className="icon">
-                            <i className="fa fa-phone"></i>
+                            <i className="fa fa-brands fa-telegram"></i>
                         </div>
-                        <h4>Call Me On</h4>
-                        <p>+996(558)-755-756</p>
+                        <h4>Write Me On</h4>
+                        <p
+                            className="cursor-pointer hover:underline hover:text-[var(--skin-color)]"
+                            onClick={() => (window.location.href = 'https://t.me/mr_osmanov')}
+                        >
+                            @Mr_Osmanov
+                        </p>
                     </div>
                     {/* Contact info item end  */}
                     {/* Contact info item start  */}
@@ -43,7 +48,12 @@ export default function Contact() {
                             <i className="fa fa-envelope"></i>
                         </div>
                         <h4>Email</h4>
-                        <p>sinaver.osmanov@gmail.com</p>
+                        <p
+                            className="cursor-pointer hover:underline hover:text-[var(--skin-color)]"
+                            onClick={() => (window.location.href = 'https://github.com/SinaverOsmanov')}
+                        >
+                            sinaver.osmanov@gmail.com
+                        </p>
                     </div>
                     {/* Contact info item end  */}
                     {/* Contact info item start  */}
@@ -52,8 +62,18 @@ export default function Contact() {
                             <i className="fa fa-globe-asia"></i>
                         </div>
                         <h4>GitHub</h4>
-                        <p>SinaverOsmanov</p>
-                        <p>SinaverFrontent</p>
+                        <p
+                            className="cursor-pointer hover:underline hover:text-[var(--skin-color)]"
+                            onClick={() => (window.location.href = 'https://github.com/SinaverOsmanov')}
+                        >
+                            SinaverOsmanov
+                        </p>
+                        <p
+                            className="cursor-pointer hover:underline hover:text-[var(--skin-color)]"
+                            onClick={() => (window.location.href = 'https://github.com/SinaverFrontent')}
+                        >
+                            SinaverFrontent
+                        </p>
                     </div>
                     {/* Contact info item end  */}
                 </div>
