@@ -9,7 +9,7 @@ export default defineConfig({
         jsxFactory: 'React.createElement',
         jsxFragment: 'React.Fragment',
       },
-      base: './',
+      base: '/portfolio/',
     css: {
         postcss: PostCSSConfig, // Use the imported PostCSS configuration
     },
