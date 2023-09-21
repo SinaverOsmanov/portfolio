@@ -11,13 +11,27 @@
         "preview": "vite preview",
         "prettier-format": "prettier --config .prettierrc '*/**/*.ts' --write",
         "predeploy": "npm run build",
-        "deploy": "gh-pages -d build"
+        "deploy": "gh-pages -d build",
+        "i18next-resources-for-ts": "i18next-resources-for-ts toc -i ./src/i18n/en -o ./src/@types/resources.ts"
     },
+    "browserslist": {
+        "production": [
+          ">0.2%",
+          "not dead",
+          "not op_mini all"
+        ],
+        "development": [
+          "last 1 chrome version",
+          "last 1 firefox version",
+          "last 1 safari version"
+        ]
+      },
     "dependencies": {
         "framer-motion": "^10.16.4",
         "i18next": "^23.5.0",
         "i18next-browser-languagedetector": "^7.1.0",
         "i18next-http-backend": "^2.2.2",
+        "i18next-resources-for-ts": "^1.3.3",
         "locizer": "^3.3.10",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",

@@ -1,78 +1,36 @@
-import { ReactNode, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { NavItem } from './NavItem';
-import Switcher from './Switcher';
-import { motion, stagger, useAnimate } from 'framer-motion';
+import { motion } from 'framer-motion';
+import { NavItemType } from '@/@types/types';
 
-const navItems = [
+const navItems: NavItemType[] = [
     {
         to: '/',
         icon: 'fa-home',
-        title: 'Home',
+        title: 'home',
     },
     {
         to: '/about',
         icon: 'fa-user',
-        title: 'About',
+        title: 'about',
     },
     {
         to: '/contact',
         icon: 'fa-comments',
-        title: 'Contact',
+        title: 'contact',
     },
     {
         to: '/services',
         icon: 'fa-list',
-        title: 'Services',
+        title: 'services',
     },
     {
         to: '/portfolio',
         icon: 'fa-briefcase',
-        title: 'Portfolio',
+        title: 'portfolio',
     },
 ];
 
-const staggerMenuItems = stagger(0.1, { startDelay: 0.15 });
-
-function useMenuAnimation(isOpen: boolean) {
-    const [scope, animate] = useAnimate();
-
-    useEffect(() => {
-        animate('.arrow', { rotate: isOpen ? 180 : 0 }, { duration: 0.2 });
-
-        animate(
-            'ul',
-            {
-                clipPath: isOpen ? 'inset(0% 0% 0% 0% round 10px)' : 'inset(10% 50% 90% 50% round 10px)',
-            },
-            {
-                type: 'spring',
-                bounce: 0,
-                duration: 0.5,
-            },
-        );
-
-        animate(
-            'li',
-            isOpen ? { opacity: 1, scale: 1, filter: 'blur(0px)' } : { opacity: 0, scale: 0.3, filter: 'blur(20px)' },
-            {
-                duration: 0.2,
-                delay: isOpen ? staggerMenuItems : 0,
-            },
-        );
-    }, [isOpen]);
-
-    return scope;
-}
-
-const variants = {
-    open: {
-        transition: { staggerChildren: 0.07, delayChildren: 0.2 },
-    },
-    closed: {
-        transition: { staggerChildren: 0.05, staggerDirection: -1 },
-    },
-};
 
 export default function Navbar({ isOpen }: { isOpen: boolean }) {
     return (
@@ -89,11 +47,11 @@ export default function Navbar({ isOpen }: { isOpen: boolean }) {
             </div>
             {/* <Switcher /> */}
             <nav className="nav">
-                <motion.ul variants={variants}>
-                    {navItems.map(item => (
+                <ul>
+                    {navItems.map((item) => (
                         <NavItem key={item.to} {...item} />
                     ))}
-                </motion.ul>
+                </ul>
             </nav>
         </motion.div>
     );

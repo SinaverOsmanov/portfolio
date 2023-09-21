@@ -25,7 +25,7 @@ function App() {
 
     return (
         <div className="h-full min-h-full">
-            <div className={`flex`}>
+            <div className={``}>
                 <Navigation isOpen={isOpenMenu} setOpen={handleOpenMenu} />
                 <div className={`flex-col flex-custom-full lg:pl-64`} onClick={() => setIsOpenMenu(false)}>
                     <Routes>

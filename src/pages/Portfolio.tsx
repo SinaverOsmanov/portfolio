@@ -1,6 +1,9 @@
 import { LazyMotion, domAnimation, m } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 export default function Portfolio() {
+    const {t} = useTranslation()
+    
     return (
         <LazyMotion features={domAnimation}>
             <m.section
@@ -13,12 +16,12 @@ export default function Portfolio() {
                 <div className="container py-16">
                     <div className="row">
                         <div className="flex-custom-full mb-14 section-title">
-                            <h1>Portfolio</h1>
+                            <h1>{t('portfolio-page.title')}</h1>
                         </div>
                     </div>
                     <div className="row mb-10">
                         <div className="portfolio-heiding">
-                            <h2 className="font-bold">My Last Projects :</h2>
+                            <h2 className="font-bold">{t('portfolio-page.projects-title')}:</h2>
                         </div>
                     </div>
                     <div className="row flex-wrap gap-y-3">

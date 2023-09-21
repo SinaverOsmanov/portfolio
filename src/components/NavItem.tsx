@@ -1,39 +1,17 @@
+import { NavItemType } from '@/@types/types';
+import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
-import { motion } from 'framer-motion';
 
-const variants = {
-    open: {
-        y: 0,
-        opacity: 1,
-        transition: {
-            y: { stiffness: 1000, velocity: -100 },
-        },
-    },
-    closed: {
-        y: 50,
-        opacity: 0,
-        transition: {
-            y: { stiffness: 1000 },
-        },
-    },
-};
-
-type NavItemProps = { to: string; icon: string; title: string };
-
-export function NavItem({ to, icon, title }: NavItemProps) {
+export function NavItem({ to, icon, title }:NavItemType ) {
     const { pathname } = useLocation();
+    const {t} = useTranslation()
 
     return (
-        <motion.li
-            variants={variants}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            className="border-b-[1px] border-gray-300 py-3"
-        >
+        <li className="border-b-[1px] border-gray-300 py-3">
             <Link to={to} className={pathname === to ? 'active' : ''}>
                 <i className={`fa ${icon} mr-4 w-4`}></i>
-                {title}
+                {t(`navigation.nav-list.${title}`)}
             </Link>
-        </motion.li>
+        </li>
     );
 }

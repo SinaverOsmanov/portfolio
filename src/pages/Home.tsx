@@ -1,7 +1,11 @@
 import { TypeAnimation } from 'react-type-animation';
 import { LazyMotion, domAnimation, m } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 function Home() {
+
+    const {t} = useTranslation()
+
     return (
         <LazyMotion features={domAnimation}>
             <m.section
@@ -15,13 +19,13 @@ function Home() {
                     <div className="flex flex-row flex-wrap">
                         <div className="flex-col basis-7/12 max-lg:basis-auto max-lg:mb-10 home-info">
                             <h3 className="hello">
-                                Hello, my name is
-                                <span className="name sl:ml-2 max-sl:block">Sinaver Osmanov</span>
+                                {t('home-page.title')}
+                                <span className="name sl:ml-2 max-sl:block">{t('name')}</span>
                             </h3>
                             <h3 className="my-profession max-sl:h-20 mb-5">
-                                I'm a
+                                {t('home-page.profession.I-m')}
                                 <TypeAnimation
-                                    sequence={['Front end Developer', 1000, 'Freelancer', 1000]}
+                                    sequence={[t('home-page.profession.list.item1'), 1000, t('home-page.profession.list.item2'), 1000]}
                                     wrapper="span"
                                     speed={50}
                                     className="ml-2"
@@ -29,17 +33,13 @@ function Home() {
                                 />
                             </h3>
                             <p>
-                                I work to make a better web; one that is fast, easy to use, beautiful, accessible to
-                                all, and frustration-free. I create successful websites that are fast, easy to use, and
-                                built with best practices. My main experience is in front-end development but I also
-                                have a passion for design. I believe having experience in both design and development
-                                allows for making the most optimal user experiences.
+                                {t('home-page.description')}
                             </p>
                             <button
                                 className="btn"
                                 onClick={() => (window.location.href = 'https://www.linkedin.com/in/sinaver-osmanov/')}
                             >
-                                My Linkedin
+                                {t('home-page.linkedIn-button')}
                             </button>
                         </div>
                         <div className="flex-col max-lg:basis-full basis-5/12 flex items-center justify-center">
