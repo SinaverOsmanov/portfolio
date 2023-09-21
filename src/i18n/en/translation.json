@@ -1,0 +1,84 @@
+{
+    "name": "Sinaver Osmanov",
+    "profession": "Web developer",
+    "home-page": {
+        "title": "Hello, my name is",
+        "profession": {
+            "I-m": "I'm a",
+            "list": {"item1":"Freelanser", "item2":"Front end Developer"}
+        },
+        "description": "Dear portfolio readers, I am excited to share with you my hard and soft skills that make me a valuable asset in any professional setting. Firstly, my hard skills include proficiency in various software programs, such as WebStorm, VSCode and Figma. I am also experienced in project management, data analysis, and digital marketing strategies. Additionally, I have strong technical skills in web development and coding languages like HTML, CSS, and JavaScript, React and else. On the other hand, my soft skills are equally important, as they are crucial in building strong relationships and effective communication. I am a great listener, able to communicate ideas and concepts clearly both in written and verbal form. I am also a team player, always willing to lend a helping hand and collaborate with others to achieve common goals. Lastly, I am a problem-solver who can think critically and creatively to solve complex challenges. Overall, I am confident that my combination of hard and soft skills makes me a well-rounded and valuable addition to any team. Thank you for taking the time to read about my skills and qualifications.",
+        "linkedIn-button": "My Linkedin"
+    },
+    "services-page": {
+        "title": "Services",
+        "services": {
+            "service1" :  {
+                "title": "Development Website",
+                "description": "I believe it is important to understand both design and development to achieve a successful user-facing product."
+            },
+            "service2" :  {
+                "title": "Landing Page",
+                "description": "In digital marketing, a landing page is a standalone web page, created specifically for a marketing or advertising campaign."
+            },
+            "service3" : {
+                "title": "Web Application",
+                "description": "A web application is a computer program that utilizes web browsers and web technology to perform tasks over the Internet."
+            }
+        }
+    },
+    "contact-page": {
+        "title": "Contact",
+        "contact-question-title": "Have You Any Questions ?",
+        "contact-question-subtitle": "I'M AT YOUR SERVICES",
+        "services": {
+            "write-me": "Write Me On",
+            "address": "Address",
+            "mail": "Email",
+            "git": "GitHub"
+        },
+        "form-title": "SEND ME AN EMAIL",
+        "form-description": "I'M VERY RESPONSIVE TO MESSAGES",
+        "form": {
+            "name": "Name",
+            "email": "Email",
+            "subject": "Subject",
+            "message": "Message"
+        },
+        "form-button": "Send Message"
+    },
+    "portfolio-page": {
+        "title": "Portfolio",
+        "projects-title": "My Projects"
+    },
+    "about-page": {
+        "title": "About Me",
+        "introduce_title": "I'm {{name}} and ",
+        "introduce_description": "I work to make a better web; one that is fast, easy to use, beautiful, accessible to all, and frustration-free. I create successful websites that are fast, easy to use, and built with best practices. My main experience is in front-end development but I also have a passion for design. I believe having experience in both design and development allows for making the most optimal user experiences.",
+        "soft-skills": {
+            "title": "Soft skills",
+            "languages": {
+                "ru": { "key": "RUSSIAN", "value": "NATIVE" },
+                "en": { "key": "ENGLISH", "value": "B2" }
+            },
+            "website": "Website",
+            "email": "Email",
+            "city": { "key": "City", "value": "Evpatoria" },
+            "freelance": { "key": "freelance", "value": "Available" }
+        },
+        "hire-button": "Hire Me",
+        "hard-skills": {
+            "title": "Hard skills"
+        }
+    },
+    "navigation": {
+        "logo": "Portfolio",
+        "nav-list": {
+            "home": "Home",
+            "about": "About",
+            "contact": "Contact",
+            "services": "Services",
+            "portfolio": "Portfolio"
+        }
+    }
+}

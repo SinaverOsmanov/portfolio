@@ -1,6 +1,9 @@
 import { LazyMotion, domAnimation, m } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 export default function Services() {
+    const { t } = useTranslation();
+
     return (
         <LazyMotion features={domAnimation}>
             <m.section
@@ -13,7 +16,7 @@ export default function Services() {
                 <div className="container py-16">
                     <div className="row">
                         <div className="basis-full mb-14 section-title">
-                            <h1>Services</h1>
+                            <h1>{t('services-page.title')}</h1>
                         </div>
                     </div>
                     <div className="row max-md:flex-wrap justify-between">
@@ -23,11 +26,8 @@ export default function Services() {
                                 <div className="icon">
                                     <i className="fa fa-mobile-alt"></i>
                                 </div>
-                                <h4>Development Website</h4>
-                                <p>
-                                    I believe it is important to understand both design and development to achieve a
-                                    successful user-facing product.
-                                </p>
+                                <h4>{t('services-page.services.service1.title')}</h4>
+                                <p>{t('services-page.services.service1.description')}</p>
                             </div>
                         </m.div>
                         {/* Service item End  */}
@@ -37,11 +37,8 @@ export default function Services() {
                                 <div className="icon">
                                     <i className="fa fa-palette"></i>
                                 </div>
-                                <h4>Landing page</h4>
-                                <p>
-                                    In digital marketing, a landing page is a standalone web page, created specifically
-                                    for a marketing or advertising campaign.
-                                </p>
+                                <h4>{t('services-page.services.service2.title')}</h4>
+                                <p>{t('services-page.services.service2.description')}</p>
                             </div>
                         </m.div>
                         {/* Service item End  */}
@@ -51,11 +48,8 @@ export default function Services() {
                                 <div className="icon">
                                     <i className="fa fa-code"></i>
                                 </div>
-                                <h4>Web Application</h4>
-                                <p>
-                                    A web application is a computer program that utilizes web browsers and web
-                                    technology to perform tasks over the Internet.
-                                </p>
+                                <h4>{t('services-page.services.service3.title')}</h4>
+                                <p>{t('services-page.services.service3.description')}</p>
                             </div>
                         </m.div>
                         {/* Service item End  */}

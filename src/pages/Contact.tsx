@@ -1,7 +1,10 @@
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { LazyMotion, domAnimation, m } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 export default function Contact() {
+    const {t} = useTranslation()
+
     return (
         <LazyMotion features={domAnimation}>
             <m.section
@@ -14,18 +17,18 @@ export default function Contact() {
                 <div className="container py-16">
                     <div className="row">
                         <div className="flex-custom-full mb-14 section-title">
-                            <h1>Contact</h1>
+                            <h1>{t('contact-page.title')}</h1>
                         </div>
                     </div>
-                    <h3 className="contact-title">Have You Any Questions ?</h3>
-                    <h4 className="contact-sub-title">I'M AT YOUR SERVICES</h4>
+                    <h3 className="contact-title">{t('contact-page.contact-question-title')}</h3>
+                    <h4 className="contact-sub-title">{t('contact-page.contact-question-subtitle')}</h4>
                     <div className="row flex-wrap">
                         {/* Contact info item start  */}
                         <div className="flex-custom-1/4 max-ls:flex-custom-1/2 max-md:flex-custom-full contact-info-item break-words">
                             <div className="icon">
                                 <i className="fa fa-brands fa-telegram"></i>
                             </div>
-                            <h4>Write Me On</h4>
+                            <h4>{t('contact-page.services.write-me')}</h4>
                             <p
                                 className="cursor-pointer hover:underline hover:text-[var(--skin-color)]"
                                 onClick={() => (window.location.href = 'https://t.me/mr_osmanov')}
@@ -39,7 +42,7 @@ export default function Contact() {
                             <div className="icon">
                                 <i className="fa fa-map-marker-alt"></i>
                             </div>
-                            <h4>Address</h4>
+                            <h4>{t('contact-page.services.address')}</h4>
                             <p>Crimea, Evpatoriya</p>
                         </div>
                         {/* Contact info item end  */}
@@ -48,7 +51,7 @@ export default function Contact() {
                             <div className="icon">
                                 <i className="fa fa-envelope"></i>
                             </div>
-                            <h4>Email</h4>
+                            <h4>{t('contact-page.services.mail')}</h4>
                             <p
                                 className="cursor-pointer hover:underline hover:text-[var(--skin-color)]"
                                 onClick={() => (window.location.href = 'https://github.com/SinaverOsmanov')}
@@ -62,7 +65,7 @@ export default function Contact() {
                             <div className="icon">
                                 <i className="fa fa-globe-asia"></i>
                             </div>
-                            <h4>GitHub</h4>
+                            <h4>{t('contact-page.services.git')}</h4>
                             <p
                                 className="cursor-pointer hover:underline hover:text-[var(--skin-color)]"
                                 onClick={() => (window.location.href = 'https://github.com/SinaverOsmanov')}
@@ -78,8 +81,8 @@ export default function Contact() {
                         </div>
                         {/* Contact info item end  */}
                     </div>
-                    <h3 className="contact-title">SEND ME AN EMAIL</h3>
-                    <h4 className="contact-sub-title">I'M VERY RESPONSIVE TO MESSAGES</h4>
+                    <h3 className="contact-title">{t('contact-page.form-title')}</h3>
+                    <h4 className="contact-sub-title">{t('contact-page.form-description')}</h4>
                     {/* Contact Form  */}
                     <div className="row">
                         <ContactForm />
@@ -99,6 +102,8 @@ type FormValues = {
 
 function ContactForm() {
     const { register, handleSubmit } = useForm<FormValues>();
+    const {t} = useTranslation()
+
 
     const onSubmit: SubmitHandler<FormValues> = data => console.log(data);
 
@@ -108,12 +113,12 @@ function ContactForm() {
                 <div className="row gap-x-3">
                     <div className="flex-col grow form-item">
                         <div className="form-group">
-                            <input {...register('name')} type="text" className="form-control" placeholder="Name" />
+                            <input {...register('name')} type="text" className="form-control" placeholder={t('contact-page.form.name')} />
                         </div>
                     </div>
                     <div className="flex-col grow form-item">
                         <div className="form-group">
-                            <input {...register('email')} type="email" className="form-control" placeholder="Email" />
+                            <input {...register('email')} type="email" className="form-control" placeholder={t('contact-page.form.email')} />
                         </div>
                     </div>
                 </div>
@@ -124,7 +129,7 @@ function ContactForm() {
                                 {...register('subject')}
                                 type="text"
                                 className="form-control"
-                                placeholder="Subject"
+                                placeholder={t('contact-page.form.subject')}
                             />
                         </div>
                     </div>
@@ -135,7 +140,7 @@ function ContactForm() {
                             <textarea
                                 {...register('message')}
                                 className="form-control"
-                                placeholder="Message"
+                                placeholder={t('contact-page.form.message')}
                             ></textarea>
                         </div>
                     </div>
@@ -143,7 +148,7 @@ function ContactForm() {
                 <div className="row">
                     <div className="flex-custom-full form-item">
                         <button type="submit" className="btn">
-                            Send Message
+                            {t('contact-page.form-button')}
                         </button>
                     </div>
                 </div>

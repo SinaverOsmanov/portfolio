@@ -3,8 +3,12 @@ import { twMerge } from 'tailwind-merge';
 import useStoreColors from '@hooks/useColors';
 import { Link } from 'react-router-dom';
 import { LazyMotion, domAnimation, m } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 export default function About() {
+
+    const {t} = useTranslation()
+
     return (
         <LazyMotion features={domAnimation}>
             <m.section
@@ -17,49 +21,40 @@ export default function About() {
                 <div className="container py-16">
                     <div className="flex flex-row">
                         <div className="basis-full mb-14 section-title">
-                            <h1>About Me</h1>
+                            <h1>{t('about-page.title')}</h1>
                         </div>
                     </div>
                     <div className="flex flex-row">
                         <div className="flex-col about-content">
                             <div className="flex flex-row mb-10">
                                 <div className="flex-col about-text">
-                                    <h3>
-                                        I'm Sinaver Osmanov and I'm
-                                        <span> Web Developer</span>
+                                    <h3>{t('about-page.introduce_title', {name: t('name')})}<span>{t('profession')}</span>
                                     </h3>
-                                    <p>
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt eaque
-                                        provident corrupti obcaecati quisquam aliquid nesciunt! Assumenda cum, dolore
-                                        incidunt veniam sequi ab laboriosam deserunt in, odio pariatur ipsam quaerat.
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati totam,
-                                        doloribus repellat eum, eius pariatur nihil, nemo ullam ipsum maiores illum
-                                        dolorem nisi enim distinctio numquam dolor aperiam omnis magni!
-                                    </p>
+                                    <p>{t('about-page.introduce_description')}</p>
                                 </div>
                             </div>
                             <div className="flex flex-row justify-between flex-wrap mb-20 max-sl:mb-5">
                                 <div className="flex-col basis-6/12 max-sl:basis-full flex-wrap personal-info">
                                     <div className="flex flex-row flex-wrap">
-                                        <h3 className="title">Soft skills</h3>
+                                        <h3 className="title">{t('about-page.soft-skills.title')}</h3>
                                         <div className="flex-custom-full info-item mb-6">
                                             <p>
-                                                RUSSIAN : <span>NATIVE</span>
+                                                {t('about-page.soft-skills.languages.ru.key')} : <span>{t('about-page.soft-skills.languages.ru.value')}</span>
                                             </p>
                                         </div>
                                         <div className="flex-custom-full info-item mb-6">
                                             <p>
-                                                ENGLISH : <span>B2</span>
+                                            {t('about-page.soft-skills.languages.en.key')} : <span>{t('about-page.soft-skills.languages.en.value')}</span>
                                             </p>
                                         </div>
                                         <div className="flex-custom-full info-item mb-6">
                                             <p>
-                                                Website : <span>www.domain.com</span>
+                                            {t('about-page.soft-skills.website')} : <span>www.domain.com</span>
                                             </p>
                                         </div>
                                         <div className="flex-custom-full info-item mb-6">
                                             <p>
-                                                Email : <span>sinaver.osmanov@gmail.com</span>
+                                                {t('about-page.soft-skills.email')} : <span>sinaver.osmanov@gmail.com</span>
                                             </p>
                                         </div>
                                         <div className="flex-custom-full info-item mb-6">
@@ -69,26 +64,26 @@ export default function About() {
                                         </div>
                                         <div className="flex-custom-full info-item mb-6">
                                             <p>
-                                                City : <span>Evpatoria</span>
+                                            {t('about-page.soft-skills.city.key')} : <span>{t('about-page.soft-skills.city.value')}</span>
                                             </p>
                                         </div>
                                         <div className="flex-custom-full info-item mb-6">
                                             <p>
-                                                Freelance : <span>Available</span>
+                                            {t('about-page.soft-skills.freelance.key')} : <span>{t('about-page.soft-skills.freelance.value')}</span>
                                             </p>
                                         </div>
                                     </div>
                                     <div className="flex flex-row flex-wrap">
                                         <div className="buttons">
                                             <Link to="/contact" className="btn hire-me">
-                                                Hire Me
+                                            {t('about-page.hire-button')}
                                             </Link>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="flex-col basis-5/12 max-sl:mt-10 max-sl:basis-full skills">
                                     <div className="flex flex-row flex-wrap">
-                                        <h3 className="title">Hard skills</h3>
+                                        <h3 className="title">{t('about-page.hard-skills.title')}</h3>
                                         <div className="flex-custom-full skills-item mb-6">
                                             <h5>HTML</h5>
                                             <div className="progress">
