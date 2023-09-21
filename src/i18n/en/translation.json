@@ -79,6 +79,7 @@
             "contact": "Contact",
             "services": "Services",
             "portfolio": "Portfolio"
-        }
+        },
+        "lang": "Choose a language"
     }
 }
