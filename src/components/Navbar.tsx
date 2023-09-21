@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import { NavItem } from './NavItem';
 import { motion } from 'framer-motion';
 import { NavItemType } from '@/@types/types';
+import { ChangeEvent, ChangeEventHandler, useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const navItems: NavItemType[] = [
     {
@@ -31,7 +33,6 @@ const navItems: NavItemType[] = [
     },
 ];
 
-
 export default function Navbar({ isOpen }: { isOpen: boolean }) {
     return (
         <motion.div
@@ -48,11 +49,49 @@ export default function Navbar({ isOpen }: { isOpen: boolean }) {
             {/* <Switcher /> */}
             <nav className="nav">
                 <ul>
-                    {navItems.map((item) => (
+                    {navItems.map(item => (
                         <NavItem key={item.to} {...item} />
                     ))}
                 </ul>
             </nav>
+            <div className='mt-10'>
+                <LanguagePanel />
+            </div>
         </motion.div>
+    );
+}
+
+function LanguagePanel() {
+    const {t,
+        i18n: { language, changeLanguage },
+    } = useTranslation();
+
+    const [lang, setLang] = useState<string>(language);
+
+    function handleChange(e: ChangeEvent<HTMLSelectElement>) {
+        setLang(e.target.value);
+    }
+
+    useEffect(()=>{
+        if(lang !== language ) {
+            changeLanguage(lang)
+        }
+    },[lang])
+
+    return (
+        <>
+            <label htmlFor="languages" className="block mb-2 text-sm font-bold text-gray-900 dark:text-white">
+                {t('navigation.lang')}
+            </label>
+            <select
+                value={lang}
+                onChange={handleChange}
+                id="languages"
+                className="w-16 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            >
+                <option value="en">EN</option>
+                <option value="ru">RU</option>
+            </select>
+        </>
     );
 }
