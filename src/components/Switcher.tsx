@@ -69,16 +69,16 @@ export default function Switcher() {
     return (
         <div className={`max-lg:top-20 top-5 relative style-switcher `}>
             <div className="flex flex-col btns">
-                <div className="flex flex-row mb-2">
+                <div className="flex flex-row rounded-full mb-2">
                     <button className="s-icon shadow-md" onClick={changeDark}>
                         <i className={`fas fa-${dark ? 'sun' : 'moon'}`} />
                     </button>
                 </div>
                 <div className={`bg-[color:var(--bg-black-100)] flex flex-row transition-all duration-500 relative overflow-hidden shadow-md rounded-full ${openColors ? 'h-[220px]' : 'h-10'}`}>
-                    <button className="style-switcher-toggler z-20 s-icon" onClick={changeColors}>
+                    <button className="style-switcher-toggler z-20 rounded-full s-icon" onClick={changeColors}>
                         <i className="fas fa-cog fa-spin"></i>
                     </button>
-                    <div className={`colors flex-col absolute left-0 bottom-1 z-10`}>
+                    <div className={`colors flex-col absolute left-0 bottom-1 z-10 rounded-full`}>
                         <span className="color-1 mb-1" onClick={() => setActiveStyle('color1')}></span>
                         <span className="color-2 mb-1" onClick={() => setActiveStyle('color2')}></span>
                         <span className="color-3 mb-1" onClick={() => setActiveStyle('color3')}></span>
