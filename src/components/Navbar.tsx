@@ -46,7 +46,6 @@ export default function Navbar({ isOpen }: { isOpen: boolean }) {
                     <span>Portfoli</span>o
                 </Link>
             </div>
-            {/* <Switcher /> */}
             <nav className="nav">
                 <ul>
                     {navItems.map(item => (
@@ -54,7 +53,7 @@ export default function Navbar({ isOpen }: { isOpen: boolean }) {
                     ))}
                 </ul>
             </nav>
-            <div className='mt-10'>
+            <div className="mt-10">
                 <LanguagePanel />
             </div>
         </motion.div>
@@ -62,7 +61,8 @@ export default function Navbar({ isOpen }: { isOpen: boolean }) {
 }
 
 function LanguagePanel() {
-    const {t,
+    const {
+        t,
         i18n: { language, changeLanguage },
     } = useTranslation();
 
@@ -72,11 +72,11 @@ function LanguagePanel() {
         setLang(e.target.value);
     }
 
-    useEffect(()=>{
-        if(lang !== language ) {
-            changeLanguage(lang)
+    useEffect(() => {
+        if (lang !== language) {
+            changeLanguage(lang);
         }
-    },[lang])
+    }, [lang]);
 
     return (
         <>
