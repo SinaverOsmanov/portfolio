@@ -1,9 +1,11 @@
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { LazyMotion, domAnimation, m } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import emailjs from '@emailjs/browser';
+import { useRef } from 'react';
 
 export default function Contact() {
-    const {t} = useTranslation()
+    const { t } = useTranslation();
 
     return (
         <LazyMotion features={domAnimation}>
@@ -54,7 +56,7 @@ export default function Contact() {
                             <h4>{t('contact-page.services.mail')}</h4>
                             <p
                                 className="cursor-pointer hover:underline hover:text-[var(--skin-color)]"
-                                onClick={() => (window.location.href = 'https://github.com/SinaverOsmanov')}
+                                onClick={() => (window.location.href = 'https://mail.google.com/')}
                             >
                                 sinaver.osmanov@gmail.com
                             </p>
@@ -101,24 +103,43 @@ type FormValues = {
 };
 
 function ContactForm() {
+    const form = useRef(null);
     const { register, handleSubmit } = useForm<FormValues>();
-    const {t} = useTranslation()
+    const { t } = useTranslation();
 
-
-    const onSubmit: SubmitHandler<FormValues> = data => console.log(data);
+    const onSubmit = (data: any) => {
+        emailjs.sendForm('service_dvyfrv7', 'template_dijtokg', form.current!, 'OiAYajDR_DHv1IuAj').then(
+            result => {
+                console.log(result.text);
+            },
+            error => {
+                console.log(error.text);
+            },
+        );
+    };
 
     return (
         <div className="flex-custom-full contact-form">
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form ref={form} onSubmit={handleSubmit(onSubmit)}>
                 <div className="row gap-x-3">
                     <div className="flex-col grow form-item">
                         <div className="form-group">
-                            <input {...register('name')} type="text" className="form-control" placeholder={t('contact-page.form.name')} />
+                            <input
+                                {...register('name')}
+                                type="text"
+                                className="form-control"
+                                placeholder={t('contact-page.form.name')}
+                            />
                         </div>
                     </div>
                     <div className="flex-col grow form-item">
                         <div className="form-group">
-                            <input {...register('email')} type="email" className="form-control" placeholder={t('contact-page.form.email')} />
+                            <input
+                                {...register('email')}
+                                type="email"
+                                className="form-control"
+                                placeholder={t('contact-page.form.email')}
+                            />
                         </div>
                     </div>
                 </div>
