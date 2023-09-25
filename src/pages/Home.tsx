@@ -1,10 +1,11 @@
 import { TypeAnimation } from 'react-type-animation';
 import { LazyMotion, domAnimation, m } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
-
-    const {t} = useTranslation()
+    const { t } = useTranslation();
 
     return (
         <LazyMotion features={domAnimation}>
@@ -24,17 +25,9 @@ function Home() {
                             </h3>
                             <h3 className="my-profession max-sl:h-20 mb-5">
                                 {t('home-page.profession.I-m')}
-                                <TypeAnimation
-                                    sequence={[t('home-page.profession.list.item1'), 1000, t('home-page.profession.list.item2'), 1000]}
-                                    wrapper="span"
-                                    speed={50}
-                                    className="ml-2"
-                                    repeat={Infinity}
-                                />
+                                <TypeAnimate />
                             </h3>
-                            <p>
-                                {t('home-page.description')}
-                            </p>
+                            <p>{t('home-page.description')}</p>
                             <button
                                 className="btn"
                                 onClick={() => (window.location.href = 'https://www.linkedin.com/in/sinaver-osmanov/')}
@@ -55,3 +48,26 @@ function Home() {
 }
 
 export default Home;
+
+function TypeAnimate() {
+    const {
+        t,
+        i18n: { language },
+    } = useTranslation();
+
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        navigate('/');
+    }, [language]);
+
+    return (
+        <TypeAnimation
+            sequence={[t('home-page.profession.list.item1'), 1000, t('home-page.profession.list.item2'), 1000]}
+            wrapper="span"
+            speed={50}
+            className="ml-2"
+            repeat={Infinity}
+        />
+    );
+}

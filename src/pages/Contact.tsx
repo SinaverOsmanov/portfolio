@@ -1,7 +1,6 @@
-import { SubmitHandler, useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import { LazyMotion, domAnimation, m } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
 
 export default function Contact() {
@@ -108,14 +107,14 @@ function ContactForm() {
     const { t } = useTranslation();
 
     const onSubmit = (data: any) => {
-        emailjs.sendForm('service_dvyfrv7', 'template_dijtokg', form.current!, 'OiAYajDR_DHv1IuAj').then(
-            result => {
-                console.log(result.text);
-            },
-            error => {
-                console.log(error.text);
-            },
-        );
+        // emailjs.sendForm(process.env.SERVICE_ID, 'template_dijtokg', form.current!, 'OiAYajDR_DHv1IuAj').then(
+        //     result => {
+        //         console.log(result.text);
+        //     },
+        //     error => {
+        //         console.log(error.text);
+        //     },
+        // );
     };
 
     return (

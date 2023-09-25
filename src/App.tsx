@@ -13,6 +13,7 @@ const Services = lazy(() => import('./pages/Services'));
 const Contact = lazy(() => import('./pages/Contact'));
 
 function App() {
+    console.log(import.meta.env.TEMPLATE_ID, 'env');
     return (
         <div className="h-full min-h-full">
             <Navigation />
