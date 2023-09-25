@@ -35,8 +35,8 @@ function Home() {
                                 {t('home-page.linkedIn-button')}
                             </button>
                         </div>
-                        <div className="flex-col max-lg:basis-full basis-5/12 flex items-center justify-center">
-                            <div className="max-lg:after:hidden max-lg:before:hidden home-img w-52">
+                        <div className="pl-10 flex-col max-lg:basis-full basis-5/12 flex items-center justify-center">
+                            <div className="max-w-[300px] max-lg:after:hidden max-lg:before:hidden home-img">
                                 <img src={'./assets/avatar.png'} alt="hero" />
                             </div>
                         </div>
