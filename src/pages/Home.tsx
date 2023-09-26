@@ -1,7 +1,7 @@
-import { TypeAnimation } from 'react-type-animation';
+import { Sequence, Speed, TypeAnimation } from 'react-type-animation';
 import { LazyMotion, domAnimation, m } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function Home() {
@@ -25,7 +25,16 @@ function Home() {
                             </h3>
                             <h3 className="my-profession max-sl:h-20 mb-5">
                                 {t('home-page.profession.I-m')}
-                                <TypeAnimate />
+                                <TypeAnimate
+                                    sequence={[
+                                        t('home-page.profession.list.item1'),
+                                        1000,
+                                        t('home-page.profession.list.item2'),
+                                        1000,
+                                    ]}
+                                    speed={50}
+                                    repeat={Infinity}
+                                />
                             </h3>
                             <p>{t('home-page.description')}</p>
                             <button
@@ -49,25 +58,33 @@ function Home() {
 
 export default Home;
 
-function TypeAnimate() {
+const TypeAnimate = React.memo(function ({
+    sequence,
+    speed,
+    repeat,
+}: {
+    sequence: Sequence;
+    speed?: Speed;
+    repeat?: number;
+}) {
     const {
-        t,
         i18n: { language },
     } = useTranslation();
 
-    const navigate = useNavigate();
+    const [uniqueKey, setUniqueKey] = useState<number>(() => Date.now());
 
     useEffect(() => {
-        navigate('/');
+        setUniqueKey(Date.now());
     }, [language]);
 
     return (
         <TypeAnimation
-            sequence={[t('home-page.profession.list.item1'), 1000, t('home-page.profession.list.item2'), 1000]}
+            key={uniqueKey}
+            sequence={sequence}
             wrapper="span"
-            speed={50}
+            speed={speed}
             className="ml-2"
-            repeat={Infinity}
+            repeat={repeat}
         />
     );
-}
+});
