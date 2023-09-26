@@ -75,7 +75,7 @@ export default function Contact() {
                             </p>
                             <p
                                 className="cursor-pointer hover:underline hover:text-[var(--skin-color)]"
-                                onClick={() => (window.location.href = 'https://github.com/SinaverFrontent')}
+                                onClick={() => (window.location.href = 'https://github.com/SinaverFrontend')}
                             >
                                 SinaverFrontent
                             </p>
