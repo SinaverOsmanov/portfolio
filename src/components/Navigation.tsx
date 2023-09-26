@@ -57,7 +57,7 @@ export default function Navigation() {
     // }, []);
 
     return (
-        <aside className={`fixed z-10 ${isOpenMenu ? 'max-lg:w-full h-full' : ''}`}>
+        <aside className={`fixed z-10 ${isOpenMenu ? 'max-lg:w-full top-0 bottom-0' : ''}`}>
             <NavigationButton onClick={() => handleOpenMenu(!isOpenMenu)}>{menuIconPath}</NavigationButton>
             <Navbar isOpen={isOpenMenu} />
             {isOpenMenu && (
