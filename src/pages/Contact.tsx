@@ -25,7 +25,7 @@ export default function Contact() {
                     <h4 className="contact-sub-title">{t('contact-page.contact-question-subtitle')}</h4>
                     <div className="row flex-wrap">
                         {/* Contact info item start  */}
-                        <div className="flex-custom-1/4 max-ls:flex-custom-1/2 max-md:flex-custom-full contact-info-item break-words">
+                        <div className="md:flex-custom-1/3 max-md:flex-custom-full contact-info-item break-words">
                             <div className="icon">
                                 <i className="fa fa-brands fa-telegram"></i>
                             </div>
@@ -39,16 +39,7 @@ export default function Contact() {
                         </div>
                         {/* Contact info item end  */}
                         {/* Contact info item start  */}
-                        <div className="flex-custom-1/4 max-ls:flex-custom-1/2 max-md:flex-custom-full contact-info-item break-words">
-                            <div className="icon">
-                                <i className="fa fa-map-marker-alt"></i>
-                            </div>
-                            <h4>{t('contact-page.services.address')}</h4>
-                            <p>Crimea, Evpatoriya</p>
-                        </div>
-                        {/* Contact info item end  */}
-                        {/* Contact info item start  */}
-                        <div className="flex-custom-1/4 max-ls:flex-custom-1/2 max-md:flex-custom-full contact-info-item break-words">
+                        <div className="md:flex-custom-1/3 max-md:flex-custom-full contact-info-item break-words">
                             <div className="icon">
                                 <i className="fa fa-envelope"></i>
                             </div>
@@ -62,7 +53,7 @@ export default function Contact() {
                         </div>
                         {/* Contact info item end  */}
                         {/* Contact info item start  */}
-                        <div className="flex-custom-1/4 max-ls:flex-custom-1/2 max-md:flex-custom-full contact-info-item break-words">
+                        <div className="md:flex-custom-1/3 max-md:flex-custom-full contact-info-item break-words">
                             <div className="icon">
                                 <i className="fa fa-globe-asia"></i>
                             </div>
