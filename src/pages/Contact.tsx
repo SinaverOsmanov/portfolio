@@ -98,7 +98,7 @@ function ContactForm() {
     const { t } = useTranslation();
 
     const onSubmit = (data: any) => {
-        // emailjs.sendForm(process.env.SERVICE_ID, 'template_dijtokg', form.current!, 'OiAYajDR_DHv1IuAj').then(
+        // emailjs.sendForm().then(
         //     result => {
         //         console.log(result.text);
         //     },
