@@ -27,7 +27,7 @@ export default defineConfig(({command, mode})=>{
             '@components': path.resolve(__dirname, './src/components'),
         },
       },
-    base: '/portfolio',
+    base: './',
     css: {
         postcss: PostCSSConfig, // Use the imported PostCSS configuration
     },

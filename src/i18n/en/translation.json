@@ -5,7 +5,7 @@
         "title": "Hello, my name is",
         "profession": {
             "I-m": "I'm a",
-            "list": {"item1":"Freelanser", "item2":"Front end Developer"}
+            "list": { "item1": "Freelanser", "item2": "Frontend Developer" }
         },
         "description": "Dear portfolio readers, I am excited to share with you my hard and soft skills that make me a valuable asset in any professional setting. Firstly, my hard skills include proficiency in various software programs, such as WebStorm, VSCode and Figma. I am also experienced in project management, data analysis, and digital marketing strategies. Additionally, I have strong technical skills in web development and coding languages like HTML, CSS, and JavaScript, React and else. On the other hand, my soft skills are equally important, as they are crucial in building strong relationships and effective communication. I am a great listener, able to communicate ideas and concepts clearly both in written and verbal form. I am also a team player, always willing to lend a helping hand and collaborate with others to achieve common goals. Lastly, I am a problem-solver who can think critically and creatively to solve complex challenges. Overall, I am confident that my combination of hard and soft skills makes me a well-rounded and valuable addition to any team. Thank you for taking the time to read about my skills and qualifications.",
         "linkedIn-button": "My Linkedin"
@@ -13,15 +13,15 @@
     "services-page": {
         "title": "Services",
         "services": {
-            "service1" :  {
+            "service1": {
                 "title": "Development Website",
                 "description": "I believe it is important to understand both design and development to achieve a successful user-facing product."
             },
-            "service2" :  {
+            "service2": {
                 "title": "Landing Page",
                 "description": "In digital marketing, a landing page is a standalone web page, created specifically for a marketing or advertising campaign."
             },
-            "service3" : {
+            "service3": {
                 "title": "Web Application",
                 "description": "A web application is a computer program that utilizes web browsers and web technology to perform tasks over the Internet."
             }
@@ -69,6 +69,98 @@
         "hire-button": "Hire Me",
         "hard-skills": {
             "title": "Hard skills"
+        },
+        "education": {
+            "education1": {
+                "timeline": "Online course",
+                "date": {
+                    "from": "July",
+                    "to": "March"
+                },
+                "title": "Result School by Vladilen Minin",
+                "text": "Junior Frontend Developer"
+            }
+        },
+        "experience": {
+            "experience1": {
+                "timeline": "Freelance",
+                "date": {
+                    "from": "March",
+                    "to": "till present"
+                },
+                "title": "Freelance",
+                "texts": {
+                    "text1": {
+                        "title": "",
+                        "subtext": "I am engaged in the development and finalization of sites and applications."
+                    }
+                }
+            },
+            "experience2": {
+                "timeline": "Krashennikov",
+                "date": {
+                    "from": "Aug",
+                    "to": "March"
+                },
+                "title": "Frontend developer",
+                "texts": {
+                    "text1": {
+                        "title": "SharePoint: Advanced Forms, Tables, and Frontend Development",
+                        "subtexts": {
+                            "sub1": "Frontend development using React, Redux Saga, SharePoint",
+                            "sub2": "Create and process SharePoint queries using CamlBuilder.",
+                            "sub3": "Implementing tables with sorting and filtering queries.",
+                            "sub4": "Creating 2 forms to create, edit, modify and delete table items.",
+                            "sub5": "Development of a card to display each item in the table using bb.",
+                            "sub6": "Using Binder for SharePoint to load data between SharePoint tables."
+                        }
+                    },
+                    "text2": {
+                        "title": "Kaspersky online chat for events",
+                        "subtexts": {
+                            "sub1": "Frontend development using React, Typescript, WebSocket and MongoDB.",
+                            "sub2": "Backend implementation using the react-use-websocket library.",
+                            "sub3": "Implementation of a moderated chat component with the ability to edit, modify and delete messages for moderators only.",
+                            "sub4": "Storing moderator information in a database and controlling access via tokens.",
+                            "sub5": "Filtering and loading new posts, displaying new users.",
+                            "sub6": "Develop logic for displaying unmoderated messages when there is no moderator.",
+                            "sub7": "Implementing like counters for each post and allowing moderator responses to posts."
+                        }
+                    },
+                    "text3": {
+                        "title": "News site",
+                        "subtexts": {
+                            "sub1": "Reworking an existing website, improving performance on React and Wordpress.",
+                            "sub2": "Using SSR (Server-Side Rendering) and Redux Saga for project optimization.",
+                            "sub3": "Developing components and logic for displaying news on the site."
+                        }
+                    }
+                }
+            },
+            "experience3": {
+                "timeline": "Rational Vision BVBA",
+                "date": {
+                    "from": "Aug",
+                    "to": "Aug"
+                },
+                "title": "Fullstack developer",
+                "texts": {
+                    "text1": {
+                        "title": "Development of Innovative SPA Projects and Back-end Logic",
+                        "subtexts": {
+                            "sub1": "Developed startup SPA projects on React, MongoDB, Express, Rest API",
+                            "sub2": "Guaranteed the quality of the startup by conducting full coverage of e2e chat tests using Selenium and Jest",
+                            "sub3": "Responsibly worked on the back-end side, including developing middleware for authorization and validation, as well as efficient processing of requests using Fastify."
+                        }
+                    },
+                    "text2": {
+                        "title": "Chat",
+                        "subtexts": {
+                            "sub1": "Implementation, creation and development with Firebase database"
+                        }
+                    }
+                }
+            }
         }
     },
     "navigation": {

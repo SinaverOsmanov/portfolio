@@ -1,13 +1,9 @@
-import { ReactElement, cloneElement } from 'react';
-import { twMerge } from 'tailwind-merge';
-import useStoreColors from '@hooks/useColors';
 import { Link } from 'react-router-dom';
 import { LazyMotion, domAnimation, m } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
 export default function About() {
-
-    const {t} = useTranslation()
+    const { t } = useTranslation();
 
     return (
         <LazyMotion features={domAnimation}>
@@ -28,7 +24,9 @@ export default function About() {
                         <div className="flex-col about-content">
                             <div className="flex flex-row mb-10">
                                 <div className="flex-col about-text">
-                                    <h3>{t('about-page.introduce_title', {name: t('name')})}<span>{t('profession')}</span>
+                                    <h3>
+                                        {t('about-page.introduce_title', { name: t('name') })}
+                                        <span>{t('profession')}</span>
                                     </h3>
                                     <p>{t('about-page.introduce_description')}</p>
                                 </div>
@@ -39,22 +37,26 @@ export default function About() {
                                         <h3 className="title">{t('about-page.soft-skills.title')}</h3>
                                         <div className="flex-custom-full info-item mb-6">
                                             <p>
-                                                {t('about-page.soft-skills.languages.ru.key')} : <span>{t('about-page.soft-skills.languages.ru.value')}</span>
+                                                {t('about-page.soft-skills.languages.ru.key')} :
+                                                <span>{t('about-page.soft-skills.languages.ru.value')}</span>
                                             </p>
                                         </div>
                                         <div className="flex-custom-full info-item mb-6">
                                             <p>
-                                            {t('about-page.soft-skills.languages.en.key')} : <span>{t('about-page.soft-skills.languages.en.value')}</span>
+                                                {t('about-page.soft-skills.languages.en.key')} :
+                                                <span>{t('about-page.soft-skills.languages.en.value')}</span>
                                             </p>
                                         </div>
                                         <div className="flex-custom-full info-item mb-6">
                                             <p>
-                                            {t('about-page.soft-skills.website')} : <span>www.domain.com</span>
+                                                {t('about-page.soft-skills.website')} :
+                                                <span>sinaverosmanov.github.io/portfolio</span>
                                             </p>
                                         </div>
                                         <div className="flex-custom-full info-item mb-6">
                                             <p>
-                                                {t('about-page.soft-skills.email')} : <span>sinaver.osmanov@gmail.com</span>
+                                                {t('about-page.soft-skills.email')} :
+                                                <span>sinaver.osmanov@gmail.com</span>
                                             </p>
                                         </div>
                                         <div className="flex-custom-full info-item mb-6">
@@ -64,19 +66,21 @@ export default function About() {
                                         </div>
                                         <div className="flex-custom-full info-item mb-6">
                                             <p>
-                                            {t('about-page.soft-skills.city.key')} : <span>{t('about-page.soft-skills.city.value')}</span>
+                                                {t('about-page.soft-skills.city.key')} :
+                                                <span>{t('about-page.soft-skills.city.value')}</span>
                                             </p>
                                         </div>
                                         <div className="flex-custom-full info-item mb-6">
                                             <p>
-                                            {t('about-page.soft-skills.freelance.key')} : <span>{t('about-page.soft-skills.freelance.value')}</span>
+                                                {t('about-page.soft-skills.freelance.key')} :
+                                                <span>{t('about-page.soft-skills.freelance.value')}</span>
                                             </p>
                                         </div>
                                     </div>
                                     <div className="flex flex-row flex-wrap">
                                         <div className="buttons">
                                             <Link to="/contact" className="btn hire-me">
-                                            {t('about-page.hire-button')}
+                                                {t('about-page.hire-button')}
                                             </Link>
                                         </div>
                                     </div>
@@ -143,31 +147,27 @@ export default function About() {
                                     </div>
                                 </div>
                             </div>
-                            {/* <div className="flex flex-row flex-wrap justify-between">
+                            <div className="flex flex-row flex-wrap justify-between">
                                 <div className="max-sl:flex-custom-full flex-custom-1/2 sl:pr-5">
                                     <h3 className="title">Education</h3>
                                     <div className="flex flex-row">
                                         <div className="timeline-box">
                                             <div className="timeline shadow-lg">
-                                                timeline item
+                                                {t('about-page.education.education1.timeline')}
                                                 <div className="timeline-item">
                                                     <div className="circle-dot"></div>
                                                     <h3 className="timeline-data">
-                                                        <i className="fa fa-calendar"></i> Aug 2001 — May 2003
+                                                        <i className="fa fa-calendar"></i>
+                                                        {t('about-page.education.education1.date.from')} 2021 —
+                                                        {t('about-page.education.education1.date.to')} 2022
                                                     </h3>
-                                                    <h4 className="timeline-title">Vocational School № 27</h4>
-                                                    <p className="timeline-text">Auto Mechanic</p>
+                                                    <h4 className="timeline-title">
+                                                        {t('about-page.education.education1.title')}
+                                                    </h4>
+                                                    <p className="timeline-text">
+                                                        {t('about-page.education.education1.text')}
+                                                    </p>
                                                 </div>
-                                                timeline item
-                                                <div className="timeline-item">
-                                                    <div className="circle-dot"></div>
-                                                    <h3 className="timeline-data">
-                                                        <i className="fa fa-calendar"></i> Nov 2022 — Mar 2023
-                                                    </h3>
-                                                    <h4 className="timeline-title">Makers Coding Bootcamp</h4>
-                                                    <p className="timeline-text">Front-End Developer</p>
-                                                </div>
-                                                timeline item
                                             </div>
                                         </div>
                                     </div>
@@ -177,50 +177,210 @@ export default function About() {
                                     <div className="flex flex-row">
                                         <div className="timeline-box">
                                             <div className="timeline shadow-lg">
-                                                timeline item
+                                                {t('about-page.experience.experience1.timeline')}
                                                 <div className="timeline-item">
                                                     <div className="circle-dot"></div>
                                                     <h3 className="timeline-data">
-                                                        <i className="fa fa-calendar"></i> 2023-2023
+                                                        <i className="fa fa-calendar"></i>
+                                                        {t('about-page.experience.experience1.date.from')} 2023 —
+                                                        {t('about-page.experience.experience1.date.to')}
                                                     </h3>
-                                                    <h4 className="timeline-title">Master in Computer Science</h4>
+                                                    <h4 className="timeline-title">
+                                                        {t('about-page.experience.experience1.title')}
+                                                    </h4>
                                                     <p className="timeline-text">
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
-                                                        culpa ab vitae ratione commodi et, velit aliquid sapiente
-                                                        deserunt voluptatum debitis molestiae maiores, illum totam.
+                                                        {t('about-page.experience.experience1.texts.text1.subtext')}
                                                     </p>
                                                 </div>
-                                                timeline item
+                                                {t('about-page.experience.experience2.timeline')}
                                                 <div className="timeline-item">
                                                     <div className="circle-dot"></div>
                                                     <h3 className="timeline-data">
-                                                        <i className="fa fa-calendar"></i> 2023-2023
+                                                        <i className="fa fa-calendar"></i>
+                                                        {t('about-page.experience.experience2.date.from')} 2022 —
+                                                        {t('about-page.experience.experience2.date.to')} 2023
                                                     </h3>
-                                                    <h4 className="timeline-title">Master in Computer Science</h4>
+                                                    <h4 className="timeline-title">
+                                                        {t('about-page.experience.experience2.title')}
+                                                    </h4>
                                                     <p className="timeline-text">
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
-                                                        culpa ab vitae ratione commodi et, velit aliquid sapiente
-                                                        deserunt voluptatum debitis molestiae maiores, illum totam.
+                                                        <h5>
+                                                            1.{' '}
+                                                            {t('about-page.experience.experience2.texts.text1.title')}:
+                                                        </h5>
+                                                        <ul>
+                                                            <li>
+                                                                -{' '}
+                                                                {t(
+                                                                    'about-page.experience.experience2.texts.text1.subtexts.sub1',
+                                                                )}
+                                                                .
+                                                            </li>
+                                                            <li>
+                                                                -{' '}
+                                                                {t(
+                                                                    'about-page.experience.experience2.texts.text1.subtexts.sub2',
+                                                                )}
+                                                            </li>
+                                                            <li>
+                                                                -{' '}
+                                                                {t(
+                                                                    'about-page.experience.experience2.texts.text1.subtexts.sub3',
+                                                                )}
+                                                            </li>
+                                                            <li>
+                                                                -{' '}
+                                                                {t(
+                                                                    'about-page.experience.experience2.texts.text1.subtexts.sub4',
+                                                                )}
+                                                            </li>
+                                                            <li>
+                                                                -{' '}
+                                                                {t(
+                                                                    'about-page.experience.experience2.texts.text1.subtexts.sub5',
+                                                                )}
+                                                            </li>
+                                                            <li>
+                                                                -{' '}
+                                                                {t(
+                                                                    'about-page.experience.experience2.texts.text1.subtexts.sub6',
+                                                                )}
+                                                            </li>
+                                                        </ul>
+                                                        <h5>
+                                                            2.{' '}
+                                                            {t('about-page.experience.experience2.texts.text2.title')}:{' '}
+                                                            <a href="https://github.com/SinaverOsmanov/chat">Chat</a>
+                                                        </h5>
+                                                        <ul>
+                                                            <li>
+                                                                -{' '}
+                                                                {t(
+                                                                    'about-page.experience.experience2.texts.text2.subtexts.sub1',
+                                                                )}
+                                                            </li>
+                                                            <li>
+                                                                -{' '}
+                                                                {t(
+                                                                    'about-page.experience.experience2.texts.text2.subtexts.sub2',
+                                                                )}
+                                                            </li>
+                                                            <li>
+                                                                -{' '}
+                                                                {t(
+                                                                    'about-page.experience.experience2.texts.text2.subtexts.sub3',
+                                                                )}
+                                                            </li>
+                                                            <li>
+                                                                -{' '}
+                                                                {t(
+                                                                    'about-page.experience.experience2.texts.text2.subtexts.sub4',
+                                                                )}
+                                                            </li>
+                                                            <li>
+                                                                -{' '}
+                                                                {t(
+                                                                    'about-page.experience.experience2.texts.text2.subtexts.sub5',
+                                                                )}
+                                                            </li>
+                                                            <li>
+                                                                -{' '}
+                                                                {t(
+                                                                    'about-page.experience.experience2.texts.text2.subtexts.sub6',
+                                                                )}
+                                                            </li>
+                                                            <li>
+                                                                -{' '}
+                                                                {t(
+                                                                    'about-page.experience.experience2.texts.text2.subtexts.sub7',
+                                                                )}
+                                                            </li>
+                                                        </ul>
+                                                        <h5>
+                                                            3.{' '}
+                                                            {t('about-page.experience.experience2.texts.text3.title')}:{' '}
+                                                            <a href="https://ryadom.media/">ryadom.media</a>
+                                                        </h5>
+                                                        <ul>
+                                                            <li>
+                                                                -{' '}
+                                                                {t(
+                                                                    'about-page.experience.experience2.texts.text3.subtexts.sub1',
+                                                                )}
+                                                            </li>
+                                                            <li>
+                                                                -{' '}
+                                                                {t(
+                                                                    'about-page.experience.experience2.texts.text3.subtexts.sub2',
+                                                                )}
+                                                            </li>
+                                                            <li>
+                                                                -{' '}
+                                                                {t(
+                                                                    'about-page.experience.experience2.texts.text3.subtexts.sub3',
+                                                                )}
+                                                            </li>
+                                                        </ul>
                                                     </p>
                                                 </div>
-                                                timeline item
+                                                {t('about-page.experience.experience3.timeline')}
                                                 <div className="timeline-item">
                                                     <div className="circle-dot"></div>
                                                     <h3 className="timeline-data">
-                                                        <i className="fa fa-calendar"></i> 2023-2023
+                                                        <i className="fa fa-calendar"></i>
+                                                        {t('about-page.experience.experience3.date.from')} 2020 —
+                                                        {t('about-page.experience.experience3.date.to')} 2022
                                                     </h3>
-                                                    <h4 className="timeline-title">Master in Computer Science</h4>
+                                                    <h4 className="timeline-title">
+                                                        {t('about-page.experience.experience3.title')}
+                                                    </h4>
                                                     <p className="timeline-text">
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
-                                                        culpa ab vitae ratione commodi et, velit aliquid sapiente
-                                                        deserunt voluptatum debitis molestiae maiores, illum totam.
+                                                        <h5>
+                                                            1.{' '}
+                                                            {t('about-page.experience.experience3.texts.text1.title')}
+                                                        </h5>
+                                                        <ul>
+                                                            <li>
+                                                                -{' '}
+                                                                {t(
+                                                                    'about-page.experience.experience3.texts.text1.subtexts.sub1',
+                                                                )}
+                                                            </li>
+                                                            <li>
+                                                                -{' '}
+                                                                {t(
+                                                                    'about-page.experience.experience3.texts.text1.subtexts.sub2',
+                                                                )}
+                                                            </li>
+                                                            <li>
+                                                                -{' '}
+                                                                {t(
+                                                                    'about-page.experience.experience3.texts.text1.subtexts.sub3',
+                                                                )}
+                                                            </li>
+                                                        </ul>
+                                                        <h5>
+                                                            2.{' '}
+                                                            {t('about-page.experience.experience3.texts.text2.title')}:{' '}
+                                                            <a href="https://breakoutmessaging.com/">
+                                                                breakoutmessaging
+                                                            </a>
+                                                        </h5>
+                                                        <ul>
+                                                            <li>
+                                                                -{' '}
+                                                                {t(
+                                                                    'about-page.experience.experience3.texts.text2.subtexts.sub1',
+                                                                )}
+                                                            </li>
+                                                        </ul>
                                                     </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div> */}
+                            </div>
                         </div>
                     </div>
                 </div>

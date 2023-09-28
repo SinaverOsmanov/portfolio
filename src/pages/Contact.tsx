@@ -2,6 +2,7 @@ import { useForm } from 'react-hook-form';
 import { LazyMotion, domAnimation, m } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { useRef } from 'react';
+import ContactForm from '@components/ContactForm';
 
 export default function Contact() {
     const { t } = useTranslation();
@@ -82,88 +83,5 @@ export default function Contact() {
                 </div>
             </m.section>
         </LazyMotion>
-    );
-}
-
-type FormValues = {
-    name: string;
-    subject: string;
-    email: string;
-    message: string;
-};
-
-function ContactForm() {
-    const form = useRef(null);
-    const { register, handleSubmit } = useForm<FormValues>();
-    const { t } = useTranslation();
-
-    const onSubmit = (data: any) => {
-        // emailjs.sendForm().then(
-        //     result => {
-        //         console.log(result.text);
-        //     },
-        //     error => {
-        //         console.log(error.text);
-        //     },
-        // );
-    };
-
-    return (
-        <div className="flex-custom-full contact-form">
-            <form ref={form} onSubmit={handleSubmit(onSubmit)}>
-                <div className="row gap-x-3">
-                    <div className="flex-col grow form-item">
-                        <div className="form-group">
-                            <input
-                                {...register('name')}
-                                type="text"
-                                className="form-control"
-                                placeholder={t('contact-page.form.name')}
-                            />
-                        </div>
-                    </div>
-                    <div className="flex-col grow form-item">
-                        <div className="form-group">
-                            <input
-                                {...register('email')}
-                                type="email"
-                                className="form-control"
-                                placeholder={t('contact-page.form.email')}
-                            />
-                        </div>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="flex-custom-full form-item">
-                        <div className="form-group">
-                            <input
-                                {...register('subject')}
-                                type="text"
-                                className="form-control"
-                                placeholder={t('contact-page.form.subject')}
-                            />
-                        </div>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="flex-custom-full form-item">
-                        <div className="form-group">
-                            <textarea
-                                {...register('message')}
-                                className="form-control"
-                                placeholder={t('contact-page.form.message')}
-                            ></textarea>
-                        </div>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="flex-custom-full form-item">
-                        <button type="submit" className="btn">
-                            {t('contact-page.form-button')}
-                        </button>
-                    </div>
-                </div>
-            </form>
-        </div>
     );
 }
