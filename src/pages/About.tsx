@@ -149,7 +149,7 @@ export default function About() {
                             </div>
                             <div className="flex flex-row flex-wrap justify-between">
                                 <div className="max-sl:flex-custom-full flex-custom-1/2 sl:pr-5">
-                                    <h3 className="title">Education</h3>
+                                    <h3 className="title">{t('about-page.education.title')}</h3>
                                     <div className="flex flex-row">
                                         <div className="timeline-box">
                                             <div className="timeline shadow-lg">
@@ -173,7 +173,7 @@ export default function About() {
                                     </div>
                                 </div>
                                 <div className="max-sl:flex-custom-full max-sl:mt-10 flex-custom-1/2">
-                                    <h3 className="title">Experience</h3>
+                                    <h3 className="title">{t('about-page.experience.title')}</h3>
                                     <div className="flex flex-row">
                                         <div className="timeline-box">
                                             <div className="timeline shadow-lg">

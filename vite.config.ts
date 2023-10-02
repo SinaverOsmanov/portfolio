@@ -26,6 +26,8 @@ export default defineConfig(({command, mode})=>{
             '@i18n': path.resolve(__dirname, './src/i18n'),
             '@components': path.resolve(__dirname, './src/components'),
         },
+        // extensions: ['.json', '.js', '.jsx', 'ts', 'tsx'],
+        // modules: ['node_modules'],
       },
     base: './',
     css: {
