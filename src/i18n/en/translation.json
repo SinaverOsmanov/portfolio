@@ -71,6 +71,7 @@
             "title": "Hard skills"
         },
         "education": {
+            "title": "Education",
             "education1": {
                 "timeline": "Online course",
                 "date": {
@@ -82,6 +83,7 @@
             }
         },
         "experience": {
+            "title": "Experience",
             "experience1": {
                 "timeline": "Freelance",
                 "date": {

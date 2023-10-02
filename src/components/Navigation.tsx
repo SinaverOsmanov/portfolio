@@ -39,23 +39,6 @@ export default function Navigation() {
         setIsOpenMenu(false);
     }, [pathname]);
 
-    // useEffect(() => {
-    //     window.addEventListener(
-    //         'resize',
-    //         () => {
-    //             if (window.innerWidth > 1024) {
-    //                 handleOpenMenu(false);
-    //                 window.removeEventListener('resize', () => {});
-    //             }
-    //         },
-    //         true,
-    //     );
-
-    //     return () => {
-    //         window.removeEventListener('resize', () => {});
-    //     };
-    // }, []);
-
     return (
         <aside className={`fixed z-10 ${isOpenMenu ? 'max-lg:w-full top-0 bottom-0' : ''}`}>
             <NavigationButton onClick={() => handleOpenMenu(!isOpenMenu)}>{menuIconPath}</NavigationButton>
