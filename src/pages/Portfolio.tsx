@@ -11,55 +11,55 @@ type PortfolioType = {
 
 const data: PortfolioType[] = [
     {
-        url: './assets/breakout-img1.png',
+        url: './assets/breakout-img1.webp',
         alt: 'Breakout messages',
         list: [
             {
-                url: './assets/breakout-img1.png',
+                url: './assets/breakout-img1.webp',
                 alt: 'image1',
             },
             {
-                url: './assets/breakout-img2-mobile.png',
+                url: './assets/breakout-img2-mobile.webp',
                 alt: 'image2',
             },
             {
-                url: './assets/breakout-img2.png',
+                url: './assets/breakout-img2.webp',
                 alt: 'image3',
             },
         ],
     },
     {
-        url: './assets/faject-img1.png',
+        url: './assets/faject-img1.webp',
         alt: 'Faject',
         list: [
             {
-                url: './assets/faject-img1.png',
+                url: './assets/faject-img1.webp',
                 alt: 'image1',
             },
             {
-                url: './assets/faject-img1-mobile.png',
+                url: './assets/faject-img1-mobile.webp',
                 alt: 'image2',
             },
             {
-                url: './assets/faject-img1-tablet.png',
+                url: './assets/faject-img1-tablet.webp',
                 alt: 'image3',
             },
         ],
     },
     {
-        url: './assets/ryadom-img1.png',
+        url: './assets/ryadom-img1.webp',
         alt: 'Ryadom media',
         list: [
             {
-                url: './assets/ryadom-img1.png',
+                url: './assets/ryadom-img1.webp',
                 alt: 'image1',
             },
             {
-                url: './assets/ryadom-img1-mobile.png',
+                url: './assets/ryadom-img1-mobile.webp',
                 alt: 'image2',
             },
             {
-                url: './assets/ryadom-img1-tablet.png',
+                url: './assets/ryadom-img1-tablet.webp',
                 alt: 'image3',
             },
         ],
@@ -130,20 +130,6 @@ export default function Portfolio() {
                         ))}
                     </div>
                 </div>
-                <Modal
-                    showModal={showModal}
-                    setShowModal={toggleShowModal}
-                    // onClose={}
-                    content={
-                        <Slider {...settings}>
-                            {portfolio?.list.map(p => (
-                                <div className="portfolio-img">
-                                    <img src={p.url} alt={p.alt} />
-                                </div>
-                            ))}
-                        </Slider>
-                    }
-                />
             </m.section>
         </LazyMotion>
     );
