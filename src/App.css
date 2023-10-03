@@ -75,6 +75,7 @@ h3 {
 * body a {
     color: var(--skin-color);
 }
+
 .section {
     min-height: 100vh;
     /* padding: 0 30px; */

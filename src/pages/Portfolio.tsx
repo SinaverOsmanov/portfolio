@@ -1,11 +1,10 @@
 import { LazyMotion, domAnimation, m } from 'framer-motion';
-import { ReactNode, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import Slider from 'react-slick';
 
 type PortfolioType = {
     url: string;
     alt: string;
+    link?: string;
     list: Omit<PortfolioType, 'list'>[];
 };
 
@@ -13,6 +12,7 @@ const data: PortfolioType[] = [
     {
         url: './assets/breakout-img1.webp',
         alt: 'Breakout messages',
+        link: 'https://breakoutmessaging.com',
         list: [
             {
                 url: './assets/breakout-img1.webp',
@@ -31,6 +31,7 @@ const data: PortfolioType[] = [
     {
         url: './assets/faject-img1.webp',
         alt: 'Faject',
+        link: 'https://faject.com',
         list: [
             {
                 url: './assets/faject-img1.webp',
@@ -49,6 +50,7 @@ const data: PortfolioType[] = [
     {
         url: './assets/ryadom-img1.webp',
         alt: 'Ryadom media',
+        link: 'https://ryadom.media',
         list: [
             {
                 url: './assets/ryadom-img1.webp',
@@ -68,32 +70,6 @@ const data: PortfolioType[] = [
 
 export default function Portfolio() {
     const { t } = useTranslation();
-
-    const [portfolio, setPortfolio] = useState<PortfolioType | null>(null);
-    const [showModal, setShowModal] = useState(false);
-
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-    };
-
-    function toggleShowModal(payload: boolean) {
-        setShowModal(payload);
-    }
-
-    function choosePortfolio(p: PortfolioType) {
-        setPortfolio(p);
-    }
-
-    function openPortfolioWithDescription(p: PortfolioType) {
-        if (p !== null) {
-            choosePortfolio(p);
-            toggleShowModal(true);
-        }
-    }
 
     return (
         <LazyMotion features={domAnimation}>
@@ -135,52 +111,95 @@ export default function Portfolio() {
     );
 }
 
-function Modal({
-    title,
-    content,
-    footer,
-    showModal,
-    setShowModal,
-}: {
-    title?: string;
-    content: ReactNode;
-    footer?: ReactNode | null;
-    showModal: boolean;
-    // closeModal: () => void;
-    setShowModal: (payload: boolean) => void;
-}) {
-    return (
-        <>
-            {showModal ? (
-                <>
-                    <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
-                        <div className="relative md:w-auto my-6 mx-auto md:max-w-3xl max-md:w-screen max-md:px-5">
-                            {/*content*/}
-                            <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
-                                {/*header*/}
-                                <div className="flex items-start align-top justify-between p-5 max-md:p-3 border-b border-solid border-slate-200 rounded-t">
-                                    <h3 className="text-3xl max-md:text-2xl font-semibold">{title || 'Portfolio'}</h3>
-                                    <button
-                                        className="p-1 text-xl ml-auto bg-transparent border-0 text-black float-right leading-none font-semibold outline-none focus:outline-none"
-                                        onClick={() => setShowModal(false)}
-                                    >
-                                        x
-                                    </button>
-                                </div>
-                                {/*body*/}
-                                <div className="relative p-6 flex-auto">{content}</div>
-                                {/*footer*/}
-                                {!!footer && (
-                                    <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
-                                        {footer}
-                                    </div>
-                                )}
-                            </div>
-                        </div>
-                    </div>
-                    <div className="opacity-70 fixed inset-0 z-60 bg-black" onClick={() => setShowModal(false)}></div>
-                </>
-            ) : null}
-        </>
-    );
-}
+// const [portfolio, setPortfolio] = useState<PortfolioType | null>(null);
+// const [showModal, setShowModal] = useState(false);
+
+// const settings = {
+//     dots: true,
+//     infinite: true,
+//     speed: 500,
+//     slidesToShow: 1,
+//     slidesToScroll: 1,
+// };
+
+// function toggleShowModal(payload: boolean) {
+//     setShowModal(payload);
+// }
+
+// function choosePortfolio(p: PortfolioType) {
+//     setPortfolio(p);
+// }
+
+// function openPortfolioWithDescription(p: PortfolioType) {
+//     if (p !== null) {
+//         choosePortfolio(p);
+//         toggleShowModal(true);
+//     }
+// }
+
+// <Modal
+//     showModal={showModal}
+//     setShowModal={toggleShowModal}
+//     // onClose={}
+//     content={
+//         <div className="h-96">
+//             <Slider {...settings}>
+//                 {portfolio?.list.map(p => (
+//                     <div className="h-full">
+//                         <img src={p.url} alt={p.alt} />
+//                     </div>
+//                 ))}
+//             </Slider>
+//         </div>
+//     }
+// />;
+
+// function Modal({
+//     title,
+//     content,
+//     footer,
+//     showModal,
+//     setShowModal,
+// }: {
+//     title?: string;
+//     content: ReactNode;
+//     footer?: ReactNode | null;
+//     showModal: boolean;
+//     // closeModal: () => void;
+//     setShowModal: (payload: boolean) => void;
+// }) {
+//     return (
+//         <>
+//             {showModal ? (
+//                 <>
+//                     <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+//                         <div className="relative md:w-auto my-6 mx-auto md:max-w-3xl max-md:w-screen max-md:px-5">
+//                             {/*content*/}
+//                             <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+//                                 {/*header*/}
+//                                 <div className="flex items-start align-top justify-between p-5 max-md:p-3 border-b border-solid border-slate-200 rounded-t">
+//                                     <h3 className="text-3xl max-md:text-2xl font-semibold">{title || 'Portfolio'}</h3>
+//                                     <button
+//                                         className="p-1 text-xl ml-auto bg-transparent border-0 text-black float-right leading-none font-semibold outline-none focus:outline-none"
+//                                         onClick={() => setShowModal(false)}
+//                                     >
+//                                         x
+//                                     </button>
+//                                 </div>
+//                                 {/*body*/}
+//                                 <div className="relative p-6 flex-auto">{content}</div>
+//                                 {/*footer*/}
+//                                 {!!footer && (
+//                                     <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
+//                                         {footer}
+//                                     </div>
+//                                 )}
+//                             </div>
+//                         </div>
+//                     </div>
+//                     <div className="opacity-70 fixed inset-0 z-60 bg-black" onClick={() => setShowModal(false)}></div>
+//                 </>
+//             ) : null}
+//         </>
+//     );
+// }

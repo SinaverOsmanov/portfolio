@@ -6,7 +6,6 @@ import path from 'path';
 // https://vitejs.dev/config/
 export default defineConfig(({command, mode})=>{
     const env = loadEnv(mode, process.cwd(), '')
-    
     return {
     plugins: [react()],
     esbuild: {
@@ -26,10 +25,8 @@ export default defineConfig(({command, mode})=>{
             '@i18n': path.resolve(__dirname, './src/i18n'),
             '@components': path.resolve(__dirname, './src/components'),
         },
-        // extensions: ['.json', '.js', '.jsx', 'ts', 'tsx'],
-        // modules: ['node_modules'],
       },
-    base: './',
+    base: mode === 'development' ? '/portfolio/' : './',
     css: {
         postcss: PostCSSConfig, // Use the imported PostCSS configuration
     },
