@@ -1,70 +1,28 @@
+import { redirectToExternalLink } from '@/helpers/redirectToExternalLink';
 import { LazyMotion, domAnimation, m } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
 type PortfolioType = {
-    url: string;
+    src: string;
     alt: string;
-    link?: string;
-    list: Omit<PortfolioType, 'list'>[];
+    link: string;
 };
 
 const data: PortfolioType[] = [
     {
-        url: './assets/breakout-img1.webp',
+        src: './assets/breakout-img1.webp',
         alt: 'Breakout messages',
         link: 'https://breakoutmessaging.com',
-        list: [
-            {
-                url: './assets/breakout-img1.webp',
-                alt: 'image1',
-            },
-            {
-                url: './assets/breakout-img2-mobile.webp',
-                alt: 'image2',
-            },
-            {
-                url: './assets/breakout-img2.webp',
-                alt: 'image3',
-            },
-        ],
     },
     {
-        url: './assets/faject-img1.webp',
+        src: './assets/faject-img1.webp',
         alt: 'Faject',
         link: 'https://faject.com',
-        list: [
-            {
-                url: './assets/faject-img1.webp',
-                alt: 'image1',
-            },
-            {
-                url: './assets/faject-img1-mobile.webp',
-                alt: 'image2',
-            },
-            {
-                url: './assets/faject-img1-tablet.webp',
-                alt: 'image3',
-            },
-        ],
     },
     {
-        url: './assets/ryadom-img1.webp',
+        src: './assets/ryadom-img1.webp',
         alt: 'Ryadom media',
         link: 'https://ryadom.media',
-        list: [
-            {
-                url: './assets/ryadom-img1.webp',
-                alt: 'image1',
-            },
-            {
-                url: './assets/ryadom-img1-mobile.webp',
-                alt: 'image2',
-            },
-            {
-                url: './assets/ryadom-img1-tablet.webp',
-                alt: 'image3',
-            },
-        ],
     },
 ];
 
@@ -95,11 +53,11 @@ export default function Portfolio() {
                         {data.map(p => (
                             <div
                                 className="max-sl:flex-custom-full max-xl:flex-custom-1/2 sl:pr-3 ls:flex-custom-1/3 portfolio-item"
-                                onClick={() => openPortfolioWithDescription(p)}
+                                onClick={() => redirectToExternalLink(p.link)}
                             >
                                 <div className="portfolio-item-inner shadow-lg">
                                     <div className="portfolio-img">
-                                        <img src={p.url} alt={p.alt} />
+                                        <img src={p.src} alt={p.alt} />
                                     </div>
                                 </div>
                             </div>
@@ -146,7 +104,7 @@ export default function Portfolio() {
 //             <Slider {...settings}>
 //                 {portfolio?.list.map(p => (
 //                     <div className="h-full">
-//                         <img src={p.url} alt={p.alt} />
+//                         <img src={p.src} alt={p.alt} />
 //                     </div>
 //                 ))}
 //             </Slider>

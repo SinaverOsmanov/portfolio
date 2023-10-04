@@ -3,6 +3,7 @@ import { LazyMotion, domAnimation, m } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { useRef } from 'react';
 import ContactForm from '@components/ContactForm';
+import { redirectToExternalLink } from '@/helpers/redirectToExternalLink';
 
 export default function Contact() {
     const { t } = useTranslation();
@@ -33,7 +34,7 @@ export default function Contact() {
                             <h4>{t('contact-page.services.write-me')}</h4>
                             <p
                                 className="cursor-pointer hover:underline hover:text-[var(--skin-color)]"
-                                onClick={() => (window.location.href = 'https://t.me/mr_osmanov')}
+                                onClick={() => redirectToExternalLink('https://t.me/mr_osmanov')}
                             >
                                 @Mr_Osmanov
                             </p>
@@ -47,7 +48,7 @@ export default function Contact() {
                             <h4>{t('contact-page.services.mail')}</h4>
                             <p
                                 className="cursor-pointer hover:underline hover:text-[var(--skin-color)]"
-                                onClick={() => (window.location.href = 'https://mail.google.com/')}
+                                onClick={() => redirectToExternalLink('https://mail.google.com/')}
                             >
                                 sinaver.osmanov@gmail.com
                             </p>
@@ -61,13 +62,13 @@ export default function Contact() {
                             <h4>{t('contact-page.services.git')}</h4>
                             <p
                                 className="cursor-pointer hover:underline hover:text-[var(--skin-color)]"
-                                onClick={() => (window.location.href = 'https://github.com/SinaverOsmanov')}
+                                onClick={() => redirectToExternalLink('https://github.com/SinaverOsmanov')}
                             >
                                 SinaverOsmanov
                             </p>
                             <p
                                 className="cursor-pointer hover:underline hover:text-[var(--skin-color)]"
-                                onClick={() => (window.location.href = 'https://github.com/SinaverFrontend')}
+                                onClick={() => redirectToExternalLink('https://github.com/SinaverFrontend')}
                             >
                                 SinaverFrontent
                             </p>

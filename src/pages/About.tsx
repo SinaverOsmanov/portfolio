@@ -105,15 +105,22 @@ export default function About() {
                                         <div className="flex-custom-full skills-item mb-6">
                                             <h5>JavaScript</h5>
                                             <div className="progress">
-                                                <div className="progress-in" style={{ width: '75%' }}></div>
-                                                <div className="skills-percent">75%</div>
+                                                <div className="progress-in" style={{ width: '85%' }}></div>
+                                                <div className="skills-percent">85%</div>
                                             </div>
                                         </div>
                                         <div className="flex-custom-full skills-item mb-6">
                                             <h5>React</h5>
                                             <div className="progress">
-                                                <div className="progress-in" style={{ width: '65%' }}></div>
-                                                <div className="skills-percent">65%</div>
+                                                <div className="progress-in" style={{ width: '80%' }}></div>
+                                                <div className="skills-percent">80%</div>
+                                            </div>
+                                        </div>
+                                        <div className="flex-custom-full skills-item mb-6">
+                                            <h5>Redux</h5>
+                                            <div className="progress">
+                                                <div className="progress-in" style={{ width: '80%' }}></div>
+                                                <div className="skills-percent">80%</div>
                                             </div>
                                         </div>
                                         <div className="flex-custom-full skills-item mb-6">
@@ -126,15 +133,15 @@ export default function About() {
                                         <div className="flex-custom-full skills-item mb-6">
                                             <h5>Git</h5>
                                             <div className="progress">
-                                                <div className="progress-in" style={{ width: '80%' }}></div>
-                                                <div className="skills-percent">80%</div>
+                                                <div className="progress-in" style={{ width: '70%' }}></div>
+                                                <div className="skills-percent">70%</div>
                                             </div>
                                         </div>
                                         <div className="flex-custom-full skills-item mb-6">
                                             <h5>Typescript</h5>
                                             <div className="progress">
-                                                <div className="progress-in" style={{ width: '80%' }}></div>
-                                                <div className="skills-percent">80%</div>
+                                                <div className="progress-in" style={{ width: '60%' }}></div>
+                                                <div className="skills-percent">60%</div>
                                             </div>
                                         </div>
                                         <div className="flex-custom-full skills-item mb-6">

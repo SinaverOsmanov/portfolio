@@ -1,8 +1,7 @@
 import ReactDOM from 'react-dom/client';
-import App from './App';
-import './i18n/config';
-import './index.css';
-import './App.css';
+import '@styles/index.css';
+import '@/i18n/config';
+import App from '@/App';
 import { BrowserRouter } from 'react-router-dom';
 
 let root = document.getElementById('root');
@@ -18,5 +17,5 @@ if (!root) {
 ReactDOM.createRoot(root).render(
     <BrowserRouter basename={'/portfolio'}>
         <App />
-    </BrowserRouter>
+    </BrowserRouter>,
 );
