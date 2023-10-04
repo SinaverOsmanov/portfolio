@@ -20,7 +20,7 @@ i18next
         load: 'languageOnly',
         interpolation: {
             escapeValue: false,
-        },
+        }
     });
 
 export default i18next;

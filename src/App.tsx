@@ -1,5 +1,6 @@
 import { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import '@styles/App.css';
 
 import Switcher from '@components/Switcher';
 import Navigation from '@components/Navigation';

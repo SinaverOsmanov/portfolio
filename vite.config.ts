@@ -6,30 +6,28 @@ import path from 'path';
 // https://vitejs.dev/config/
 export default defineConfig(({command, mode})=>{
     const env = loadEnv(mode, process.cwd(), '')
-    
     return {
     plugins: [react()],
     esbuild: {
         jsxFactory: 'React.createElement',
         jsxFragment: 'React.Fragment',
     },
-    define: {
-        __TEMPLATE_ID__: JSON.stringify(env.TEMPLATE_ID),
-    },
+    // define: {
+    //     __TEMPLATE_ID__: JSON.stringify(env.TEMPLATE_ID),
+    // },
     resolve: {
         alias: {
             '@': path.resolve(__dirname, './src'),
             '@pages': path.resolve(__dirname, './src/pages'),
             '@assets': path.resolve(__dirname, './src/assets'),
             '@hooks': path.resolve(__dirname, './src/hooks'),
+            '@styles': path.resolve(__dirname, './src/styles'),
             '@store': path.resolve(__dirname, './src/store'),
             '@i18n': path.resolve(__dirname, './src/i18n'),
             '@components': path.resolve(__dirname, './src/components'),
         },
-        // extensions: ['.json', '.js', '.jsx', 'ts', 'tsx'],
-        // modules: ['node_modules'],
       },
-    base: './',
+    base: mode === 'development' ? '/portfolio' : './',
     css: {
         postcss: PostCSSConfig, // Use the imported PostCSS configuration
     },
