@@ -10,7 +10,7 @@ export default function LanguagePanel() {
     } = useTranslation();
     const [lang, setLang] = useState<string>(language);
     const [showList, setShowList] = useState<boolean>(false);
-    const { elementRef: dropdownRef, off } = useClickOutsideRef(showList, () => handleCloseList());
+    const dropdownRef = useClickOutsideRef(showList, () => handleCloseList());
 
     function handleToggleList() {
         setShowList(prev => !prev);
@@ -18,7 +18,6 @@ export default function LanguagePanel() {
 
     function handleCloseList() {
         setShowList(false);
-        off();
     }
 
     function clickHandleLanguage(language: 'en' | 'ru') {
@@ -48,11 +47,18 @@ export default function LanguagePanel() {
             >
                 <div
                     onClick={handleToggleList}
-                    className={`p-[7px] font-bold cursor-pointer bg-[--bg-black-900] transition-all  text-[--text-black-900] text-sm ${
+                    className={`p-[7px] font-bold cursor-pointer bg-[--bg-black-900] transition-all relative text-[--text-black-900] text-sm ${
                         showList ? 'border-b-[1px] border-opacity-50 border-[--bg-black-50]' : ''
                     }`}
                 >
-                    {lang.toUpperCase()}
+                    <div>{lang.toUpperCase()}</div>
+                    <div
+                        className={`transition-transform duration-500 absolute right-1 top-[9px]  ${
+                            showList ? 'rotate-180' : 'rotate-0'
+                        }`}
+                    >
+                        <ArrowDownIcon />
+                    </div>
                 </div>
                 <div
                     className={`lang-list cursor-pointer bg-[--bg-black-100] transition-all duration-500 overflow-hidden text-[--text-black-900] ${
@@ -64,5 +70,20 @@ export default function LanguagePanel() {
                 </div>
             </div>
         </>
+    );
+}
+
+function ArrowDownIcon() {
+    return (
+        <svg
+            fill="#000000"
+            height="14px"
+            width="14px"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 330 330"
+        >
+            <path d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393 c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393 s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"></path>
+        </svg>
     );
 }

@@ -5,14 +5,10 @@ function useClickOutsideRef<T>(active: T, cb: () => void) {
 
     const handleClickOutside = (event: MouseEvent) => {
         if (elementRef.current && !elementRef.current.contains(event.target as Node)) {
-            console.log('Clicked outside the dropdown');
             cb();
+            document.removeEventListener('click', handleClickOutside);
         }
     };
-
-    function off() {
-        document.removeEventListener('click', handleClickOutside);
-    }
 
     useEffect(() => {
         document.addEventListener('click', handleClickOutside);
@@ -21,7 +17,7 @@ function useClickOutsideRef<T>(active: T, cb: () => void) {
         };
     }, [active]);
 
-    return { elementRef, off };
+    return elementRef;
 }
 
 export default useClickOutsideRef;
