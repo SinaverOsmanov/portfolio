@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-function useClickOutsideRef(cb: () => void) {
+function useClickOutsideRef<T>(active: T, cb: () => void) {
     const elementRef = useRef<HTMLDivElement>(null);
 
     const handleClickOutside = (event: MouseEvent) => {
@@ -10,14 +10,18 @@ function useClickOutsideRef(cb: () => void) {
         }
     };
 
+    function off() {
+        document.removeEventListener('click', handleClickOutside);
+    }
+
     useEffect(() => {
         document.addEventListener('click', handleClickOutside);
         return () => {
             document.removeEventListener('click', handleClickOutside);
         };
-    }, []);
+    }, [active]);
 
-    return elementRef;
+    return { elementRef, off };
 }
 
 export default useClickOutsideRef;
