@@ -6,11 +6,11 @@ import { useTranslation } from 'react-i18next';
 export default function LanguagePanel() {
     const {
         t,
-        i18n: { language, changeLanguage, languages },
+        i18n: { language, changeLanguage },
     } = useTranslation();
     const [lang, setLang] = useState<string>(language);
     const [showList, setShowList] = useState<boolean>(false);
-    const dropdownRef = useClickOutsideRef(() => handleCloseList());
+    const { elementRef: dropdownRef, off } = useClickOutsideRef(showList, () => handleCloseList());
 
     function handleToggleList() {
         setShowList(prev => !prev);
@@ -18,6 +18,7 @@ export default function LanguagePanel() {
 
     function handleCloseList() {
         setShowList(false);
+        off();
     }
 
     function clickHandleLanguage(language: 'en' | 'ru') {
