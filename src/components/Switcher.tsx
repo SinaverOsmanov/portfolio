@@ -1,8 +1,10 @@
+import localStorageService from '@services/localStorage.service';
 import useStoreTheme from '../store/storeTheme';
 import { useState, useEffect } from 'react';
 
 export default function Switcher() {
     const [openColors, setOpenColors] = useState(false);
+    const { getTokens, setTokens } = localStorageService;
 
     const { dark, toggleDark } = useStoreTheme();
 
@@ -24,7 +26,7 @@ export default function Switcher() {
 
     function getColor(color?: string): string {
         let skinColor = '#1854b4';
-        const hasColor = JSON.parse(localStorage.getItem('skin')!);
+        const hasColor = getTokens().skin;
 
         switch (color) {
             case 'color1':
@@ -45,21 +47,18 @@ export default function Switcher() {
     function setActiveStyle(c: string) {
         const color = getColor(c);
 
-        localStorage.setItem('skin', JSON.stringify(color));
+        setTokens().skin(color);
 
         document.body.style.setProperty('--skin-color', color);
     }
 
     useEffect(() => {
-        const body = document.body;
-
-        const computedStyle = getComputedStyle(body);
-        const colorValue = computedStyle.getPropertyValue('--skin-color');
-        const skinColor = JSON.parse(localStorage.getItem('skin') || JSON.stringify(''));
+        const skinColor = getTokens().skin;
 
         if (!skinColor) {
             const color = getColor();
-            localStorage.setItem('skin', JSON.stringify(colorValue));
+
+            setTokens().skin(color);
             document.body.style.setProperty('--skin-color', color);
         } else {
             document.body.style.setProperty('--skin-color', skinColor);

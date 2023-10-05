@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { NavItem } from './NavItem';
 import { motion } from 'framer-motion';
-import { NavItemType } from '@/@types/types';
+import { NavItemType } from '@/types/types';
 import { ChangeEvent, ChangeEventHandler, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import LanguagePanel from './LanguagePanel';

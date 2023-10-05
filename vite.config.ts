@@ -5,20 +5,18 @@ import path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig(({command, mode})=>{
-    const env = loadEnv(mode, process.cwd(), '')
     return {
     plugins: [react()],
     esbuild: {
         jsxFactory: 'React.createElement',
         jsxFragment: 'React.Fragment',
     },
-    // define: {
-    //     __TEMPLATE_ID__: JSON.stringify(env.TEMPLATE_ID),
-    // },
     resolve: {
         alias: {
             '@': path.resolve(__dirname, './src'),
             '@pages': path.resolve(__dirname, './src/pages'),
+            '@types': path.resolve(__dirname, './src/types'),
+            '@services': path.resolve(__dirname, './src/services'),
             '@assets': path.resolve(__dirname, './src/assets'),
             '@hooks': path.resolve(__dirname, './src/hooks'),
             '@styles': path.resolve(__dirname, './src/styles'),
