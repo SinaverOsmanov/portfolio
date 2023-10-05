@@ -1,10 +1,12 @@
 import localStorageService from '@services/localStorage.service';
 import useStoreTheme from '../store/storeTheme';
 import { useState, useEffect } from 'react';
+import useClickOutsideRef from '@hooks/useClickOutsideRef';
 
 export default function Switcher() {
     const [openColors, setOpenColors] = useState(false);
     const { getTokens, setTokens } = localStorageService;
+    const colorRef = useClickOutsideRef(openColors, () => setOpenColors(false));
 
     const { dark, toggleDark } = useStoreTheme();
 
@@ -74,6 +76,7 @@ export default function Switcher() {
                     </button>
                 </div>
                 <div
+                    ref={colorRef}
                     className={`bg-[color:var(--bg-black-100)] flex flex-row transition-all duration-500 relative overflow-hidden shadow-md rounded-full ${
                         openColors ? 'h-[220px]' : 'h-10'
                     }`}
