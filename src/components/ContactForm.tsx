@@ -15,7 +15,16 @@ export default function ContactForm() {
     const { register, handleSubmit } = useForm<FormValues>();
     const { t } = useTranslation();
 
-    const onSubmit = (data: any) => {};
+    const onSubmit = () => {
+        emailjs.sendForm('service_dvyfrv7', 'template_dijtokg', form.current!, 'OiAYajDR_DHv1IuAj').then(
+            result => {
+                console.log(result.text);
+            },
+            error => {
+                console.log(error.text);
+            },
+        );
+    };
 
     return (
         <div className="flex-custom-full contact-form">

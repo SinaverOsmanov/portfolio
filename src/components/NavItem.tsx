@@ -1,10 +1,10 @@
-import { NavItemType } from '@/@types/types';
+import { NavItemType } from '@/types/types';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
 
-export function NavItem({ to, icon, title }:NavItemType ) {
+export function NavItem({ to, icon, title }: NavItemType) {
     const { pathname } = useLocation();
-    const {t} = useTranslation()
+    const { t } = useTranslation();
 
     return (
         <li className="border-b-[1px] border-gray-300 py-3">
