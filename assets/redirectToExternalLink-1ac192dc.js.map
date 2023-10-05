@@ -1,0 +1,1 @@
+{"version":3,"file":"redirectToExternalLink-1ac192dc.js","sources":["../../src/helpers/redirectToExternalLink.ts"],"sourcesContent":["export function redirectToExternalLink(link: string) {\r\n    if(link) {\r\n        window.location.href = link\r\n    }\r\n}\r\n"],"names":["redirectToExternalLink","link"],"mappings":"AAAO,SAASA,EAAuBC,EAAc,CAC9CA,IACC,OAAO,SAAS,KAAOA,EAE/B"}
