@@ -16,14 +16,7 @@ export default function ContactForm() {
     const { t } = useTranslation();
 
     const onSubmit = () => {
-        emailjs.sendForm('service_dvyfrv7', 'template_dijtokg', form.current!, 'OiAYajDR_DHv1IuAj').then(
-            result => {
-                console.log(result.text);
-            },
-            error => {
-                console.log(error.text);
-            },
-        );
+       
     };
 
     return (
