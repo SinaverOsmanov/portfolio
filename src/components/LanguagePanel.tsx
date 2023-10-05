@@ -53,7 +53,7 @@ export default function LanguagePanel() {
                 >
                     <div>{lang.toUpperCase()}</div>
                     <div
-                        className={`transition-transform duration-500 absolute right-1 top-[9px]  ${
+                        className={`transition-transform duration-500 absolute right-2 top-[9px]  ${
                             showList ? 'rotate-180' : 'rotate-0'
                         }`}
                     >
@@ -76,7 +76,7 @@ export default function LanguagePanel() {
 function ArrowDownIcon() {
     return (
         <svg
-            fill="#000000"
+            style={{ fill: 'var(--text-black-900)' }}
             height="14px"
             width="14px"
             version="1.1"
