@@ -21,7 +21,23 @@ export default function ContactForm() {
     const [formResult, setFormResult] = useState(false);
     const [animate, setAnimate] = useState(false);
 
-    const onSubmit = () => {};
+    const onSubmit = () => {
+        setTimeout(() => {
+            emailjs
+                .sendForm('service_dvyfrv7', 'template_dijtokg', form.current!, 'OiAYajDR_DHv1IuAj')
+                .then(
+                    result => {
+                        console.log(result.text);
+                        setFormResult(true);
+                    },
+                    error => {
+                        console.log(error.text);
+                        setFormResult(false);
+                    },
+                )
+                .finally(() => setAnimate(true));
+        }, 500);
+    };
 
     return (
         <div className="flex-custom-full contact-form">
