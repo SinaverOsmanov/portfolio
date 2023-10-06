@@ -2,12 +2,23 @@
 @import 'slick-carousel/slick/slick.css';
 @import 'slick-carousel/slick/slick-theme.css';
 
+
 :root {
     --bg-black-900: #f2f2fc;
     --bg-black-100: #fdf9ff;
     --bg-black-50: #e8dfec;
     --text-black-900: #302e4d;
     --text-black-700: #504e70;
+    --transition-color: all 0.3s ease-in-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    scrollbar-color: var(--skin-color);
 }
 
 body.dark {
@@ -45,7 +56,10 @@ body {
     line-height: 1.5;
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
-    transition: all 0.3s linear;
+    -webkit-transition: var(--transition-color);
+    -moz-transition: var(--transition-color);
+    -o-transition: var(--transition-color);
+    transition: var(--transition-color);
     /*font-family: 'Clicker Script', cursive;*/
 }
 
@@ -55,21 +69,23 @@ h3,
 h4,
 h5,
 h6,
+aside,
+a,
+span,
 button {
-    transition: all 0.3s linear;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    outline: none;
-    text-decoration: none;
-    box-sizing: border-box;
+    -webkit-transition: var(--transition-color);
+    -moz-transition: var(--transition-color);
+    -o-transition: var(--transition-color);
+    transition: var(--transition-color);
 }
 
 ::before,
 ::after {
     box-sizing: border-box;
+    -webkit-transition: var(--transition-color);
+    -moz-transition: var(--transition-color);
+    -o-transition: var(--transition-color);
+    transition: var(--transition-color);
 }
 
 h3 {
@@ -155,7 +171,6 @@ h3 {
 .aside {
     background: var(--bg-black-100);
     border-right: 1px solid var(--bg-black-50);
-    transition: all 0.3s ease;
 }
 
 .aside .logo a {
@@ -192,65 +207,6 @@ h3 {
     border-right: 5px solid var(--skin-color);
     right: -20px;
     top: -20px;
-}
-
-.aside .nav-toggler {
-    height: 40px;
-    width: 45px;
-    border: 1px solid var(--bg-black-50);
-    cursor: pointer;
-    position: fixed;
-    left: 300px;
-    top: 20px;
-    border-radius: 5px;
-    background: var(--bg-black-100);
-    display: flex;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-}
-
-.aside .nav-toggler span {
-    height: 2px;
-    width: 18px;
-    background: var(--skin-color);
-    display: inline-block;
-    position: relative;
-}
-
-.aside .nav-toggler.open span {
-    background-color: transparent;
-}
-
-.aside .nav-toggler span::before {
-    position: absolute;
-    content: '';
-    height: 2px;
-    width: 18px;
-    background: var(--skin-color);
-    top: -6px;
-    left: 0;
-}
-
-.aside .nav-toggler.open span::before {
-    transform: rotate(45deg);
-    top: 0;
-}
-
-.aside .nav-toggler span::after {
-    position: absolute;
-    content: '';
-    height: 2px;
-    width: 18px;
-    background: var(--skin-color);
-    top: 6px;
-    left: 0;
-}
-
-.aside .nav-toggler.open span::after {
-    transform: rotate(-45deg);
-    top: 0;
 }
 
 .aside .nav ul li:last-child {
@@ -393,6 +349,10 @@ h3.my-profession {
     height: 100%;
     border-radius: 4px;
     background: var(--skin-color);
+    -webkit-transition: var(--transition-color);
+    -moz-transition: var(--transition-color);
+    -o-transition: var(--transition-color);
+    transition: var(--transition-color);
 }
 
 .about .about-content .skills .skills-item .progress .skills-percent {
@@ -459,6 +419,10 @@ h3.my-profession {
     width: 15px;
     border-radius: 50%;
     background-color: var(--skin-color);
+    -webkit-transition: var(--transition-color);
+    -moz-transition: var(--transition-color);
+    -o-transition: var(--transition-color);
+    transition: var(--transition-color);
 }
 
 .about .about-content .timeline .timeline-data {
@@ -519,20 +483,20 @@ h3.my-profession {
     border-radius: 50%;
     display: block;
     margin: 0 auto 30px;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
 }
 
 .service .service-item .service-item-inner .icon .fa {
     color: var(--skin-color);
     font-size: 40px;
     line-height: 60px;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    /* -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease; */
     width: 100%;
 }
 
@@ -641,7 +605,10 @@ h3.my-profession {
     border: 1px solid var(--bg-black-50);
     padding: 10px 25px;
     color: var(--text-black-700);
-    transition: all 0.3s ease;
+    -webkit-transition: var(--transition-color);
+    -moz-transition: var(--transition-color);
+    -o-transition: var(--transition-color);
+    transition: var(--transition-color);
     font-size: 18px;
 }
 
@@ -666,7 +633,10 @@ h3.my-profession {
     width: 40px;
     z-index: 101;
     border-radius: 5px;
-    transition: all 0.3s ease;
+    -webkit-transition: var(--transition-color);
+    -moz-transition: var(--transition-color);
+    -o-transition: var(--transition-color);
+    transition: var(--transition-color);
     transform: translateX(100%);
 }
 
@@ -691,7 +661,6 @@ h3.my-profession {
     border: 1px solid var(--bg-black-100);
     /* margin-right: 25px; */
     cursor: pointer;
-    transition: all 0.3s ease;
     border-radius: 50%;
 }
 
@@ -759,11 +728,10 @@ h3.my-profession {
 .lang-list>div {
     font-weight: 600;
     padding: 5px;
-    transition: all .5 ease;
 }
 
 .lang-list>div:hover {
     background: var(--skin-color);
     color: white;
-    transition: all .5 ease;
+    transition: background-color .5s, color .5s ease;
 }

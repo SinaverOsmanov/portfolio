@@ -12,7 +12,7 @@ function I18nLoading() {
     useEffect(() => {
         setLoading(true);
 
-        const timeout = setTimeout(() => setLoading(false), 200);
+        const timeout = setTimeout(() => setLoading(false), 500);
         return () => clearTimeout(timeout);
     }, [language]);
 
