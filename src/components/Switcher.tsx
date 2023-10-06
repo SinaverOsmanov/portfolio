@@ -15,8 +15,10 @@ export default function Switcher() {
 
         if (isDark) {
             document.body.classList.remove('dark');
+            setTokens().darkTheme(false);
         } else {
             document.body.classList.add('dark');
+            setTokens().darkTheme(true);
         }
 
         toggleDark();
@@ -56,6 +58,7 @@ export default function Switcher() {
 
     useEffect(() => {
         const skinColor = getTokens().skin;
+        const themeColor = getTokens().darkTheme;
 
         if (!skinColor) {
             const color = getColor();
@@ -64,6 +67,14 @@ export default function Switcher() {
             document.body.style.setProperty('--skin-color', color);
         } else {
             document.body.style.setProperty('--skin-color', skinColor);
+        }
+
+        if (!themeColor) {
+            setTokens().darkTheme(false);
+            document.body.classList.remove('dark');
+        } else {
+            setTokens().darkTheme(true);
+            document.body.classList.add('dark');
         }
     }, []);
 
@@ -81,7 +92,7 @@ export default function Switcher() {
                         openColors ? 'h-[220px]' : 'h-10'
                     }`}
                 >
-                    <button className="style-switcher-toggler z-20 rounded-full s-icon" onClick={changeColors}>
+                    <button className="z-20 rounded-full s-icon" onClick={changeColors}>
                         <i className="fas fa-cog fa-spin"></i>
                     </button>
                     <div className={`colors flex-col absolute left-0 bottom-1 z-10 rounded-full`}>
