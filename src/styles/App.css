@@ -9,7 +9,7 @@
     --bg-black-50: #e8dfec;
     --text-black-900: #302e4d;
     --text-black-700: #504e70;
-    --transition-color: all 0.3s ease-in-out;
+    --transition-color: all 0.3s linear;
 }
 
 * {
@@ -218,6 +218,13 @@ h3 {
     font-weight: 600;
     /* border-bottom: 1px solid var(--bg-black-50); */
     color: var(--text-black-900);
+}
+
+.aside .nav li a i::before {
+    -webkit-transition: all .1s linear;
+    -moz-transition: all .1s linear;
+    -o-transition: all .1s linear;
+    transition: all .1s linear;
 }
 
 .aside .nav li a.active {
