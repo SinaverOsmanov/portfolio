@@ -274,7 +274,7 @@ h3.my-profession {
     width: 80px;
     border-bottom: 10px solid var(--skin-color);
     border-right: 10px solid var(--skin-color);
-    right: -20px;
+    right: -40px;
     bottom: -40px;
 }
 
@@ -285,7 +285,7 @@ h3.my-profession {
     width: 80px;
     border-top: 10px solid var(--skin-color);
     border-left: 10px solid var(--skin-color);
-    left: -20px;
+    left: -40px;
     top: -40px;
 }
 
