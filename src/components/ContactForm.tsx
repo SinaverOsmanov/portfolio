@@ -1,14 +1,8 @@
 import emailjs from '@emailjs/browser';
-import { SVGProps, useEffect, useRef, useState } from 'react';
+import { FormValues } from '@/types/types';
+import { SVGProps, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
-
-type FormValues = {
-    name: string;
-    subject: string;
-    email: string;
-    message: string;
-};
 
 export default function ContactForm() {
     const form = useRef(null);

@@ -9,3 +9,10 @@ export type LocalizationKeys = {
     icon: string,
     title: 'about' | 'contact' | 'services' | 'portfolio' | 'home'
 }
+
+export type FormValues = {
+  name: string;
+  subject: string;
+  email: string;
+  message: string;
+};
