@@ -61,17 +61,6 @@ export default function About() {
                                         </div>
                                         <div className="flex-custom-full info-item mb-6">
                                             <p>
-                                                Makers Coding Bootcamp : <span>Front-End Developer</span>
-                                            </p>
-                                        </div>
-                                        <div className="flex-custom-full info-item mb-6">
-                                            <p>
-                                                {t('about-page.soft-skills.city.key')} :
-                                                <span>{t('about-page.soft-skills.city.value')}</span>
-                                            </p>
-                                        </div>
-                                        <div className="flex-custom-full info-item mb-6">
-                                            <p>
                                                 {t('about-page.soft-skills.freelance.key')} :
                                                 <span>{t('about-page.soft-skills.freelance.value')}</span>
                                             </p>
@@ -257,7 +246,12 @@ export default function About() {
                                                         <h5>
                                                             2.{' '}
                                                             {t('about-page.experience.experience2.texts.text2.title')}:{' '}
-                                                            <a href="https://github.com/SinaverOsmanov/chat">Chat</a>
+                                                            <a
+                                                                href="https://github.com/SinaverOsmanov/chat"
+                                                                target="_blank"
+                                                            >
+                                                                Chat
+                                                            </a>
                                                         </h5>
                                                         <ul>
                                                             <li>
@@ -306,7 +300,9 @@ export default function About() {
                                                         <h5>
                                                             3.{' '}
                                                             {t('about-page.experience.experience2.texts.text3.title')}:{' '}
-                                                            <a href="https://ryadom.media/">ryadom.media</a>
+                                                            <a href="https://ryadom.media/" target="_blank">
+                                                                ryadom.media
+                                                            </a>
                                                         </h5>
                                                         <ul>
                                                             <li>
@@ -369,7 +365,7 @@ export default function About() {
                                                         <h5>
                                                             2.{' '}
                                                             {t('about-page.experience.experience3.texts.text2.title')}:{' '}
-                                                            <a href="https://breakoutmessaging.com/">
+                                                            <a href="https://breakoutmessaging.com/" target="_blank">
                                                                 breakoutmessaging
                                                             </a>
                                                         </h5>

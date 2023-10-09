@@ -10,7 +10,7 @@ export type LocalizationKeys = {
     title: 'about' | 'contact' | 'services' | 'portfolio' | 'home'
 }
 
-export type FormValues = {
+export type FormDataType = {
   name: string;
   subject: string;
   email: string;

@@ -2,8 +2,6 @@ import { Link } from 'react-router-dom';
 import { NavItem } from './NavItem';
 import { motion } from 'framer-motion';
 import { NavItemType } from '@/types/types';
-import { ChangeEvent, ChangeEventHandler, useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import LanguagePanel from './LanguagePanel';
 
 const navItems: NavItemType[] = [
@@ -40,11 +38,11 @@ export default function Navbar({ isOpen }: { isOpen: boolean }) {
             transition={{ duration: 1, bounce: false, type: 'spring', damping: 15, stiffness: 70 }}
             className={`aside z-50 ${
                 isOpen ? 'max-lg:translate-x-0' : 'max-lg:-translate-x-full'
-            }  w-64 flex fixed left-0 flex-col px-10 pt-12 h-full overflow-auto`}
+            }  w-72 flex fixed left-0 flex-col px-10 pt-12 h-full overflow-auto`}
         >
             <div className="text-lg text-center mb-20 logo">
                 <Link to="/">
-                    <span>Portfoli</span>o
+                    <span>Sinaver </span>Osmanov
                 </Link>
             </div>
             <nav className="nav">
