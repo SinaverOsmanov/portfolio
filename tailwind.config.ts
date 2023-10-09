@@ -46,9 +46,6 @@ export default {
 
             xl: '1440px',
             // => @media (min-width: 1280px) { ... }
-  
-            '2xl': '2560px',
-            // => @media (min-width: 1536px) { ... }
         },
     },
   },
