@@ -173,10 +173,14 @@ h3 {
     border-right: 1px solid var(--bg-black-50);
 }
 
+.aside .logo {
+    position: relative;
+}
+
 .aside .logo a {
     color: var(--text-black-900);
     font-weight: 700;
-    font-size: 30px;
+    font-size: 25px;
     letter-spacing: 5px;
     position: relative;
     text-transform: capitalize;
@@ -184,28 +188,28 @@ h3 {
 
 .aside .logo span {
     font-family: 'Clicker Script', cursive;
-    font-size: 40px;
+    font-size: 35px;
 }
 
-.aside .logo a::before {
+.aside .logo::before {
     position: absolute;
     content: '';
     width: 20px;
     height: 20px;
     border-bottom: 5px solid var(--skin-color);
     border-left: 5px solid var(--skin-color);
-    left: -20px;
+    left: 0;
     bottom: -20px;
 }
 
-.aside .logo a::after {
+.aside .logo::after {
     position: absolute;
     content: '';
     width: 20px;
     height: 20px;
     border-top: 5px solid var(--skin-color);
     border-right: 5px solid var(--skin-color);
-    right: -20px;
+    right: 0;
     top: -20px;
 }
 
@@ -241,9 +245,9 @@ h3.hello {
     font-size: 28px;
 }
 
-h3.hello span {
+h3.hello .name {
     font-family: 'Clicker Script', cursive;
-    font-size: 35px;
+    font-size: 43px;
     font-weight: 700;
     color: var(--skin-color);
 }

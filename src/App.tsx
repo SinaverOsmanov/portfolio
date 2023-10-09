@@ -24,7 +24,7 @@ function App() {
             <Navigation />
 
             <Suspense fallback={<Loading />}>
-                <main className={`flex-col flex-custom-full lg:pl-64`}>
+                <main className={`flex-col flex-custom-full lg:pl-72`}>
                     <Routes>
                         <Route path="/" Component={Home} />
                         <Route path="/about" Component={About} />

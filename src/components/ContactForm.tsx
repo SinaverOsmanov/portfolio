@@ -1,8 +1,8 @@
-import emailjs from '@emailjs/browser';
-import { FormValues } from '@/types/types';
+import { FormDataType } from '@/types/types';
 import { SVGProps, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
+import emailService from '@services/emailjs.service';
 
 export default function ContactForm() {
     const form = useRef(null);
@@ -10,12 +10,27 @@ export default function ContactForm() {
         register,
         handleSubmit,
         formState: {},
-    } = useForm<FormValues>();
+    } = useForm<FormDataType>();
     const { t } = useTranslation();
     const [formResult, setFormResult] = useState(false);
     const [animate, setAnimate] = useState(false);
 
-    const onSubmit = () => {};
+    const onSubmit = async () => {
+        if (!formResult) {
+            try {
+                if (form.current) {
+                    await emailService.post(form.current);
+                    setFormResult(true);
+                } else {
+                    setFormResult(false);
+                }
+            } catch (error) {
+                setFormResult(false);
+            } finally {
+                setAnimate(true);
+            }
+        }
+    };
 
     return (
         <div className="flex-custom-full contact-form">
