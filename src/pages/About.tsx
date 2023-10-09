@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { LazyMotion, domAnimation, m } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { redirectToExternalLink } from '@/helpers/redirectToExternalLink';
 
 export default function About() {
     const { t } = useTranslation();
@@ -50,7 +51,13 @@ export default function About() {
                                         <div className="flex-custom-full info-item mb-6">
                                             <p>
                                                 {t('about-page.soft-skills.website')} :
-                                                <span>sinaverosmanov.github.io/portfolio</span>
+                                                <span
+                                                    onClick={() =>
+                                                        redirectToExternalLink('https://sinaverosmanov.github.io/')
+                                                    }
+                                                >
+                                                    https://sinaverosmanov.github.io/
+                                                </span>
                                             </p>
                                         </div>
                                         <div className="flex-custom-full info-item mb-6">

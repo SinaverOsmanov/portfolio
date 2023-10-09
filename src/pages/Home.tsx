@@ -1,6 +1,7 @@
 import { LazyMotion, domAnimation, m } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import TypeAnimate from '@components/TypeAnimate';
+import { redirectToExternalLink } from '@/helpers/redirectToExternalLink';
 
 function Home() {
     const { t } = useTranslation();
@@ -37,7 +38,7 @@ function Home() {
                             <p>{t('home-page.description')}</p>
                             <button
                                 className="btn"
-                                onClick={() => (window.location.href = 'https://www.linkedin.com/in/sinaver-osmanov/')}
+                                onClick={() => redirectToExternalLink('https://www.linkedin.com/in/sinaver-osmanov/')}
                             >
                                 {t('home-page.linkedIn-button')}
                             </button>
