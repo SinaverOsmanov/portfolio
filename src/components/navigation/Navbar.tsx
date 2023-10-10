@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom';
-import { NavItem } from './NavItem';
-import { motion } from 'framer-motion';
 import { NavItemType } from '@/types/types';
-import LanguagePanel from './LanguagePanel';
+import LanguagePanel from '../LanguagePanel';
+import { NavItem } from './NavItem';
 
 const navItems: NavItemType[] = [
     {
@@ -34,11 +33,10 @@ const navItems: NavItemType[] = [
 
 export default function Navbar({ isOpen }: { isOpen: boolean }) {
     return (
-        <motion.div
-            transition={{ duration: 1, bounce: false, type: 'spring', damping: 15, stiffness: 70 }}
-            className={`aside z-50 ${
+        <div
+            className={`aside transition-all duration-300 ${
                 isOpen ? 'max-lg:translate-x-0' : 'max-lg:-translate-x-full'
-            }  w-72 flex fixed left-0 flex-col px-10 pt-12 h-full overflow-auto`}
+            } z-50 w-64 flex fixed left-0 flex-col px-8 pt-12 h-full overflow-auto`}
         >
             <div className="text-lg text-center mb-20 logo">
                 <Link to="/">
@@ -55,6 +53,6 @@ export default function Navbar({ isOpen }: { isOpen: boolean }) {
             <div className="mt-10">
                 <LanguagePanel />
             </div>
-        </motion.div>
+        </div>
     );
 }
