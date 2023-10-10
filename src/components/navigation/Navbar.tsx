@@ -2,8 +2,6 @@ import { Link } from 'react-router-dom';
 import { NavItemType } from '@/types/types';
 import LanguagePanel from '../LanguagePanel';
 import { NavItem } from './NavItem';
-import { useEffect } from 'react';
-import { animate } from 'framer-motion';
 
 const navItems: NavItemType[] = [
     {
