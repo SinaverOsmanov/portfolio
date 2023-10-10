@@ -93,7 +93,7 @@ export default function Switcher() {
                     }`}
                 >
                     <button className="z-20 rounded-full s-icon" onClick={changeColors}>
-                        <i className="fas fa-cog fa-spin"></i>
+                        <i className="fa-solid fa-palette"></i>
                     </button>
                     <div className={`colors flex-col absolute left-0 bottom-1 z-10 rounded-full`}>
                         <span className="color-1 mb-1" onClick={() => setActiveStyle('color1')}></span>
