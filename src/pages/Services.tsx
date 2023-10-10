@@ -1,3 +1,4 @@
+import { ReactHelmet } from '@components/ReactHelmet';
 import { LazyMotion, domAnimation, m } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
@@ -6,6 +7,7 @@ export default function Services() {
 
     return (
         <LazyMotion features={domAnimation}>
+            <ReactHelmet title="Services" description="Portfolio ServicesPage" />
             <m.section
                 initial={{ x: '100vw' }}
                 animate={{ x: '0' }}
