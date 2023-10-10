@@ -34,9 +34,9 @@ const navItems: NavItemType[] = [
 export default function Navbar({ isOpen }: { isOpen: boolean }) {
     return (
         <div
-            className={`aside transition-all duration-300 ${
+            className={`aside transition-all duration-500 z-50 ${
                 isOpen ? 'max-lg:translate-x-0' : 'max-lg:-translate-x-full'
-            } z-50 w-64 flex fixed left-0 flex-col px-8 pt-12 h-full overflow-auto`}
+            }  w-72 flex fixed left-0 flex-col px-10 pt-12 h-full overflow-auto`}
         >
             <div className="text-lg text-center mb-20 logo">
                 <Link to="/">
