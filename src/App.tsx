@@ -1,6 +1,5 @@
-import { Suspense, lazy, useEffect, useState } from 'react';
+import { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
 import '@styles/App.css';
 
 import Switcher from '@components/Switcher';
