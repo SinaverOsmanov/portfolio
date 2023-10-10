@@ -47,7 +47,7 @@ export default function LanguagePanel() {
             >
                 <div
                     onClick={handleToggleList}
-                    className={`p-[7px] font-bold cursor-pointer bg-[--bg-black-900] transition-all relative text-[--text-black-900] text-sm ${
+                    className={`p-[7px] font-bold cursor-pointer bg-[--bg-black-900] relative text-[--text-black-900] text-sm ${
                         showList ? 'border-b-[1px] border-opacity-50 border-[--bg-black-50]' : ''
                     }`}
                 >
@@ -61,7 +61,7 @@ export default function LanguagePanel() {
                     </div>
                 </div>
                 <div
-                    className={`lang-list cursor-pointer bg-[--bg-black-100] transition-all duration-500 overflow-hidden text-[--text-black-900] ${
+                    className={`lang-list cursor-pointer bg-[--bg-black-100] duration-500 overflow-hidden text-[--text-black-900] ${
                         showList ? 'h-[68px]' : 'h-0'
                     }`}
                 >
