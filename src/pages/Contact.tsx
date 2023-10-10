@@ -1,7 +1,5 @@
-import { useForm } from 'react-hook-form';
 import { LazyMotion, domAnimation, m } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { useRef } from 'react';
 import ContactForm from '@components/ContactForm';
 import { redirectToExternalLink } from '@/helpers/redirectToExternalLink';
 import { ReactHelmet } from '@components/ReactHelmet';

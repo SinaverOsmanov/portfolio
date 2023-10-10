@@ -3,10 +3,10 @@ import { Routes, Route } from 'react-router-dom';
 import '@styles/App.css';
 
 import Switcher from '@components/Switcher';
-import Navigation from '@components/Navigation';
 import ScrollToTop from '@components/ScrollToTop';
 import { Loading } from '@components/Loading';
 import I18nLoading from '@components/I18nLoading';
+import Navigation from '@components/navigation/Navigation';
 
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
