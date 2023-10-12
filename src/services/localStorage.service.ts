@@ -11,7 +11,7 @@ type LocalStorageType = {
 export function setTokens(): LocalStorageType {
     return {
         lang: (token) => localStorage.setItem(LANG_KEY, token),
-        skin: (token) => localStorage.setItem(SKIN_KEY, token),
+        skin: (token) => localStorage.setItem(SKIN_KEY, JSON.stringify(token)),
         darkTheme: (token) => localStorage.setItem(DARK_THEME_KEY, JSON.stringify(token)),
     };
 }
@@ -21,7 +21,7 @@ export function setTokens(): LocalStorageType {
 export function getTokens() {
     return { 
         lang: localStorage.getItem(LANG_KEY), 
-        skin: localStorage.getItem(SKIN_KEY),
+        skin: JSON.parse(localStorage.getItem(SKIN_KEY) ?? JSON.stringify('#1854b4')),
         darkTheme: JSON.parse(localStorage.getItem(DARK_THEME_KEY) ?? JSON.stringify(false)),
     };
 }
