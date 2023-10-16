@@ -2,14 +2,14 @@ import { Link } from 'react-router-dom';
 import { LazyMotion, domAnimation, m } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { redirectToExternalLink } from '@/helpers/redirectToExternalLink';
-import { ReactHelmet } from '@components/ReactHelmet';
+import { ReactHelmet } from '@components/utils/ReactHelmet';
 
 export default function About() {
     const { t } = useTranslation();
 
     return (
         <LazyMotion features={domAnimation}>
-            <ReactHelmet title="About" description="Portfolio AboutPage" />
+            <ReactHelmet title="About me" description="This page describe my experience and knowledge" />
             <m.section
                 initial={{ x: '100vw' }}
                 animate={{ x: '0' }}

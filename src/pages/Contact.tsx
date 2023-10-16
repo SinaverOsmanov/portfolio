@@ -1,15 +1,15 @@
 import { LazyMotion, domAnimation, m } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import ContactForm from '@components/ContactForm';
+import ContactForm from '@components/ui/ContactForm';
 import { redirectToExternalLink } from '@/helpers/redirectToExternalLink';
-import { ReactHelmet } from '@components/ReactHelmet';
+import { ReactHelmet } from '@components/utils/ReactHelmet';
 
 export default function Contact() {
     const { t } = useTranslation();
 
     return (
         <LazyMotion features={domAnimation}>
-            <ReactHelmet title="Contact" description="Portfolio ContactPage" />
+            <ReactHelmet title="Contact" description="You can contact me here" />
             <m.section
                 initial={{ x: '100vw' }}
                 animate={{ x: '0' }}

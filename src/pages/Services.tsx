@@ -1,4 +1,4 @@
-import { ReactHelmet } from '@components/ReactHelmet';
+import { ReactHelmet } from '@components/utils/ReactHelmet';
 import { LazyMotion, domAnimation, m } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { NavItemType } from '@/types/types';
-import LanguagePanel from '../LanguagePanel';
+import LanguagePanel from '../ui/LanguagePanel';
 import { NavItem } from './NavItem';
 
 const navItems: NavItemType[] = [
@@ -25,9 +25,9 @@ const navItems: NavItemType[] = [
         title: 'services',
     },
     {
-        to: '/portfolio',
+        to: '/cases',
         icon: 'fa-briefcase',
-        title: 'portfolio',
+        title: 'cases',
     },
 ];
 

@@ -1,15 +1,18 @@
 import { LazyMotion, domAnimation, m } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import TypeAnimate from '@components/TypeAnimate';
+import TypeAnimate from '@components/utils/TypeAnimate';
 import { redirectToExternalLink } from '@/helpers/redirectToExternalLink';
-import { ReactHelmet } from '@components/ReactHelmet';
+import { ReactHelmet } from '@components/utils/ReactHelmet';
 
 function Home() {
     const { t } = useTranslation();
 
     return (
         <LazyMotion features={domAnimation}>
-            <ReactHelmet title="Portfolio - Sinaver Osmanov" description="Portfolio HomePage" />
+            <ReactHelmet
+                title="Sinaver Osmanov — Frontend Developer"
+                description="The portfolio of Sinaver Osmanov, Frontend Developer."
+            />
             <m.section
                 initial={{ x: '100vw' }}
                 animate={{ x: '0' }}

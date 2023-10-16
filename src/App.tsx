@@ -2,15 +2,16 @@ import { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import '@styles/App.css';
 
-import Switcher from '@components/Switcher';
-import ScrollToTop from '@components/ScrollToTop';
-import { Loading } from '@components/Loading';
+import Switcher from '@components/ui/Switcher';
+import ScrollToTop from '@components/utils/ScrollToTop';
+import { Loading } from '@components/ui/Loading';
 import I18nLoading from '@components/I18nLoading';
 import Navigation from '@components/navigation/Navigation';
 
-const Home = lazy(() => import('./pages/Home'));
+import Home from '@pages/Home';
+
 const About = lazy(() => import('./pages/About'));
-const Portfolio = lazy(() => import('./pages/Portfolio'));
+const Cases = lazy(() => import('./pages/Cases'));
 const Services = lazy(() => import('./pages/Services'));
 const Contact = lazy(() => import('./pages/Contact'));
 
@@ -28,7 +29,7 @@ function App() {
                         <Route path="/" Component={Home} />
                         <Route path="/about" Component={About} />
                         <Route path="/services" Component={Services} />
-                        <Route path="/portfolio" Component={Portfolio} />
+                        <Route path="/cases" Component={Cases} />
                         <Route path="/contact" Component={Contact} />
                     </Routes>
                 </main>
