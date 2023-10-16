@@ -7,7 +7,7 @@ export default function Services() {
 
     return (
         <LazyMotion features={domAnimation}>
-            <ReactHelmet title="Services" description="Portfolio ServicesPage" />
+            <ReactHelmet title="Services" description="You can see what I can do" />
             <m.section
                 initial={{ x: '100vw' }}
                 animate={{ x: '0' }}

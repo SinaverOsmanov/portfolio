@@ -32,7 +32,7 @@ export default function Cases() {
 
     return (
         <LazyMotion features={domAnimation}>
-            <ReactHelmet title="Cases" description="Portfolio PortfolioPage" />
+            <ReactHelmet title="Cases" description="This page show my cases, what I did" />
             <m.section
                 initial={{ x: '100vw' }}
                 animate={{ x: '0' }}
