@@ -50,7 +50,6 @@ export default function Switcher() {
 
     function setActiveStyle(c: string) {
         const color = getColor(c);
-
         setTokens().skin(color);
 
         document.body.style.setProperty('--skin-color', color);
@@ -59,7 +58,7 @@ export default function Switcher() {
     useEffect(() => {
         const skinColor = getTokens().skin;
         const themeColor = getTokens().darkTheme;
-
+        
         if (!skinColor) {
             const color = getColor();
 
