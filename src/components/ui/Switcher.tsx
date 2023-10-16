@@ -1,5 +1,5 @@
 import localStorageService from '@services/localStorage.service';
-import useStoreTheme from '../store/storeTheme';
+import useStoreTheme from '../../store/storeTheme';
 import { useState, useEffect } from 'react';
 import useClickOutsideRef from '@hooks/useClickOutsideRef';
 

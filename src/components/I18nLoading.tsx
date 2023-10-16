@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Loading } from './Loading';
+import { Loading } from './ui/Loading';
 import { useTranslation } from 'react-i18next';
 
 function I18nLoading() {

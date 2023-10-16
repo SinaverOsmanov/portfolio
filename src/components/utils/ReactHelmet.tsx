@@ -5,6 +5,8 @@ export function ReactHelmet({ title, description }: { title: string; description
         <Helmet>
             <title>{title}</title>
             <meta name="description" content={description} />
+            <meta property="og:description" content={description} />
+            <meta property="og:title" content={title} />
         </Helmet>
     );
 }
