@@ -37,28 +37,28 @@ export default function Cases() {
                 initial={{ x: '100vw' }}
                 animate={{ x: '0' }}
                 transition={{ duration: 1, bounce: false, type: 'spring', damping: 15, stiffness: 70 }}
-                className="portfolio section"
-                id="portfolio"
+                className="cases section"
+                id="cases"
             >
                 <div className="container py-16">
                     <div className="row">
                         <div className="flex-custom-full mb-14 section-title">
-                            <h1>{t('portfolio-page.title')}</h1>
+                            <h1>{t('cases-page.title')}</h1>
                         </div>
                     </div>
                     <div className="row mb-10">
-                        <div className="portfolio-heiding">
-                            <h2 className="font-bold">{t('portfolio-page.projects-title')}:</h2>
+                        <div className="cases-heiding">
+                            <h2 className="font-bold">{t('cases-page.projects-title')}:</h2>
                         </div>
                     </div>
                     <div className="row flex-wrap gap-y-3">
                         {data.map(p => (
                             <div
-                                className="max-sl:flex-custom-full max-xl:flex-custom-1/2 sl:pr-3 ls:flex-custom-1/3 portfolio-item"
+                                className="max-sl:flex-custom-full max-xl:flex-custom-1/2 sl:pr-3 ls:flex-custom-1/3 cases-item"
                                 onClick={() => redirectToExternalLink(p.link)}
                             >
-                                <div className="portfolio-item-inner shadow-lg">
-                                    <div className="portfolio-img">
+                                <div className="cases-item-inner shadow-lg">
+                                    <div className="cases-img">
                                         <img src={p.src} alt={p.alt} />
                                     </div>
                                 </div>

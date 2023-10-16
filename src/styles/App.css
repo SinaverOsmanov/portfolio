@@ -531,14 +531,14 @@ h3.my-profession {
     color: var(--text-black-700);
 }
 
-/* portfolio */
+/* cases */
 
-.portfolio .portfolio-heiding h2 {
+.cases .cases-heiding h2 {
     color: var(--text-black-900);
     font-size: 24px;
 }
 
-.portfolio .portfolio-item .portfolio-item-inner {
+.cases .cases-item .cases-item-inner {
     border: 6px solid var(--bg-black-100);
     border-radius: 10px;
     overflow: hidden;
@@ -546,11 +546,11 @@ h3.my-profession {
     height: 100%;
 }
 
-.portfolio .portfolio-img {
+.cases .cases-img {
     height: 100%;
 }
 
-.portfolio .portfolio-img img {
+.cases .cases-img img {
     width: 100%;
     object-fit: cover;
     height: 100%;
