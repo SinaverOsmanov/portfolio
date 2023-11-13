@@ -1,4 +1,4 @@
-import { Suspense, lazy } from 'react';
+import { Suspense, lazy, useEffect, useMemo, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import '@styles/App.css';
 
@@ -8,14 +8,23 @@ import { Loading } from '@components/ui/Loading';
 import I18nLoading from '@components/I18nLoading';
 import Navigation from '@components/navigation/Navigation';
 
-import Home from '@pages/Home';
+// import Home from '@pages/Home';
 
+const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
 const Cases = lazy(() => import('./pages/Cases'));
 const Services = lazy(() => import('./pages/Services'));
 const Contact = lazy(() => import('./pages/Contact'));
 
 function App() {
+    const [load, setLoad] = useState(false);
+
+    const memoizedLoad = useMemo(() => <Loading />, [load]);
+
+    function triggerLoad() {
+        setLoad(true);
+    }
+
     return (
         <div className="h-full min-h-full">
             <I18nLoading />

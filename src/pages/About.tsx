@@ -143,6 +143,13 @@ export default function About() {
                                             </div>
                                         </div>
                                         <div className="flex-custom-full skills-item mb-6">
+                                            <h5>MobX</h5>
+                                            <div className="progress">
+                                                <div className="progress-in" style={{ width: '40%' }}></div>
+                                                <div className="skills-percent">40%</div>
+                                            </div>
+                                        </div>
+                                        <div className="flex-custom-full skills-item mb-6">
                                             <h5>Bootstrap, Material UI, Antd, Blueprint.js, Tailwind</h5>
                                             <div className="progress">
                                                 <div className="progress-in" style={{ width: '70%' }}></div>
